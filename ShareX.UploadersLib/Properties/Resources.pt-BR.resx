@@ -117,32 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CertFileNameEditor_EditValue_Browse_for_a_certificate_file___" xml:space="preserve">
-    <value>Procurar por um arquivo de certificado...</value>
-  </data>
-  <data name="UploadersConfigForm_oAuthJira_RefreshButtonClicked_Refresh_authorization_is_not_supported_" xml:space="preserve">
-    <value>Autorização de atualização não é suportada.</value>
-  </data>
-  <data name="UploadersConfigForm_LoadSettings_Invalid_device_name" xml:space="preserve">
-    <value>Nome de dispositivo invalido</value>
-  </data>
-  <data name="UploadersConfigForm_BoxListFolders_Box_refresh_folders_list_failed" xml:space="preserve">
-    <value>Falha na atualização da lista de pastas do Box</value>
-  </data>
-  <data name="UploadersConfigForm_Error" xml:space="preserve">
-    <value>Erro</value>
-  </data>
-  <data name="OneDrive_RootFolder_Root_folder" xml:space="preserve">
-    <value>Pasta raiz</value>
-  </data>
   <data name="OAuthInfo_OAuthInfo_New_account" xml:space="preserve">
     <value>Nova conta</value>
-  </data>
-  <data name="TwitterTweetForm_SendTweet_Tweet_error" xml:space="preserve">
-    <value>Erro no tuite</value>
-  </data>
-  <data name="UploadersConfigForm_ListFolders_Authentication_required_" xml:space="preserve">
-    <value>Autenticação obrigatória.</value>
   </data>
   <data name="UploadersConfigForm_LoadSettings_Selected_folder_" xml:space="preserve">
     <value>Pasta selecionada:</value>
@@ -150,51 +126,57 @@
   <data name="UploadersConfigForm_Login_failed" xml:space="preserve">
     <value>Falha no login.</value>
   </data>
-  <data name="UploadersConfigForm_Login_successful" xml:space="preserve">
-    <value>Login feito com sucesso.</value>
-  </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Click_refresh_button" xml:space="preserve">
-    <value>Clicar no botão de atualizar</value>
-  </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Configured" xml:space="preserve">
-    <value>Configurado</value>
-  </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Invalid_authentication" xml:space="preserve">
-    <value>Autenticação invalida</value>
-  </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Not_configured" xml:space="preserve">
-    <value>Não configurado</value>
-  </data>
-  <data name="UploadersConfigForm_PhotobucketCreateAlbum__0__successfully_created_" xml:space="preserve">
-    <value>{0} criado com sucesso.</value>
-  </data>
-  <data name="UploadersConfigForm_SendSpaceRegister_SendSpace_Registration___" xml:space="preserve">
-    <value>Registro no SendSpace</value>
+  <data name="UploadersConfigForm_LoadSettings_Parent_album_path_e_g_" xml:space="preserve">
+    <value>Caminho do álbum pai, por exemplo:</value>
   </data>
   <data name="UploadersConfigForm_TestCustomUploader_Error__Result_is_empty_" xml:space="preserve">
     <value>Erro: Resultado está vazio.</value>
   </data>
+  <data name="UploadersConfigForm_Error" xml:space="preserve">
+    <value>Erro</value>
+  </data>
   <data name="UploadersConfigForm_TestFTPAccount_Connected_" xml:space="preserve">
     <value>Conectado!</value>
+  </data>
+  <data name="UploadersConfigForm_PhotobucketCreateAlbum__0__successfully_created_" xml:space="preserve">
+    <value>{0} criado com sucesso.</value>
   </data>
   <data name="UploadersConfigForm_TestFTPAccount_Connected_Created_folders" xml:space="preserve">
     <value>Conectado!
 Pastas criadas:</value>
   </data>
-  <data name="JiraUpload_ValidateIssueId_Issue_not_found" xml:space="preserve">
-    <value>Questão não encontrada</value>
-  </data>
-  <data name="KeyFileNameEditor_EditValue_Browse_for_a_key_file___" xml:space="preserve">
-    <value>Procurar por um arquivo de chave...</value>
-  </data>
-  <data name="UploadersConfigForm_LoadSettings_Parent_album_path_e_g_" xml:space="preserve">
-    <value>Caminho do álbum pai, por exemplo:</value>
+  <data name="CertFileNameEditor_EditValue_Browse_for_a_certificate_file___" xml:space="preserve">
+    <value>Procurar por um arquivo de certificado...</value>
   </data>
   <data name="UploadersConfigForm_OneDriveAddFolder_Querying_folders___" xml:space="preserve">
     <value>Consultando pastas...</value>
   </data>
+  <data name="UploadersConfigForm_SendSpaceRegister_SendSpace_Registration___" xml:space="preserve">
+    <value>Registro no SendSpace</value>
+  </data>
+  <data name="UploadersConfigForm_Login_successful" xml:space="preserve">
+    <value>Login feito com sucesso.</value>
+  </data>
+  <data name="UploadersConfigForm_ListFolders_Authentication_required_" xml:space="preserve">
+    <value>Autenticação obrigatória.</value>
+  </data>
+  <data name="KeyFileNameEditor_EditValue_Browse_for_a_key_file___" xml:space="preserve">
+    <value>Procurar por um arquivo de chave...</value>
+  </data>
   <data name="UploadersConfigForm_FTPOpenClient_Unable_to_find_valid_FTP_account_" xml:space="preserve">
     <value>Não foi possivel achar uma conta FTP valida.</value>
+  </data>
+  <data name="TwitterTweetForm_SendTweet_Tweet_error" xml:space="preserve">
+    <value>Erro no tuite</value>
+  </data>
+  <data name="UploadersConfigForm_LoadSettings_Invalid_device_name" xml:space="preserve">
+    <value>Nome de dispositivo invalido</value>
+  </data>
+  <data name="UploadersConfigForm_BoxListFolders_Box_refresh_folders_list_failed" xml:space="preserve">
+    <value>Falha na atualização da lista de pastas do Box</value>
+  </data>
+  <data name="OneDrive_RootFolder_Root_folder" xml:space="preserve">
+    <value>Pasta raiz</value>
   </data>
   <data name="UploadersConfigForm_Remove_all_custom_uploaders_Confirmation" xml:space="preserve">
     <value>Remover todos destinos customizados?</value>
@@ -247,37 +229,37 @@ Pastas criadas:</value>
   <data name="LoggedInAs0" xml:space="preserve">
     <value>Conectado como {0}.</value>
   </data>
-  <data name="URL" xml:space="preserve">
-    <value>URL</value>
-  </data>
-  <data name="DeletionURL" xml:space="preserve">
-    <value>URL de exclusão</value>
-  </data>
-  <data name="Error" xml:space="preserve">
-    <value>Erro</value>
+  <data name="FormattingFailed_JSON" xml:space="preserve">
+    <value>A formatação falhou.</value>
   </data>
   <data name="FormattingFailed_XML" xml:space="preserve">
     <value>A formatação falhou.</value>
   </data>
-  <data name="FormattingFailed_JSON" xml:space="preserve">
-    <value>A formatação falhou.</value>
-  </data>
-  <data name="Headers" xml:space="preserve">
-    <value>Cabeçalhos</value>
-  </data>
-  <data name="ResponseText" xml:space="preserve">
-    <value>Texto de resposta</value>
-  </data>
-  <data name="ResponseURL" xml:space="preserve">
-    <value>URL de resposta</value>
-  </data>
   <data name="ShortenedURL" xml:space="preserve">
     <value>URL encurtado</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="ThumbnailURL" xml:space="preserve">
+    <value>URL da miniatura</value>
+  </data>
+  <data name="DeletionURL" xml:space="preserve">
+    <value>URL de exclusão</value>
   </data>
   <data name="StatusCode" xml:space="preserve">
     <value>Código de status</value>
   </data>
-  <data name="ThumbnailURL" xml:space="preserve">
-    <value>URL da miniatura</value>
+  <data name="ResponseURL" xml:space="preserve">
+    <value>URL de resposta</value>
+  </data>
+  <data name="ResponseText" xml:space="preserve">
+    <value>Texto de resposta</value>
+  </data>
+  <data name="Headers" xml:space="preserve">
+    <value>Cabeçalhos</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erro</value>
   </data>
 </root>

@@ -187,7 +187,7 @@ namespace ShareX
         [Editor(typeof(ExeFileNameEditor), typeof(UITypeEditor))]
         public string BrowserPath { get; set; }
 
-        [Category("Application"), DefaultValue(false), Description("Save settings after task completed but only if there is no other active tasks.")]
+        [Category("Application"), DefaultValue(false), Description("Save settings after task completed but only if there are no other active tasks.")]
         public bool SaveSettingsAfterTaskCompleted { get; set; }
 
         [Category("Application"), DefaultValue(false), Description("In main window when task is completed automatically select it.")]

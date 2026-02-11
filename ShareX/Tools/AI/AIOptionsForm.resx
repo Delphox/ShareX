@@ -123,10 +123,14 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblProvider.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 16</value>
+    <value>10, 13</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblProvider.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblProvider.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 16</value>
+    <value>49, 13</value>
   </data>
   <data name="lblProvider.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -147,10 +151,13 @@
     <value>0</value>
   </data>
   <data name="cbProvider.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 40</value>
+    <value>12, 32</value>
+  </data>
+  <data name="cbProvider.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="cbProvider.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 24</value>
+    <value>228, 21</value>
   </data>
   <data name="cbProvider.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -168,10 +175,13 @@
     <value>1</value>
   </data>
   <data name="btnAPIKeyHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 36</value>
+    <value>248, 29</value>
+  </data>
+  <data name="btnAPIKeyHelp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnAPIKeyHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
+    <value>26, 26</value>
   </data>
   <data name="btnAPIKeyHelp.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -188,14 +198,54 @@
   <data name="&gt;&gt;btnAPIKeyHelp.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="btnOpenAILoadModels.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnOpenAILoadModels.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnOpenAILoadModels.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 81</value>
+  </data>
+  <data name="btnOpenAILoadModels.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnOpenAILoadModels.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 26</value>
+  </data>
+  <data name="btnOpenAILoadModels.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <metadata name="tipStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="btnOpenAILoadModels.ToolTip" xml:space="preserve">
+    <value>Load models</value>
+  </data>
+  <data name="&gt;&gt;btnOpenAILoadModels.Name" xml:space="preserve">
+    <value>btnOpenAILoadModels</value>
+  </data>
+  <data name="&gt;&gt;btnOpenAILoadModels.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnOpenAILoadModels.Parent" xml:space="preserve">
+    <value>gbOpenAI</value>
+  </data>
+  <data name="&gt;&gt;btnOpenAILoadModels.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lblOpenAIAPIKey.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblOpenAIAPIKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 24</value>
+    <value>10, 20</value>
+  </data>
+  <data name="lblOpenAIAPIKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblOpenAIAPIKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 16</value>
+    <value>47, 13</value>
   </data>
   <data name="lblOpenAIAPIKey.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -213,13 +263,16 @@
     <value>gbOpenAI</value>
   </data>
   <data name="&gt;&gt;lblOpenAIAPIKey.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="txtOpenAIAPIKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 48</value>
+    <value>12, 39</value>
+  </data>
+  <data name="txtOpenAIAPIKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="txtOpenAIAPIKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 22</value>
+    <value>241, 20</value>
   </data>
   <data name="txtOpenAIAPIKey.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -234,16 +287,19 @@
     <value>gbOpenAI</value>
   </data>
   <data name="&gt;&gt;txtOpenAIAPIKey.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblOpenAIModel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblOpenAIModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 80</value>
+    <value>10, 65</value>
+  </data>
+  <data name="lblOpenAIModel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblOpenAIModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+    <value>39, 13</value>
   </data>
   <data name="lblOpenAIModel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -261,7 +317,7 @@
     <value>gbOpenAI</value>
   </data>
   <data name="&gt;&gt;lblOpenAIModel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="cbOpenAIModel.Items" xml:space="preserve">
     <value>gpt-5.2</value>
@@ -279,10 +335,13 @@
     <value>gpt-5-nano</value>
   </data>
   <data name="cbOpenAIModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 104</value>
+    <value>12, 84</value>
+  </data>
+  <data name="cbOpenAIModel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="cbOpenAIModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 24</value>
+    <value>212, 21</value>
   </data>
   <data name="cbOpenAIModel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -297,16 +356,19 @@
     <value>gbOpenAI</value>
   </data>
   <data name="&gt;&gt;cbOpenAIModel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblOpenAICustomURL.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblOpenAICustomURL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 248</value>
+    <value>10, 209</value>
+  </data>
+  <data name="lblOpenAICustomURL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblOpenAICustomURL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 16</value>
+    <value>96, 13</value>
   </data>
   <data name="lblOpenAICustomURL.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -324,13 +386,16 @@
     <value>gbOpenAI</value>
   </data>
   <data name="&gt;&gt;lblOpenAICustomURL.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txtOpenAICustomURL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 272</value>
+    <value>12, 229</value>
+  </data>
+  <data name="txtOpenAICustomURL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="txtOpenAICustomURL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 22</value>
+    <value>241, 20</value>
   </data>
   <data name="txtOpenAICustomURL.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -345,7 +410,7 @@
     <value>gbOpenAI</value>
   </data>
   <data name="&gt;&gt;txtOpenAICustomURL.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="cbOpenAIReasoningEffort.Items" xml:space="preserve">
     <value>minimal</value>
@@ -360,10 +425,13 @@
     <value>high</value>
   </data>
   <data name="cbOpenAIReasoningEffort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 160</value>
+    <value>12, 130</value>
+  </data>
+  <data name="cbOpenAIReasoningEffort.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="cbOpenAIReasoningEffort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 24</value>
+    <value>241, 21</value>
   </data>
   <data name="cbOpenAIReasoningEffort.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -378,16 +446,19 @@
     <value>gbOpenAI</value>
   </data>
   <data name="&gt;&gt;cbOpenAIReasoningEffort.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lblReasoningEffort.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblReasoningEffort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 136</value>
+    <value>10, 110</value>
+  </data>
+  <data name="lblReasoningEffort.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblReasoningEffort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 16</value>
+    <value>88, 13</value>
   </data>
   <data name="lblReasoningEffort.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -405,16 +476,19 @@
     <value>gbOpenAI</value>
   </data>
   <data name="&gt;&gt;lblReasoningEffort.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lblVerbosity.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblVerbosity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 192</value>
+    <value>10, 156</value>
+  </data>
+  <data name="lblVerbosity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblVerbosity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 16</value>
+    <value>53, 13</value>
   </data>
   <data name="lblVerbosity.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -432,7 +506,7 @@
     <value>gbOpenAI</value>
   </data>
   <data name="&gt;&gt;lblVerbosity.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="cbOpenAIVerbosity.Items" xml:space="preserve">
     <value>low</value>
@@ -444,10 +518,13 @@
     <value>high</value>
   </data>
   <data name="cbOpenAIVerbosity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 216</value>
+    <value>12, 176</value>
+  </data>
+  <data name="cbOpenAIVerbosity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="cbOpenAIVerbosity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 24</value>
+    <value>241, 21</value>
   </data>
   <data name="cbOpenAIVerbosity.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -462,13 +539,19 @@
     <value>gbOpenAI</value>
   </data>
   <data name="&gt;&gt;cbOpenAIVerbosity.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="gbOpenAI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 80</value>
+    <value>12, 65</value>
+  </data>
+  <data name="gbOpenAI.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="gbOpenAI.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="gbOpenAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 312</value>
+    <value>264, 263</value>
   </data>
   <data name="gbOpenAI.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -492,10 +575,13 @@
     <value>True</value>
   </data>
   <data name="lblGeminiAPIKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 24</value>
+    <value>9, 20</value>
+  </data>
+  <data name="lblGeminiAPIKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblGeminiAPIKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 16</value>
+    <value>47, 13</value>
   </data>
   <data name="lblGeminiAPIKey.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -516,10 +602,13 @@
     <value>0</value>
   </data>
   <data name="txtGeminiAPIKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 44</value>
+    <value>9, 36</value>
+  </data>
+  <data name="txtGeminiAPIKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="txtGeminiAPIKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>328, 22</value>
+    <value>247, 20</value>
   </data>
   <data name="txtGeminiAPIKey.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -540,10 +629,13 @@
     <value>True</value>
   </data>
   <data name="lblGeminiModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 76</value>
+    <value>9, 62</value>
+  </data>
+  <data name="lblGeminiModel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblGeminiModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+    <value>39, 13</value>
   </data>
   <data name="lblGeminiModel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -576,10 +668,13 @@
     <value>gemini-1.5-pro</value>
   </data>
   <data name="cbGeminiModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 96</value>
+    <value>9, 78</value>
+  </data>
+  <data name="cbGeminiModel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="cbGeminiModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>328, 24</value>
+    <value>247, 21</value>
   </data>
   <data name="cbGeminiModel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -597,10 +692,16 @@
     <value>3</value>
   </data>
   <data name="gbGemini.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 80</value>
+    <value>12, 65</value>
+  </data>
+  <data name="gbGemini.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="gbGemini.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="gbGemini.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 180</value>
+    <value>264, 146</value>
   </data>
   <data name="gbGemini.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -627,10 +728,13 @@
     <value>True</value>
   </data>
   <data name="lblOpenRouterAPIKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 24</value>
+    <value>9, 20</value>
+  </data>
+  <data name="lblOpenRouterAPIKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblOpenRouterAPIKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 16</value>
+    <value>47, 13</value>
   </data>
   <data name="lblOpenRouterAPIKey.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -651,10 +755,13 @@
     <value>0</value>
   </data>
   <data name="txtOpenRouterAPIKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 44</value>
+    <value>9, 36</value>
+  </data>
+  <data name="txtOpenRouterAPIKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="txtOpenRouterAPIKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>328, 22</value>
+    <value>247, 20</value>
   </data>
   <data name="txtOpenRouterAPIKey.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -675,10 +782,13 @@
     <value>True</value>
   </data>
   <data name="lblOpenRouterModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 76</value>
+    <value>9, 62</value>
+  </data>
+  <data name="lblOpenRouterModel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblOpenRouterModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+    <value>39, 13</value>
   </data>
   <data name="lblOpenRouterModel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -708,10 +818,13 @@
     <value>google/gemini-pro-1.5</value>
   </data>
   <data name="cbOpenRouterModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 96</value>
+    <value>9, 78</value>
+  </data>
+  <data name="cbOpenRouterModel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="cbOpenRouterModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>328, 24</value>
+    <value>247, 21</value>
   </data>
   <data name="cbOpenRouterModel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -729,10 +842,16 @@
     <value>3</value>
   </data>
   <data name="gbOpenRouter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 80</value>
+    <value>12, 65</value>
+  </data>
+  <data name="gbOpenRouter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="gbOpenRouter.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="gbOpenRouter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 180</value>
+    <value>264, 146</value>
   </data>
   <data name="gbOpenRouter.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -755,11 +874,17 @@
   <data name="&gt;&gt;gbOpenRouter.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="btnTestConnection.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnTestConnection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 400</value>
+    <value>12, 332</value>
+  </data>
+  <data name="btnTestConnection.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnTestConnection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 32</value>
+    <value>78, 26</value>
   </data>
   <data name="btnTestConnection.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -783,13 +908,19 @@
     <value>True</value>
   </data>
   <data name="lblTestStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 408</value>
+    <value>102, 339</value>
+  </data>
+  <data name="lblTestStatus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblTestStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 16</value>
+    <value>0, 13</value>
   </data>
   <data name="lblTestStatus.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="lblTestStatus.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomRight</value>
   </data>
   <data name="&gt;&gt;lblTestStatus.Name" xml:space="preserve">
     <value>lblTestStatus</value>
@@ -807,10 +938,13 @@
     <value>True</value>
   </data>
   <data name="cbAutoStartRegion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 448</value>
+    <value>12, 369</value>
+  </data>
+  <data name="cbAutoStartRegion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="cbAutoStartRegion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 20</value>
+    <value>103, 17</value>
   </data>
   <data name="cbAutoStartRegion.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -834,10 +968,13 @@
     <value>True</value>
   </data>
   <data name="cbAutoStartAnalyze.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 472</value>
+    <value>12, 389</value>
+  </data>
+  <data name="cbAutoStartAnalyze.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="cbAutoStartAnalyze.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 20</value>
+    <value>110, 17</value>
   </data>
   <data name="cbAutoStartAnalyze.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -861,10 +998,13 @@
     <value>True</value>
   </data>
   <data name="cbAutoCopyResult.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 496</value>
+    <value>12, 408</value>
+  </data>
+  <data name="cbAutoCopyResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="cbAutoCopyResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 20</value>
+    <value>102, 17</value>
   </data>
   <data name="cbAutoCopyResult.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -885,10 +1025,13 @@
     <value>10</value>
   </data>
   <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 528</value>
+    <value>114, 429</value>
+  </data>
+  <data name="btnOK.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 32</value>
+    <value>78, 26</value>
   </data>
   <data name="btnOK.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -909,10 +1052,13 @@
     <value>11</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 528</value>
+    <value>198, 429</value>
+  </data>
+  <data name="btnCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 32</value>
+    <value>78, 26</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -936,20 +1082,25 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>384, 575</value>
+    <value>288, 467</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ShareX - AI options</value>
+  </data>
+  <data name="&gt;&gt;tipStatus.Name" xml:space="preserve">
+    <value>tipStatus</value>
+  </data>
+  <data name="&gt;&gt;tipStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AIOptionsForm</value>

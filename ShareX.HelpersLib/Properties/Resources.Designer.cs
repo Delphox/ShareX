@@ -19,7 +19,7 @@ namespace ShareX.HelpersLib.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -644,6 +644,16 @@ namespace ShareX.HelpersLib.Properties {
         internal static System.Drawing.Bitmap cross {
             get {
                 object obj = ResourceManager.GetObject("cross", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cross_circle {
+            get {
+                object obj = ResourceManager.GetObject("cross-circle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2463,6 +2473,105 @@ namespace ShareX.HelpersLib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1 Day.
+        /// </summary>
+        internal static string PrivateBinExpiration_D1 {
+            get {
+                return ResourceManager.GetString("PrivateBinExpiration_D1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 Hour.
+        /// </summary>
+        internal static string PrivateBinExpiration_H1 {
+            get {
+                return ResourceManager.GetString("PrivateBinExpiration_H1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 Month.
+        /// </summary>
+        internal static string PrivateBinExpiration_M1 {
+            get {
+                return ResourceManager.GetString("PrivateBinExpiration_M1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10 Minutes.
+        /// </summary>
+        internal static string PrivateBinExpiration_M10 {
+            get {
+                return ResourceManager.GetString("PrivateBinExpiration_M10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5 Minutes.
+        /// </summary>
+        internal static string PrivateBinExpiration_M5 {
+            get {
+                return ResourceManager.GetString("PrivateBinExpiration_M5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Never.
+        /// </summary>
+        internal static string PrivateBinExpiration_N {
+            get {
+                return ResourceManager.GetString("PrivateBinExpiration_N", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 Week.
+        /// </summary>
+        internal static string PrivateBinExpiration_W1 {
+            get {
+                return ResourceManager.GetString("PrivateBinExpiration_W1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 Year.
+        /// </summary>
+        internal static string PrivateBinExpiration_Y1 {
+            get {
+                return ResourceManager.GetString("PrivateBinExpiration_Y1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Markdown.
+        /// </summary>
+        internal static string PrivateBinFormat_Markdown {
+            get {
+                return ResourceManager.GetString("PrivateBinFormat_Markdown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plain Text.
+        /// </summary>
+        internal static string PrivateBinFormat_PlainText {
+            get {
+                return ResourceManager.GetString("PrivateBinFormat_PlainText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Syntax Highlighting.
+        /// </summary>
+        internal static string PrivateBinFormat_SyntaxHighlighting {
+            get {
+                return ResourceManager.GetString("PrivateBinFormat_SyntaxHighlighting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Automatic.
         /// </summary>
         internal static string ProxyMethod_Automatic {
@@ -3488,6 +3597,16 @@ namespace ShareX.HelpersLib.Properties {
         internal static System.Drawing.Bitmap tick {
             get {
                 object obj = ResourceManager.GetObject("tick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tick_circle {
+            get {
+                object obj = ResourceManager.GetObject("tick-circle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

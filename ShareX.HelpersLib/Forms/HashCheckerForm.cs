@@ -25,7 +25,6 @@
 
 using ShareX.HelpersLib.Properties;
 using System;
-using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,6 +42,8 @@ namespace ShareX.HelpersLib
         {
             InitializeComponent();
             ShareXResources.ApplyTheme(this, true);
+            pbTick.BackColor = txtTarget.BackColor;
+            pbCross.BackColor = txtTarget.BackColor;
 
             UpdateCompareControls();
             UpdateCheckButton();
@@ -59,6 +60,8 @@ namespace ShareX.HelpersLib
             {
                 txtFilePath.Text = filePath;
             }
+
+            UpdateResult();
         }
 
         protected void OnPlayNotificationSound()
@@ -95,19 +98,19 @@ namespace ShareX.HelpersLib
             {
                 if (txtResult.Text.Equals(txtTarget.Text, StringComparison.OrdinalIgnoreCase))
                 {
-                    txtTarget.BackColor = Color.FromArgb(200, 255, 200);
+                    pbTick.Visible = true;
+                    pbCross.Visible = false;
                 }
                 else
                 {
-                    txtTarget.BackColor = Color.FromArgb(255, 200, 200);
+                    pbTick.Visible = false;
+                    pbCross.Visible = true;
                 }
-
-                txtTarget.ForeColor = SystemColors.ControlText;
             }
             else
             {
-                txtTarget.BackColor = txtResult.BackColor;
-                txtTarget.ForeColor = txtResult.ForeColor;
+                pbTick.Visible = false;
+                pbCross.Visible = false;
             }
         }
 

@@ -142,6 +142,9 @@
   <data name="Pastebin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Favicons\Pastebin.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PrivateBin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Favicons\PrivateBin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="OwnCloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Favicons\OwnCloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,9 +184,6 @@
   <data name="Upaste" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Favicons\Upaste.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Not_configured" xml:space="preserve">
-    <value>Not configured</value>
-  </data>
   <data name="UploadersConfigForm_PhotobucketCreateAlbum__0__successfully_created_" xml:space="preserve">
     <value>{0} successfully created.</value>
   </data>
@@ -200,9 +200,6 @@ Created folders:</value>
   <data name="Yourls" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Favicons\Yourls.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mega" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Favicons\Mega.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="UploadersConfigForm_OneDriveAddFolder_Querying_folders___" xml:space="preserve">
     <value>Querying folders...</value>
   </data>
@@ -211,12 +208,6 @@ Created folders:</value>
   </data>
   <data name="UploadersConfigForm_SendSpaceRegister_SendSpace_Registration___" xml:space="preserve">
     <value>SendSpace registration</value>
-  </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Invalid_authentication" xml:space="preserve">
-    <value>Invalid authentication</value>
-  </data>
-  <data name="JiraUpload_ValidateIssueId_Issue_not_found" xml:space="preserve">
-    <value>Issue not found</value>
   </data>
   <data name="UploadersConfigForm_Login_successful" xml:space="preserve">
     <value>Login successful.</value>
@@ -254,9 +245,6 @@ Created folders:</value>
   <data name="Pomf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Favicons\Pomf.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Configured" xml:space="preserve">
-    <value>Configured</value>
-  </data>
   <data name="puush" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Favicons\puush.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -274,9 +262,6 @@ Created folders:</value>
   </data>
   <data name="UploadersConfigForm_BoxListFolders_Box_refresh_folders_list_failed" xml:space="preserve">
     <value>Box refresh folders list failed</value>
-  </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Click_refresh_button" xml:space="preserve">
-    <value>Click refresh button</value>
   </data>
   <data name="OneDrive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Favicons\OneDrive.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

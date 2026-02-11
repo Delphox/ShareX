@@ -117,39 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DuplicateNameNotAllowed" xml:space="preserve">
-    <value>Powielona nazwa jest niedozwolona.</value>
-  </data>
-  <data name="Error" xml:space="preserve">
-    <value>Błąd</value>
-  </data>
-  <data name="ExportFailed" xml:space="preserve">
-    <value>Eksport nie powiódł się.</value>
-  </data>
-  <data name="LoggedInAs0" xml:space="preserve">
-    <value>Zalogowany jako {0}.</value>
-  </data>
-  <data name="URL" xml:space="preserve">
-    <value>Link</value>
-  </data>
-  <data name="UploadersConfigForm_TestCustomUploader_Error__Result_is_empty_" xml:space="preserve">
-    <value>Błąd: Wynik jest pusty.</value>
-  </data>
-  <data name="UploadersConfigForm_TestFTPAccount_Connected_" xml:space="preserve">
-    <value>Połączony!</value>
-  </data>
-  <data name="UploadersConfigForm_TestFTPAccount_Connected_Created_folders" xml:space="preserve">
-    <value>Połączony!
-Utworzone foldery:</value>
-  </data>
-  <data name="UploadersConfigForm_UpdatePastebinStatus_LoggedIn" xml:space="preserve">
-    <value>Zalogowany.</value>
-  </data>
-  <data name="UploadersConfigForm_UpdatePastebinStatus_NotLoggedIn" xml:space="preserve">
-    <value>Niezalogowany.</value>
-  </data>
-  <data name="UploadersConfigForm_Error" xml:space="preserve">
-    <value>Błąd</value>
+  <data name="OAuthInfo_OAuthInfo_New_account" xml:space="preserve">
+    <value>Nowe konto</value>
   </data>
   <data name="UploadersConfigForm_LoadSettings_Selected_folder_" xml:space="preserve">
     <value>Wybrany folder:</value>
@@ -157,17 +126,63 @@ Utworzone foldery:</value>
   <data name="UploadersConfigForm_Login_failed" xml:space="preserve">
     <value>Logowanie nie powiodło się.</value>
   </data>
+  <data name="UploadersConfigForm_LoadSettings_Parent_album_path_e_g_" xml:space="preserve">
+    <value>Ścieżka albumu nadrzędnego, na przykład:</value>
+  </data>
+  <data name="UploadersConfigForm_TestCustomUploader_Error__Result_is_empty_" xml:space="preserve">
+    <value>Błąd: Wynik jest pusty.</value>
+  </data>
+  <data name="UploadersConfigForm_Error" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="UploadersConfigForm_TestFTPAccount_Connected_" xml:space="preserve">
+    <value>Połączony!</value>
+  </data>
+  <data name="UploadersConfigForm_PhotobucketCreateAlbum__0__successfully_created_" xml:space="preserve">
+    <value>{0} pomyślnie utworzony.</value>
+  </data>
+  <data name="UploadersConfigForm_TestFTPAccount_Connected_Created_folders" xml:space="preserve">
+    <value>Połączony!
+Utworzone foldery:</value>
+  </data>
+  <data name="CertFileNameEditor_EditValue_Browse_for_a_certificate_file___" xml:space="preserve">
+    <value>Przeglądaj w poszukiwaniu pliku certyfikatu...</value>
+  </data>
+  <data name="UploadersConfigForm_OneDriveAddFolder_Querying_folders___" xml:space="preserve">
+    <value>Przeszukiwanie folderów...</value>
+  </data>
+  <data name="UploadersConfigForm_SendSpaceRegister_SendSpace_Registration___" xml:space="preserve">
+    <value>Rejestracja w SendSpace</value>
+  </data>
   <data name="UploadersConfigForm_Login_successful" xml:space="preserve">
     <value>Logowanie powiodło się.</value>
   </data>
   <data name="UploadersConfigForm_ListFolders_Authentication_required_" xml:space="preserve">
     <value>Wymagane uwierzytelnienie.</value>
   </data>
-  <data name="UploadersConfigForm_LoadSettings_Invalid_device_name" xml:space="preserve">
-    <value>Nieprawidłowa nazwa urządzenia</value>
+  <data name="KeyFileNameEditor_EditValue_Browse_for_a_key_file___" xml:space="preserve">
+    <value>Przeglądaj w poszukiwaniu pliku klucza...</value>
   </data>
   <data name="UploadersConfigForm_FTPOpenClient_Unable_to_find_valid_FTP_account_" xml:space="preserve">
     <value>Nie można znaleźć prawidłowego konta FTP.</value>
+  </data>
+  <data name="TwitterTweetForm_SendTweet_Tweet_error" xml:space="preserve">
+    <value>Błąd tweeta</value>
+  </data>
+  <data name="UploadersConfigForm_LoadSettings_Invalid_device_name" xml:space="preserve">
+    <value>Nieprawidłowa nazwa urządzenia</value>
+  </data>
+  <data name="UploadersConfigForm_BoxListFolders_Box_refresh_folders_list_failed" xml:space="preserve">
+    <value>Nie udało się zaktualizować listy folderów Box</value>
+  </data>
+  <data name="OneDrive_RootFolder_Root_folder" xml:space="preserve">
+    <value>Folder główny</value>
+  </data>
+  <data name="UploadersConfigForm_Remove_all_custom_uploaders_Confirmation" xml:space="preserve">
+    <value>Usunąć wszystkie własne serwisy?</value>
+  </data>
+  <data name="OAuthControl_OAuthControl_PasteVerificationCodeHere" xml:space="preserve">
+    <value>Wklej kod weryfikacyjny tutaj</value>
   </data>
   <data name="UploadersConfigForm_ConnectSFTPAccount_Key_file_not_found" xml:space="preserve">
     <value>Plik klucza nie istnieje.</value>
@@ -178,26 +193,41 @@ Utworzone foldery:</value>
   <data name="UploadersConfigForm_eiCustomUploaders_ExportRequested_DestinationTypeMustBeConfigured" xml:space="preserve">
     <value>"Typ miejsca docelowego" musi być skonfigurowany.</value>
   </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Click_refresh_button" xml:space="preserve">
-    <value>Kliknij przycisk odświeżania</value>
+  <data name="CustomUploaderItem_GetRequestURL_RequestURLMustBeConfigured" xml:space="preserve">
+    <value>"Link żądania" musi być skonfigurowany.</value>
   </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Configured" xml:space="preserve">
-    <value>Skonfigurowany</value>
+  <data name="CustomUploaderItem_GetFileFormName_FileFormNameMustBeConfigured" xml:space="preserve">
+    <value>"Nazwa formularza pliku" musi być skonfigurowana.</value>
   </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Not_configured" xml:space="preserve">
-    <value>Nie skonfigurowany</value>
+  <data name="UploadersConfigForm_UpdatePastebinStatus_NotLoggedIn" xml:space="preserve">
+    <value>Niezalogowany.</value>
   </data>
-  <data name="TwitterTweetForm_SendTweet_Tweet_error" xml:space="preserve">
-    <value>Błąd tweeta</value>
+  <data name="UploadersConfigForm_UpdatePastebinStatus_LoggedIn" xml:space="preserve">
+    <value>Zalogowany.</value>
   </data>
-  <data name="UploadersConfigForm_PhotobucketCreateAlbum__0__successfully_created_" xml:space="preserve">
-    <value>{0} pomyślnie utworzony.</value>
+  <data name="OAuthControl_Status_NotLoggedIn" xml:space="preserve">
+    <value>Niezalogowany.</value>
+  </data>
+  <data name="OAuthControl_Status_LoggedIn" xml:space="preserve">
+    <value>Zalogowany.</value>
+  </data>
+  <data name="OAuthControl_Status_LoginFailed" xml:space="preserve">
+    <value>Logowanie nie powiodło się.</value>
+  </data>
+  <data name="txtB2BucketWatermark" xml:space="preserve">
+    <value>(Opcjonalnie) Używane tylko wtedy, gdy nie ustawiono bucketa podczas tworzenia klucza</value>
+  </data>
+  <data name="DuplicateNameNotAllowed" xml:space="preserve">
+    <value>Powielona nazwa jest niedozwolona.</value>
   </data>
   <data name="GoogleDrive_MyDrive_My_drive" xml:space="preserve">
     <value>Mój dysk</value>
   </data>
-  <data name="Headers" xml:space="preserve">
-    <value>Nagłówki</value>
+  <data name="ExportFailed" xml:space="preserve">
+    <value>Eksport nie powiódł się.</value>
+  </data>
+  <data name="LoggedInAs0" xml:space="preserve">
+    <value>Zalogowany jako {0}.</value>
   </data>
   <data name="FormattingFailed_JSON" xml:space="preserve">
     <value>Formatowanie nie powiodło się.</value>
@@ -205,38 +235,20 @@ Utworzone foldery:</value>
   <data name="FormattingFailed_XML" xml:space="preserve">
     <value>Formatowanie nie powiodło się.</value>
   </data>
-  <data name="CertFileNameEditor_EditValue_Browse_for_a_certificate_file___" xml:space="preserve">
-    <value>Przeglądaj w poszukiwaniu pliku certyfikatu...</value>
-  </data>
-  <data name="KeyFileNameEditor_EditValue_Browse_for_a_key_file___" xml:space="preserve">
-    <value>Przeglądaj w poszukiwaniu pliku klucza...</value>
-  </data>
   <data name="ShortenedURL" xml:space="preserve">
     <value>Skrócony link</value>
   </data>
-  <data name="OAuthControl_Status_LoggedIn" xml:space="preserve">
-    <value>Zalogowany.</value>
+  <data name="URL" xml:space="preserve">
+    <value>Link</value>
   </data>
-  <data name="OAuthControl_Status_NotLoggedIn" xml:space="preserve">
-    <value>Niezalogowany.</value>
-  </data>
-  <data name="UploadersConfigForm_MegaConfigureTab_Invalid_authentication" xml:space="preserve">
-    <value>Nieprawidłowe uwierzytelnienie</value>
-  </data>
-  <data name="UploadersConfigForm_oAuthJira_RefreshButtonClicked_Refresh_authorization_is_not_supported_" xml:space="preserve">
-    <value>Odświeżanie autoryzacji nie jest obsługiwane.</value>
-  </data>
-  <data name="UploadersConfigForm_Remove_all_custom_uploaders_Confirmation" xml:space="preserve">
-    <value>Usunąć wszystkie własne serwisy?</value>
-  </data>
-  <data name="CustomUploaderItem_GetFileFormName_FileFormNameMustBeConfigured" xml:space="preserve">
-    <value>"Nazwa formularza pliku" musi być skonfigurowana.</value>
-  </data>
-  <data name="CustomUploaderItem_GetRequestURL_RequestURLMustBeConfigured" xml:space="preserve">
-    <value>"Link żądania" musi być skonfigurowany.</value>
+  <data name="ThumbnailURL" xml:space="preserve">
+    <value>Link miniatury</value>
   </data>
   <data name="DeletionURL" xml:space="preserve">
     <value>Link usuwania</value>
+  </data>
+  <data name="StatusCode" xml:space="preserve">
+    <value>Kod statusu</value>
   </data>
   <data name="ResponseURL" xml:space="preserve">
     <value>Link odpowiedzi</value>
@@ -244,43 +256,16 @@ Utworzone foldery:</value>
   <data name="ResponseText" xml:space="preserve">
     <value>Tekst odpowiedzi</value>
   </data>
-  <data name="OAuthControl_OAuthControl_PasteVerificationCodeHere" xml:space="preserve">
-    <value>Wklej kod weryfikacyjny tutaj</value>
+  <data name="Headers" xml:space="preserve">
+    <value>Nagłówki</value>
   </data>
-  <data name="OAuthControl_Status_LoginFailed" xml:space="preserve">
-    <value>Logowanie nie powiodło się.</value>
-  </data>
-  <data name="OAuthInfo_OAuthInfo_New_account" xml:space="preserve">
-    <value>Nowe konto</value>
-  </data>
-  <data name="OneDrive_RootFolder_Root_folder" xml:space="preserve">
-    <value>Folder główny</value>
-  </data>
-  <data name="StatusCode" xml:space="preserve">
-    <value>Kod statusu</value>
-  </data>
-  <data name="ThumbnailURL" xml:space="preserve">
-    <value>Link miniatury</value>
-  </data>
-  <data name="UploadersConfigForm_BoxListFolders_Box_refresh_folders_list_failed" xml:space="preserve">
-    <value>Nie udało się zaktualizować listy folderów Box</value>
-  </data>
-  <data name="UploadersConfigForm_LoadSettings_Parent_album_path_e_g_" xml:space="preserve">
-    <value>Ścieżka albumu nadrzędnego, na przykład:</value>
-  </data>
-  <data name="UploadersConfigForm_SendSpaceRegister_SendSpace_Registration___" xml:space="preserve">
-    <value>Rejestracja w SendSpace</value>
-  </data>
-  <data name="txtB2BucketWatermark" xml:space="preserve">
-    <value>(Opcjonalnie) Używane tylko wtedy, gdy nie ustawiono bucketa podczas tworzenia klucza</value>
-  </data>
-  <data name="UploadersConfigForm_OneDriveAddFolder_Querying_folders___" xml:space="preserve">
-    <value>Przeszukiwanie folderów...</value>
-  </data>
-  <data name="Connect" xml:space="preserve">
-    <value>Połącz...</value>
+  <data name="Error" xml:space="preserve">
+    <value>Błąd</value>
   </data>
   <data name="Disconnect" xml:space="preserve">
     <value>Rozłącz</value>
+  </data>
+  <data name="Connect" xml:space="preserve">
+    <value>Połącz...</value>
   </data>
 </root>

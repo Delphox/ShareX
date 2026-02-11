@@ -1250,11 +1250,11 @@
   <data name="HotkeyType_QRCodeScanRegion" xml:space="preserve">
     <value>QR-код (сканувати область)</value>
   </data>
-  <data name="ScrollMethod_MouseWheel" xml:space="preserve">
-    <value>Коліщатко миші</value>
-  </data>
   <data name="ScrollMethod_DownArrow" xml:space="preserve">
     <value>Стрілка вниз</value>
+  </data>
+  <data name="ScrollMethod_MouseWheel" xml:space="preserve">
+    <value>Коліщатко миші</value>
   </data>
   <data name="ScrollMethod_PageDown" xml:space="preserve">
     <value>Сторінка вниз</value>

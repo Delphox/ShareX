@@ -140,6 +140,12 @@ namespace ShareX.UploadersLib
 
         #endregion Pastie
 
+        #region PrivateBin
+
+        public PrivateBinSettings PrivateBinSettings { get; set; } = new PrivateBinSettings();
+
+        #endregion PrivateBin
+
         #endregion Text uploaders
 
         #region File uploaders
@@ -241,13 +247,6 @@ namespace ShareX.UploadersLib
         public string EmailAutomaticSendTo { get; set; } = "";
 
         #endregion Email
-
-        #region Mega
-
-        public MegaAuthInfos MegaAuthInfos { get; set; } = null;
-        public string MegaParentNodeId { get; set; } = null;
-
-        #endregion Mega
 
         #region Amazon S3
 

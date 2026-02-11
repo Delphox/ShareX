@@ -219,7 +219,12 @@ WHERE Id = @Id;";
 
         public void Dispose()
         {
-            connection?.Dispose();
+            if (connection != null)
+            {
+                connection.Close();
+                connection.Dispose();
+                SqliteConnection.ClearPool(connection);
+            }
         }
     }
 }

@@ -3,6 +3,8 @@
     <TargetFramework>net48</TargetFramework>
     <OutputType>WinExe</OutputType>
     <PlatformTarget>x86</PlatformTarget>
+    <Platforms>x86</Platforms>
+    <Configurations>Release;Debug;Steam</Configurations>
     <AssemblyName>ShareX_Launcher</AssemblyName>
     <ApplicationIcon>ShareX_Icon.ico</ApplicationIcon>
     <UseWindowsForms>true</UseWindowsForms>

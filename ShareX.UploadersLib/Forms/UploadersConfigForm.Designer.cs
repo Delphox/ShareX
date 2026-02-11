@@ -57,6 +57,11 @@ namespace ShareX.UploadersLib
             txtRapidSharePremiumUserName = new System.Windows.Forms.TextBox();
             ttHelpTip = new System.Windows.Forms.ToolTip(components);
             cbAmazonS3CustomCNAME = new System.Windows.Forms.CheckBox();
+            gbPrivateBinCredentials = new System.Windows.Forms.GroupBox();
+            lblPrivateBinPassword = new System.Windows.Forms.Label();
+            lblPrivateBinUsername = new System.Windows.Forms.Label();
+            txtPrivateBinPassword = new System.Windows.Forms.TextBox();
+            txtPrivateBinUsername = new System.Windows.Forms.TextBox();
             txtB2CustomUrl = new System.Windows.Forms.TextBox();
             cbB2CustomUrl = new System.Windows.Forms.CheckBox();
             txtB2Bucket = new System.Windows.Forms.TextBox();
@@ -282,18 +287,6 @@ namespace ShareX.UploadersLib
             lblB2UploadPath = new System.Windows.Forms.Label();
             lblB2ApplicationKey = new System.Windows.Forms.Label();
             lblB2ApplicationKeyId = new System.Windows.Forms.Label();
-            tpMega = new System.Windows.Forms.TabPage();
-            btnMegaRefreshFolders = new System.Windows.Forms.Button();
-            lblMegaStatus = new System.Windows.Forms.Label();
-            btnMegaRegister = new System.Windows.Forms.Button();
-            lblMegaFolder = new System.Windows.Forms.Label();
-            lblMegaStatusTitle = new System.Windows.Forms.Label();
-            cbMegaFolder = new System.Windows.Forms.ComboBox();
-            lblMegaEmail = new System.Windows.Forms.Label();
-            btnMegaLogin = new System.Windows.Forms.Button();
-            txtMegaEmail = new System.Windows.Forms.TextBox();
-            txtMegaPassword = new System.Windows.Forms.TextBox();
-            lblMegaPassword = new System.Windows.Forms.Label();
             tpOwnCloud = new System.Windows.Forms.TabPage();
             cbOwnCloudAppendFileNameToURL = new System.Windows.Forms.CheckBox();
             nudOwnCloudExpiryTime = new System.Windows.Forms.NumericUpDown();
@@ -512,6 +505,16 @@ namespace ShareX.UploadersLib
             txtOneTimeSecretEmail = new System.Windows.Forms.TextBox();
             tpPastie = new System.Windows.Forms.TabPage();
             cbPastieIsPublic = new System.Windows.Forms.CheckBox();
+            tpPrivateBin = new System.Windows.Forms.TabPage();
+            lblPrivateBinCustomUrl = new System.Windows.Forms.Label();
+            txtPrivateBinCustomUrl = new System.Windows.Forms.TextBox();
+            lblPrivateBinExpiration = new System.Windows.Forms.Label();
+            cbPrivateBinExpiration = new System.Windows.Forms.ComboBox();
+            lblPrivateBinFormat = new System.Windows.Forms.Label();
+            cbPrivateBinFormat = new System.Windows.Forms.ComboBox();
+            lblPrivateBinPastePassword = new System.Windows.Forms.Label();
+            txtPrivateBinPastePassword = new System.Windows.Forms.TextBox();
+            cbPrivateBinBurnAfterReading = new System.Windows.Forms.CheckBox();
             tpImageUploaders = new System.Windows.Forms.TabPage();
             tcImageUploaders = new System.Windows.Forms.TabControl();
             tpImgur = new System.Windows.Forms.TabPage();
@@ -572,6 +575,7 @@ namespace ShareX.UploadersLib
             tcUploaders = new System.Windows.Forms.TabControl();
             tttvMain = new ShareX.HelpersLib.TabToTreeView();
             actRapidShareAccountType = new AccountTypeControl();
+            gbPrivateBinCredentials.SuspendLayout();
             tpURLShorteners.SuspendLayout();
             tcURLShorteners.SuspendLayout();
             tpBitly.SuspendLayout();
@@ -600,7 +604,6 @@ namespace ShareX.UploadersLib
             gbGoogleCloudStorageAdvanced.SuspendLayout();
             tpAzureStorage.SuspendLayout();
             tpBackblazeB2.SuspendLayout();
-            tpMega.SuspendLayout();
             tpOwnCloud.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudOwnCloudExpiryTime).BeginInit();
             tpMediaFire.SuspendLayout();
@@ -634,6 +637,7 @@ namespace ShareX.UploadersLib
             tpHastebin.SuspendLayout();
             tpOneTimeSecret.SuspendLayout();
             tpPastie.SuspendLayout();
+            tpPrivateBin.SuspendLayout();
             tpImageUploaders.SuspendLayout();
             tcImageUploaders.SuspendLayout();
             tpImgur.SuspendLayout();
@@ -670,6 +674,40 @@ namespace ShareX.UploadersLib
             ttHelpTip.SetToolTip(cbAmazonS3CustomCNAME, resources.GetString("cbAmazonS3CustomCNAME.ToolTip"));
             cbAmazonS3CustomCNAME.UseVisualStyleBackColor = true;
             cbAmazonS3CustomCNAME.CheckedChanged += cbAmazonS3CustomCNAME_CheckedChanged;
+            // 
+            // gbPrivateBinCredentials
+            // 
+            gbPrivateBinCredentials.Controls.Add(lblPrivateBinPassword);
+            gbPrivateBinCredentials.Controls.Add(lblPrivateBinUsername);
+            gbPrivateBinCredentials.Controls.Add(txtPrivateBinPassword);
+            gbPrivateBinCredentials.Controls.Add(txtPrivateBinUsername);
+            resources.ApplyResources(gbPrivateBinCredentials, "gbPrivateBinCredentials");
+            gbPrivateBinCredentials.Name = "gbPrivateBinCredentials";
+            gbPrivateBinCredentials.TabStop = false;
+            ttHelpTip.SetToolTip(gbPrivateBinCredentials, resources.GetString("gbPrivateBinCredentials.ToolTip"));
+            // 
+            // lblPrivateBinPassword
+            // 
+            resources.ApplyResources(lblPrivateBinPassword, "lblPrivateBinPassword");
+            lblPrivateBinPassword.Name = "lblPrivateBinPassword";
+            // 
+            // lblPrivateBinUsername
+            // 
+            resources.ApplyResources(lblPrivateBinUsername, "lblPrivateBinUsername");
+            lblPrivateBinUsername.Name = "lblPrivateBinUsername";
+            // 
+            // txtPrivateBinPassword
+            // 
+            resources.ApplyResources(txtPrivateBinPassword, "txtPrivateBinPassword");
+            txtPrivateBinPassword.Name = "txtPrivateBinPassword";
+            txtPrivateBinPassword.UseSystemPasswordChar = true;
+            txtPrivateBinPassword.TextChanged += txtPrivateBinPassword_TextChanged;
+            // 
+            // txtPrivateBinUsername
+            // 
+            resources.ApplyResources(txtPrivateBinUsername, "txtPrivateBinUsername");
+            txtPrivateBinUsername.Name = "txtPrivateBinUsername";
+            txtPrivateBinUsername.TextChanged += txtPrivateBinUsername_TextChanged;
             // 
             // txtB2CustomUrl
             // 
@@ -1040,7 +1078,6 @@ namespace ShareX.UploadersLib
             tcFileUploaders.Controls.Add(tpGoogleCloudStorage);
             tcFileUploaders.Controls.Add(tpAzureStorage);
             tcFileUploaders.Controls.Add(tpBackblazeB2);
-            tcFileUploaders.Controls.Add(tpMega);
             tcFileUploaders.Controls.Add(tpOwnCloud);
             tcFileUploaders.Controls.Add(tpMediaFire);
             tcFileUploaders.Controls.Add(tpPushbullet);
@@ -2297,90 +2334,6 @@ namespace ShareX.UploadersLib
             resources.ApplyResources(lblB2ApplicationKeyId, "lblB2ApplicationKeyId");
             lblB2ApplicationKeyId.Name = "lblB2ApplicationKeyId";
             // 
-            // tpMega
-            // 
-            tpMega.BackColor = System.Drawing.SystemColors.Window;
-            tpMega.Controls.Add(btnMegaRefreshFolders);
-            tpMega.Controls.Add(lblMegaStatus);
-            tpMega.Controls.Add(btnMegaRegister);
-            tpMega.Controls.Add(lblMegaFolder);
-            tpMega.Controls.Add(lblMegaStatusTitle);
-            tpMega.Controls.Add(cbMegaFolder);
-            tpMega.Controls.Add(lblMegaEmail);
-            tpMega.Controls.Add(btnMegaLogin);
-            tpMega.Controls.Add(txtMegaEmail);
-            tpMega.Controls.Add(txtMegaPassword);
-            tpMega.Controls.Add(lblMegaPassword);
-            resources.ApplyResources(tpMega, "tpMega");
-            tpMega.Name = "tpMega";
-            // 
-            // btnMegaRefreshFolders
-            // 
-            resources.ApplyResources(btnMegaRefreshFolders, "btnMegaRefreshFolders");
-            btnMegaRefreshFolders.Name = "btnMegaRefreshFolders";
-            btnMegaRefreshFolders.UseVisualStyleBackColor = true;
-            btnMegaRefreshFolders.Click += btnMegaRefreshFolders_Click;
-            // 
-            // lblMegaStatus
-            // 
-            resources.ApplyResources(lblMegaStatus, "lblMegaStatus");
-            lblMegaStatus.Name = "lblMegaStatus";
-            // 
-            // btnMegaRegister
-            // 
-            resources.ApplyResources(btnMegaRegister, "btnMegaRegister");
-            btnMegaRegister.Name = "btnMegaRegister";
-            btnMegaRegister.UseVisualStyleBackColor = true;
-            btnMegaRegister.Click += btnMegaRegister_Click;
-            // 
-            // lblMegaFolder
-            // 
-            resources.ApplyResources(lblMegaFolder, "lblMegaFolder");
-            lblMegaFolder.Name = "lblMegaFolder";
-            // 
-            // lblMegaStatusTitle
-            // 
-            resources.ApplyResources(lblMegaStatusTitle, "lblMegaStatusTitle");
-            lblMegaStatusTitle.Name = "lblMegaStatusTitle";
-            // 
-            // cbMegaFolder
-            // 
-            cbMegaFolder.DisplayMember = "DisplayName";
-            cbMegaFolder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cbMegaFolder.FormattingEnabled = true;
-            resources.ApplyResources(cbMegaFolder, "cbMegaFolder");
-            cbMegaFolder.Name = "cbMegaFolder";
-            cbMegaFolder.ValueMember = "Node";
-            cbMegaFolder.SelectedIndexChanged += cbMegaFolder_SelectedIndexChanged;
-            // 
-            // lblMegaEmail
-            // 
-            resources.ApplyResources(lblMegaEmail, "lblMegaEmail");
-            lblMegaEmail.Name = "lblMegaEmail";
-            // 
-            // btnMegaLogin
-            // 
-            resources.ApplyResources(btnMegaLogin, "btnMegaLogin");
-            btnMegaLogin.Name = "btnMegaLogin";
-            btnMegaLogin.UseVisualStyleBackColor = true;
-            btnMegaLogin.Click += btnMegaLogin_Click;
-            // 
-            // txtMegaEmail
-            // 
-            resources.ApplyResources(txtMegaEmail, "txtMegaEmail");
-            txtMegaEmail.Name = "txtMegaEmail";
-            // 
-            // txtMegaPassword
-            // 
-            resources.ApplyResources(txtMegaPassword, "txtMegaPassword");
-            txtMegaPassword.Name = "txtMegaPassword";
-            txtMegaPassword.UseSystemPasswordChar = true;
-            // 
-            // lblMegaPassword
-            // 
-            resources.ApplyResources(lblMegaPassword, "lblMegaPassword");
-            lblMegaPassword.Name = "lblMegaPassword";
-            // 
             // tpOwnCloud
             // 
             tpOwnCloud.BackColor = System.Drawing.SystemColors.Window;
@@ -3601,6 +3554,7 @@ namespace ShareX.UploadersLib
             tcTextUploaders.Controls.Add(tpHastebin);
             tcTextUploaders.Controls.Add(tpOneTimeSecret);
             tcTextUploaders.Controls.Add(tpPastie);
+            tcTextUploaders.Controls.Add(tpPrivateBin);
             resources.ApplyResources(tcTextUploaders, "tcTextUploaders");
             tcTextUploaders.Name = "tcTextUploaders";
             tcTextUploaders.SelectedIndex = 0;
@@ -3926,6 +3880,78 @@ namespace ShareX.UploadersLib
             cbPastieIsPublic.Name = "cbPastieIsPublic";
             cbPastieIsPublic.UseVisualStyleBackColor = true;
             cbPastieIsPublic.CheckedChanged += cbPastieIsPublic_CheckedChanged;
+            // 
+            // tpPrivateBin
+            // 
+            tpPrivateBin.BackColor = System.Drawing.SystemColors.Window;
+            tpPrivateBin.Controls.Add(lblPrivateBinCustomUrl);
+            tpPrivateBin.Controls.Add(txtPrivateBinCustomUrl);
+            tpPrivateBin.Controls.Add(lblPrivateBinExpiration);
+            tpPrivateBin.Controls.Add(cbPrivateBinExpiration);
+            tpPrivateBin.Controls.Add(lblPrivateBinFormat);
+            tpPrivateBin.Controls.Add(cbPrivateBinFormat);
+            tpPrivateBin.Controls.Add(lblPrivateBinPastePassword);
+            tpPrivateBin.Controls.Add(txtPrivateBinPastePassword);
+            tpPrivateBin.Controls.Add(cbPrivateBinBurnAfterReading);
+            tpPrivateBin.Controls.Add(gbPrivateBinCredentials);
+            resources.ApplyResources(tpPrivateBin, "tpPrivateBin");
+            tpPrivateBin.Name = "tpPrivateBin";
+            // 
+            // lblPrivateBinCustomUrl
+            // 
+            resources.ApplyResources(lblPrivateBinCustomUrl, "lblPrivateBinCustomUrl");
+            lblPrivateBinCustomUrl.Name = "lblPrivateBinCustomUrl";
+            // 
+            // txtPrivateBinCustomUrl
+            // 
+            resources.ApplyResources(txtPrivateBinCustomUrl, "txtPrivateBinCustomUrl");
+            txtPrivateBinCustomUrl.Name = "txtPrivateBinCustomUrl";
+            txtPrivateBinCustomUrl.TextChanged += txtPrivateBinCustomUrl_TextChanged;
+            // 
+            // lblPrivateBinExpiration
+            // 
+            resources.ApplyResources(lblPrivateBinExpiration, "lblPrivateBinExpiration");
+            lblPrivateBinExpiration.Name = "lblPrivateBinExpiration";
+            // 
+            // cbPrivateBinExpiration
+            // 
+            cbPrivateBinExpiration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbPrivateBinExpiration.FormattingEnabled = true;
+            resources.ApplyResources(cbPrivateBinExpiration, "cbPrivateBinExpiration");
+            cbPrivateBinExpiration.Name = "cbPrivateBinExpiration";
+            cbPrivateBinExpiration.SelectedIndexChanged += cbPrivateBinExpiration_SelectedIndexChanged;
+            // 
+            // lblPrivateBinFormat
+            // 
+            resources.ApplyResources(lblPrivateBinFormat, "lblPrivateBinFormat");
+            lblPrivateBinFormat.Name = "lblPrivateBinFormat";
+            // 
+            // cbPrivateBinFormat
+            // 
+            cbPrivateBinFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbPrivateBinFormat.FormattingEnabled = true;
+            resources.ApplyResources(cbPrivateBinFormat, "cbPrivateBinFormat");
+            cbPrivateBinFormat.Name = "cbPrivateBinFormat";
+            cbPrivateBinFormat.SelectedIndexChanged += cbPrivateBinFormat_SelectedIndexChanged;
+            // 
+            // lblPrivateBinPastePassword
+            // 
+            resources.ApplyResources(lblPrivateBinPastePassword, "lblPrivateBinPastePassword");
+            lblPrivateBinPastePassword.Name = "lblPrivateBinPastePassword";
+            // 
+            // txtPrivateBinPastePassword
+            // 
+            resources.ApplyResources(txtPrivateBinPastePassword, "txtPrivateBinPastePassword");
+            txtPrivateBinPastePassword.Name = "txtPrivateBinPastePassword";
+            txtPrivateBinPastePassword.UseSystemPasswordChar = true;
+            txtPrivateBinPastePassword.TextChanged += txtPrivateBinPastePassword_TextChanged;
+            // 
+            // cbPrivateBinBurnAfterReading
+            // 
+            resources.ApplyResources(cbPrivateBinBurnAfterReading, "cbPrivateBinBurnAfterReading");
+            cbPrivateBinBurnAfterReading.Name = "cbPrivateBinBurnAfterReading";
+            cbPrivateBinBurnAfterReading.UseVisualStyleBackColor = true;
+            cbPrivateBinBurnAfterReading.CheckedChanged += cbPrivateBinBurnAfterReading_CheckedChanged;
             // 
             // tpImageUploaders
             // 
@@ -4377,6 +4403,8 @@ namespace ShareX.UploadersLib
             Name = "UploadersConfigForm";
             Shown += UploadersConfigForm_Shown;
             Resize += UploadersConfigForm_Resize;
+            gbPrivateBinCredentials.ResumeLayout(false);
+            gbPrivateBinCredentials.PerformLayout();
             tpURLShorteners.ResumeLayout(false);
             tcURLShorteners.ResumeLayout(false);
             tpBitly.ResumeLayout(false);
@@ -4428,8 +4456,6 @@ namespace ShareX.UploadersLib
             tpAzureStorage.PerformLayout();
             tpBackblazeB2.ResumeLayout(false);
             tpBackblazeB2.PerformLayout();
-            tpMega.ResumeLayout(false);
-            tpMega.PerformLayout();
             tpOwnCloud.ResumeLayout(false);
             tpOwnCloud.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudOwnCloudExpiryTime).EndInit();
@@ -4489,6 +4515,8 @@ namespace ShareX.UploadersLib
             tpOneTimeSecret.PerformLayout();
             tpPastie.ResumeLayout(false);
             tpPastie.PerformLayout();
+            tpPrivateBin.ResumeLayout(false);
+            tpPrivateBin.PerformLayout();
             tpImageUploaders.ResumeLayout(false);
             tcImageUploaders.ResumeLayout(false);
             tpImgur.ResumeLayout(false);
@@ -4542,17 +4570,6 @@ namespace ShareX.UploadersLib
         private System.Windows.Forms.ComboBox cbFTPImage;
         private System.Windows.Forms.ComboBox cbFTPFile;
         private System.Windows.Forms.ComboBox cbFTPText;
-        private System.Windows.Forms.Label lblMegaStatus;
-        private System.Windows.Forms.Button btnMegaRefreshFolders;
-        private System.Windows.Forms.Button btnMegaRegister;
-        private System.Windows.Forms.Label lblMegaFolder;
-        private System.Windows.Forms.ComboBox cbMegaFolder;
-        private System.Windows.Forms.Label lblMegaEmail;
-        private System.Windows.Forms.TextBox txtMegaEmail;
-        private System.Windows.Forms.Label lblMegaPassword;
-        private System.Windows.Forms.TextBox txtMegaPassword;
-        private System.Windows.Forms.Button btnMegaLogin;
-        private System.Windows.Forms.Label lblMegaStatusTitle;
         private System.Windows.Forms.TextBox txtAmazonS3CustomDomain;
         private System.Windows.Forms.Label lblAmazonS3PathPreviewLabel;
         private System.Windows.Forms.Label lblAmazonS3PathPreview;
@@ -4809,7 +4826,6 @@ namespace ShareX.UploadersLib
         internal System.Windows.Forms.TabPage tpGoogleDrive;
         internal System.Windows.Forms.TabPage tpBox;
         internal System.Windows.Forms.TabPage tpAmazonS3;
-        internal System.Windows.Forms.TabPage tpMega;
         internal System.Windows.Forms.TabPage tpOwnCloud;
         internal System.Windows.Forms.TabPage tpMediaFire;
         internal System.Windows.Forms.TabPage tpPushbullet;
@@ -5026,6 +5042,21 @@ namespace ShareX.UploadersLib
         private System.Windows.Forms.CheckBox cbYouTubeShowDialog;
         private System.Windows.Forms.LinkLabel llYouTubePermissionsLink;
         private System.Windows.Forms.Label lblYouTubePermissionsTip;
+        private System.Windows.Forms.Label lblPrivateBinCustomUrl;
+        private System.Windows.Forms.TextBox txtPrivateBinCustomUrl;
+        private System.Windows.Forms.Label lblPrivateBinExpiration;
+        private System.Windows.Forms.ComboBox cbPrivateBinExpiration;
+        private System.Windows.Forms.Label lblPrivateBinFormat;
+        private System.Windows.Forms.ComboBox cbPrivateBinFormat;
+        private System.Windows.Forms.Label lblPrivateBinPastePassword;
+        private System.Windows.Forms.TextBox txtPrivateBinPastePassword;
+        private System.Windows.Forms.CheckBox cbPrivateBinBurnAfterReading;
+        private System.Windows.Forms.GroupBox gbPrivateBinCredentials;
+        private System.Windows.Forms.Label lblPrivateBinPassword;
+        private System.Windows.Forms.Label lblPrivateBinUsername;
+        private System.Windows.Forms.TextBox txtPrivateBinPassword;
+        private System.Windows.Forms.TextBox txtPrivateBinUsername;
+        internal System.Windows.Forms.TabPage tpPrivateBin;
         private OAuthLoopbackControl oauth2YouTube;
         private OAuthLoopbackControl oauth2GoogleDrive;
         private OAuthLoopbackControl oauth2GoogleCloudStorage;

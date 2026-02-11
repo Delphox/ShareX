@@ -173,6 +173,135 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
   <data name="&gt;&gt;cbAmazonS3CustomCNAME.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="lblPrivateBinPassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPrivateBinPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPrivateBinPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 73</value>
+  </data>
+  <data name="lblPrivateBinPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 15</value>
+  </data>
+  <data name="lblPrivateBinPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblPrivateBinPassword.Text" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinPassword.Name" xml:space="preserve">
+    <value>lblPrivateBinPassword</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinPassword.Parent" xml:space="preserve">
+    <value>gbPrivateBinCredentials</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinPassword.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblPrivateBinUsername.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPrivateBinUsername.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPrivateBinUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 25</value>
+  </data>
+  <data name="lblPrivateBinUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 15</value>
+  </data>
+  <data name="lblPrivateBinUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblPrivateBinUsername.Text" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinUsername.Name" xml:space="preserve">
+    <value>lblPrivateBinUsername</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinUsername.Parent" xml:space="preserve">
+    <value>gbPrivateBinCredentials</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinUsername.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtPrivateBinPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 89</value>
+  </data>
+  <data name="txtPrivateBinPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 23</value>
+  </data>
+  <data name="txtPrivateBinPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinPassword.Name" xml:space="preserve">
+    <value>txtPrivateBinPassword</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinPassword.Parent" xml:space="preserve">
+    <value>gbPrivateBinCredentials</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinPassword.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtPrivateBinUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 41</value>
+  </data>
+  <data name="txtPrivateBinUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 23</value>
+  </data>
+  <data name="txtPrivateBinUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinUsername.Name" xml:space="preserve">
+    <value>txtPrivateBinUsername</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinUsername.Parent" xml:space="preserve">
+    <value>gbPrivateBinCredentials</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinUsername.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbPrivateBinCredentials.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 232</value>
+  </data>
+  <data name="gbPrivateBinCredentials.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 126</value>
+  </data>
+  <data name="gbPrivateBinCredentials.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbPrivateBinCredentials.Text" xml:space="preserve">
+    <value>Credentials</value>
+  </data>
+  <data name="gbPrivateBinCredentials.ToolTip" xml:space="preserve">
+    <value>Some servers might require additional authorization</value>
+  </data>
+  <data name="&gt;&gt;gbPrivateBinCredentials.Name" xml:space="preserve">
+    <value>gbPrivateBinCredentials</value>
+  </data>
+  <data name="&gt;&gt;gbPrivateBinCredentials.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbPrivateBinCredentials.Parent" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;gbPrivateBinCredentials.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="txtB2CustomUrl.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 256</value>
   </data>
@@ -391,7 +520,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpBitly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>803, 539</value>
+    <value>178, 38</value>
   </data>
   <data name="tpBitly.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -652,7 +781,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpYourls.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpYourls.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -838,7 +967,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>4, 24</value>
   </data>
   <data name="tpPolr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpPolr.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1027,7 +1156,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpFirebaseDynamicLinks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpFirebaseDynamicLinks.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1288,7 +1417,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpKutt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpKutt.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1417,7 +1546,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpZeroWidthShortener.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpZeroWidthShortener.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1444,7 +1573,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>3, 3</value>
   </data>
   <data name="tcURLShorteners.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 567</value>
+    <value>186, 66</value>
   </data>
   <data name="tcURLShorteners.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1468,7 +1597,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpURLShorteners.Size" type="System.Drawing.Size, System.Drawing">
-    <value>817, 573</value>
+    <value>192, 72</value>
   </data>
   <data name="tpURLShorteners.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -6060,324 +6189,6 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
   <data name="&gt;&gt;tpBackblazeB2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="btnMegaRefreshFolders.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnMegaRefreshFolders.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 166</value>
-  </data>
-  <data name="btnMegaRefreshFolders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 24</value>
-  </data>
-  <data name="btnMegaRefreshFolders.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="btnMegaRefreshFolders.Text" xml:space="preserve">
-    <value>Refresh</value>
-  </data>
-  <data name="&gt;&gt;btnMegaRefreshFolders.Name" xml:space="preserve">
-    <value>btnMegaRefreshFolders</value>
-  </data>
-  <data name="&gt;&gt;btnMegaRefreshFolders.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnMegaRefreshFolders.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;btnMegaRefreshFolders.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblMegaStatus.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMegaStatus.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMegaStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 34</value>
-  </data>
-  <data name="lblMegaStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 15</value>
-  </data>
-  <data name="lblMegaStatus.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblMegaStatus.Text" xml:space="preserve">
-    <value>Configured / Not configured</value>
-  </data>
-  <data name="&gt;&gt;lblMegaStatus.Name" xml:space="preserve">
-    <value>lblMegaStatus</value>
-  </data>
-  <data name="&gt;&gt;lblMegaStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMegaStatus.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;lblMegaStatus.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnMegaRegister.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnMegaRegister.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 70</value>
-  </data>
-  <data name="btnMegaRegister.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 24</value>
-  </data>
-  <data name="btnMegaRegister.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnMegaRegister.Text" xml:space="preserve">
-    <value>Register...</value>
-  </data>
-  <data name="&gt;&gt;btnMegaRegister.Name" xml:space="preserve">
-    <value>btnMegaRegister</value>
-  </data>
-  <data name="&gt;&gt;btnMegaRegister.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnMegaRegister.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;btnMegaRegister.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblMegaFolder.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMegaFolder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMegaFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 152</value>
-  </data>
-  <data name="lblMegaFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 15</value>
-  </data>
-  <data name="lblMegaFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="lblMegaFolder.Text" xml:space="preserve">
-    <value>Folder:</value>
-  </data>
-  <data name="&gt;&gt;lblMegaFolder.Name" xml:space="preserve">
-    <value>lblMegaFolder</value>
-  </data>
-  <data name="&gt;&gt;lblMegaFolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMegaFolder.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;lblMegaFolder.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblMegaStatusTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMegaStatusTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMegaStatusTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 16</value>
-  </data>
-  <data name="lblMegaStatusTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 15</value>
-  </data>
-  <data name="lblMegaStatusTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblMegaStatusTitle.Text" xml:space="preserve">
-    <value>Status: </value>
-  </data>
-  <data name="&gt;&gt;lblMegaStatusTitle.Name" xml:space="preserve">
-    <value>lblMegaStatusTitle</value>
-  </data>
-  <data name="&gt;&gt;lblMegaStatusTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMegaStatusTitle.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;lblMegaStatusTitle.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="cbMegaFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 168</value>
-  </data>
-  <data name="cbMegaFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 23</value>
-  </data>
-  <data name="cbMegaFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;cbMegaFolder.Name" xml:space="preserve">
-    <value>cbMegaFolder</value>
-  </data>
-  <data name="&gt;&gt;cbMegaFolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbMegaFolder.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;cbMegaFolder.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblMegaEmail.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMegaEmail.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMegaEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 56</value>
-  </data>
-  <data name="lblMegaEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 15</value>
-  </data>
-  <data name="lblMegaEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblMegaEmail.Text" xml:space="preserve">
-    <value>Email:</value>
-  </data>
-  <data name="&gt;&gt;lblMegaEmail.Name" xml:space="preserve">
-    <value>lblMegaEmail</value>
-  </data>
-  <data name="&gt;&gt;lblMegaEmail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMegaEmail.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;lblMegaEmail.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btnMegaLogin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnMegaLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 118</value>
-  </data>
-  <data name="btnMegaLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 24</value>
-  </data>
-  <data name="btnMegaLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="btnMegaLogin.Text" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="&gt;&gt;btnMegaLogin.Name" xml:space="preserve">
-    <value>btnMegaLogin</value>
-  </data>
-  <data name="&gt;&gt;btnMegaLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnMegaLogin.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;btnMegaLogin.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="txtMegaEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 72</value>
-  </data>
-  <data name="txtMegaEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 23</value>
-  </data>
-  <data name="txtMegaEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txtMegaEmail.Name" xml:space="preserve">
-    <value>txtMegaEmail</value>
-  </data>
-  <data name="&gt;&gt;txtMegaEmail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtMegaEmail.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;txtMegaEmail.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="txtMegaPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 120</value>
-  </data>
-  <data name="txtMegaPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 23</value>
-  </data>
-  <data name="txtMegaPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;txtMegaPassword.Name" xml:space="preserve">
-    <value>txtMegaPassword</value>
-  </data>
-  <data name="&gt;&gt;txtMegaPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtMegaPassword.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;txtMegaPassword.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lblMegaPassword.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMegaPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMegaPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 104</value>
-  </data>
-  <data name="lblMegaPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 15</value>
-  </data>
-  <data name="lblMegaPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lblMegaPassword.Text" xml:space="preserve">
-    <value>Password:</value>
-  </data>
-  <data name="&gt;&gt;lblMegaPassword.Name" xml:space="preserve">
-    <value>lblMegaPassword</value>
-  </data>
-  <data name="&gt;&gt;lblMegaPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMegaPassword.Parent" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;lblMegaPassword.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="tpMega.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 64</value>
-  </data>
-  <data name="tpMega.Size" type="System.Drawing.Size, System.Drawing">
-    <value>803, 499</value>
-  </data>
-  <data name="tpMega.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="tpMega.Text" xml:space="preserve">
-    <value>Mega</value>
-  </data>
-  <data name="&gt;&gt;tpMega.Name" xml:space="preserve">
-    <value>tpMega</value>
-  </data>
-  <data name="&gt;&gt;tpMega.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpMega.Parent" xml:space="preserve">
-    <value>tcFileUploaders</value>
-  </data>
-  <data name="&gt;&gt;tpMega.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <data name="cbOwnCloudAppendFileNameToURL.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -6868,7 +6679,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpOwnCloud.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="cbMediaFireUseLongLink.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7078,7 +6889,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpMediaFire.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="lblPushbulletDevices.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7240,7 +7051,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpPushbullet.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="btnSendSpaceRegister.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -7420,7 +7231,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpSendSpace.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="cbLocalhostrDirectURL.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7579,7 +7390,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpHostr.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="lblLambdaInfo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7738,7 +7549,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpLambda.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="txtPomfResultURL.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 80</value>
@@ -7867,7 +7678,7 @@ For example, if your bucket is called "bucket.example.com" then URL will be "htt
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpPomf.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="cbSeafileAPIURL.Items" xml:space="preserve">
     <value>https://seacloud.cc/api2/</value>
@@ -8828,7 +8639,7 @@ Using an encrypted library disables sharing.</value>
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpSeafile.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <data name="cbStreamableUseDirectURL.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8996,7 +8807,7 @@ Using an encrypted library disables sharing.</value>
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpStreamable.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>18</value>
   </data>
   <data name="btnSulGetAPIKey.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -9101,7 +8912,7 @@ Using an encrypted library disables sharing.</value>
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpSul.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>19</value>
   </data>
   <data name="btnLithiioFetchAPIKey.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -9335,7 +9146,7 @@ Using an encrypted library disables sharing.</value>
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpLithiio.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>20</value>
   </data>
   <data name="cbPlikOneShot.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9842,7 +9653,7 @@ Using an encrypted library disables sharing.</value>
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpPlik.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>21</value>
   </data>
   <data name="oauth2YouTube.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 8</value>
@@ -10061,7 +9872,7 @@ Using an encrypted library disables sharing.</value>
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpYouTube.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>22</value>
   </data>
   <data name="lbSharedFolderAccounts.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -10367,7 +10178,7 @@ Using an encrypted library disables sharing.</value>
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpSharedFolder.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>23</value>
   </data>
   <data name="txtEmailAutomaticSendTo.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 408</value>
@@ -10787,7 +10598,7 @@ Using an encrypted library disables sharing.</value>
     <value>tcFileUploaders</value>
   </data>
   <data name="&gt;&gt;tpEmail.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>24</value>
   </data>
   <data name="tcFileUploaders.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -11390,7 +11201,7 @@ Using an encrypted library disables sharing.</value>
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpPaste_ee.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpPaste_ee.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -11609,7 +11420,7 @@ Using an encrypted library disables sharing.</value>
     <value>4, 24</value>
   </data>
   <data name="tpGist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpGist.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -11717,7 +11528,7 @@ Using an encrypted library disables sharing.</value>
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpUpaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpUpaste.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -11876,7 +11687,7 @@ Using an encrypted library disables sharing.</value>
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpHastebin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpHastebin.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -11903,7 +11714,7 @@ Using an encrypted library disables sharing.</value>
     <value>NoControl</value>
   </data>
   <data name="lblOneTimeSecretAPIKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 55</value>
+    <value>13, 64</value>
   </data>
   <data name="lblOneTimeSecretAPIKey.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 15</value>
@@ -11957,7 +11768,7 @@ Using an encrypted library disables sharing.</value>
     <value>1</value>
   </data>
   <data name="txtOneTimeSecretAPIKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 71</value>
+    <value>16, 80</value>
   </data>
   <data name="txtOneTimeSecretAPIKey.Size" type="System.Drawing.Size, System.Drawing">
     <value>304, 23</value>
@@ -12005,7 +11816,7 @@ Using an encrypted library disables sharing.</value>
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpOneTimeSecret.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpOneTimeSecret.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -12062,7 +11873,7 @@ Using an encrypted library disables sharing.</value>
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpPastie.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 38</value>
+    <value>803, 539</value>
   </data>
   <data name="tpPastie.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -12081,6 +11892,267 @@ Using an encrypted library disables sharing.</value>
   </data>
   <data name="&gt;&gt;tpPastie.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="lblPrivateBinCustomUrl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPrivateBinCustomUrl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPrivateBinCustomUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 16</value>
+  </data>
+  <data name="lblPrivateBinCustomUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 15</value>
+  </data>
+  <data name="lblPrivateBinCustomUrl.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lblPrivateBinCustomUrl.Text" xml:space="preserve">
+    <value>Custom URL:</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinCustomUrl.Name" xml:space="preserve">
+    <value>lblPrivateBinCustomUrl</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinCustomUrl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinCustomUrl.Parent" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinCustomUrl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtPrivateBinCustomUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 32</value>
+  </data>
+  <data name="txtPrivateBinCustomUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 23</value>
+  </data>
+  <data name="txtPrivateBinCustomUrl.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinCustomUrl.Name" xml:space="preserve">
+    <value>txtPrivateBinCustomUrl</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinCustomUrl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinCustomUrl.Parent" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinCustomUrl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPrivateBinExpiration.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPrivateBinExpiration.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPrivateBinExpiration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 64</value>
+  </data>
+  <data name="lblPrivateBinExpiration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 15</value>
+  </data>
+  <data name="lblPrivateBinExpiration.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lblPrivateBinExpiration.Text" xml:space="preserve">
+    <value>Expiration:</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinExpiration.Name" xml:space="preserve">
+    <value>lblPrivateBinExpiration</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinExpiration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinExpiration.Parent" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinExpiration.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbPrivateBinExpiration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 80</value>
+  </data>
+  <data name="cbPrivateBinExpiration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 23</value>
+  </data>
+  <data name="cbPrivateBinExpiration.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinExpiration.Name" xml:space="preserve">
+    <value>cbPrivateBinExpiration</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinExpiration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinExpiration.Parent" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinExpiration.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblPrivateBinFormat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPrivateBinFormat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPrivateBinFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 113</value>
+  </data>
+  <data name="lblPrivateBinFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 15</value>
+  </data>
+  <data name="lblPrivateBinFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lblPrivateBinFormat.Text" xml:space="preserve">
+    <value>Format:</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinFormat.Name" xml:space="preserve">
+    <value>lblPrivateBinFormat</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinFormat.Parent" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinFormat.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbPrivateBinFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 129</value>
+  </data>
+  <data name="cbPrivateBinFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 23</value>
+  </data>
+  <data name="cbPrivateBinFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinFormat.Name" xml:space="preserve">
+    <value>cbPrivateBinFormat</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinFormat.Parent" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinFormat.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblPrivateBinPastePassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPrivateBinPastePassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPrivateBinPastePassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 162</value>
+  </data>
+  <data name="lblPrivateBinPastePassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 15</value>
+  </data>
+  <data name="lblPrivateBinPastePassword.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="lblPrivateBinPastePassword.Text" xml:space="preserve">
+    <value>Paste password:</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinPastePassword.Name" xml:space="preserve">
+    <value>lblPrivateBinPastePassword</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinPastePassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinPastePassword.Parent" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;lblPrivateBinPastePassword.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtPrivateBinPastePassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 178</value>
+  </data>
+  <data name="txtPrivateBinPastePassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 23</value>
+  </data>
+  <data name="txtPrivateBinPastePassword.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinPastePassword.Name" xml:space="preserve">
+    <value>txtPrivateBinPastePassword</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinPastePassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinPastePassword.Parent" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;txtPrivateBinPastePassword.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cbPrivateBinBurnAfterReading.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbPrivateBinBurnAfterReading.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbPrivateBinBurnAfterReading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 207</value>
+  </data>
+  <data name="cbPrivateBinBurnAfterReading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 19</value>
+  </data>
+  <data name="cbPrivateBinBurnAfterReading.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="cbPrivateBinBurnAfterReading.Text" xml:space="preserve">
+    <value>Burn after reading</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinBurnAfterReading.Name" xml:space="preserve">
+    <value>cbPrivateBinBurnAfterReading</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinBurnAfterReading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinBurnAfterReading.Parent" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;cbPrivateBinBurnAfterReading.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tpPrivateBin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tpPrivateBin.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpPrivateBin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>803, 539</value>
+  </data>
+  <data name="tpPrivateBin.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="tpPrivateBin.Text" xml:space="preserve">
+    <value>PrivateBin</value>
+  </data>
+  <data name="&gt;&gt;tpPrivateBin.Name" xml:space="preserve">
+    <value>tpPrivateBin</value>
+  </data>
+  <data name="&gt;&gt;tpPrivateBin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpPrivateBin.Parent" xml:space="preserve">
+    <value>tcTextUploaders</value>
+  </data>
+  <data name="&gt;&gt;tpPrivateBin.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="tcTextUploaders.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

@@ -1190,8 +1190,14 @@
   <data name="HotkeyType_PinToScreenFromScreen" xml:space="preserve">
     <value>Ekrana sabitle (Ekrandan)</value>
   </data>
-  <data name="HotkeyType_Metadata" xml:space="preserve">
-    <value>Metadata</value>
+  <data name="HotkeyType_PauseScreenRecording" xml:space="preserve">
+    <value>Ekran kaydını duraklat</value>
+  </data>
+  <data name="ShapeType_DrawingFreehandArrow" xml:space="preserve">
+    <value>Serbest çizim ok</value>
+  </data>
+  <data name="HotkeyType_ImageBeautifier" xml:space="preserve">
+    <value>Resim güzelleştirici</value>
   </data>
   <data name="AfterCaptureTasks_BeautifyImage" xml:space="preserve">
     <value>Resmi güzelleştir</value>
@@ -1199,23 +1205,20 @@
   <data name="Check" xml:space="preserve">
     <value>Denetle</value>
   </data>
-  <data name="ImageBeautifierBackgroundType_Color" xml:space="preserve">
-    <value>Renk</value>
-  </data>
-  <data name="ImageBeautifierBackgroundType_Desktop" xml:space="preserve">
-    <value>Masaüstü</value>
+  <data name="HotkeyType_CustomWindow" xml:space="preserve">
+    <value>Önceden yapılandırılmış pencereyi yakala</value>
   </data>
   <data name="UpdateChannel_Dev" xml:space="preserve">
     <value>Dev</value>
   </data>
-  <data name="HotkeyType_CustomWindow" xml:space="preserve">
-    <value>Önceden yapılandırılmış pencereyi yakala</value>
+  <data name="UpdateChannel_PreRelease" xml:space="preserve">
+    <value>Ön sürüm</value>
   </data>
-  <data name="ToastClickAction_DeleteFile" xml:space="preserve">
-    <value>Yerel dosyayı sil</value>
+  <data name="UpdateChannel_Release" xml:space="preserve">
+    <value>Sürüm</value>
   </data>
-  <data name="ScrollMethod_DownArrow" xml:space="preserve">
-    <value>Aşağı ok</value>
+  <data name="DownloaderForm_FileDownloader_ProgressChanged_Progress" xml:space="preserve">
+    <value>İlerleme</value>
   </data>
   <data name="DownloaderForm_FileDownloader_ProgressChanged_DownloadSpeed" xml:space="preserve">
     <value>İndirme hızı</value>
@@ -1223,8 +1226,20 @@
   <data name="DownloaderForm_FileDownloader_ProgressChanged_FileSize" xml:space="preserve">
     <value>Dosya boyutu</value>
   </data>
-  <data name="ShapeType_DrawingFreehandArrow" xml:space="preserve">
-    <value>Serbest çizim ok</value>
+  <data name="HotkeyType_ActiveWindowBorderless" xml:space="preserve">
+    <value>Aktif pencereyi çerçevesiz yap</value>
+  </data>
+  <data name="HotkeyType_ActiveWindowTopMost" xml:space="preserve">
+    <value>Aktif pencereyi en üstte tut</value>
+  </data>
+  <data name="HotkeyType_PinToScreenCloseAll" xml:space="preserve">
+    <value>Ekrana sabitle (Tümünü kapat)</value>
+  </data>
+  <data name="ImageBeautifierBackgroundType_Color" xml:space="preserve">
+    <value>Renk</value>
+  </data>
+  <data name="ImageBeautifierBackgroundType_Desktop" xml:space="preserve">
+    <value>Masaüstü</value>
   </data>
   <data name="ImageBeautifierBackgroundType_Gradient" xml:space="preserve">
     <value>Gradyan</value>
@@ -1232,14 +1247,20 @@
   <data name="ImageBeautifierBackgroundType_Image" xml:space="preserve">
     <value>Resim</value>
   </data>
-  <data name="HotkeyType_ImageBeautifier" xml:space="preserve">
-    <value>Resim güzelleştirici</value>
+  <data name="ImageBeautifierBackgroundType_Transparent" xml:space="preserve">
+    <value>Saydam</value>
   </data>
-  <data name="HotkeyType_ActiveWindowBorderless" xml:space="preserve">
-    <value>Aktif pencereyi çerçevesiz yap</value>
+  <data name="HotkeyType_Metadata" xml:space="preserve">
+    <value>Metadata</value>
   </data>
-  <data name="HotkeyType_ActiveWindowTopMost" xml:space="preserve">
-    <value>Aktif pencereyi en üstte tut</value>
+  <data name="HotkeyType_StripMetadata" xml:space="preserve">
+    <value>Metadata’yı temizle</value>
+  </data>
+  <data name="HotkeyType_QRCodeScanRegion" xml:space="preserve">
+    <value>QR kodu (Bölge tara)</value>
+  </data>
+  <data name="ScrollMethod_DownArrow" xml:space="preserve">
+    <value>Aşağı ok</value>
   </data>
   <data name="ScrollMethod_MouseWheel" xml:space="preserve">
     <value>Mouse tekerleği</value>
@@ -1247,31 +1268,10 @@
   <data name="ScrollMethod_PageDown" xml:space="preserve">
     <value>Page down</value>
   </data>
-  <data name="HotkeyType_PauseScreenRecording" xml:space="preserve">
-    <value>Ekran kaydını duraklat</value>
-  </data>
-  <data name="HotkeyType_PinToScreenCloseAll" xml:space="preserve">
-    <value>Ekrana sabitle (Tümünü kapat)</value>
-  </data>
-  <data name="UpdateChannel_PreRelease" xml:space="preserve">
-    <value>Ön sürüm</value>
-  </data>
-  <data name="DownloaderForm_FileDownloader_ProgressChanged_Progress" xml:space="preserve">
-    <value>İlerleme</value>
-  </data>
-  <data name="HotkeyType_QRCodeScanRegion" xml:space="preserve">
-    <value>QR kodu (Bölge tara)</value>
-  </data>
-  <data name="UpdateChannel_Release" xml:space="preserve">
-    <value>Sürüm</value>
-  </data>
   <data name="ScrollMethod_ScrollMessage" xml:space="preserve">
     <value>Kaydırma mesajı</value>
   </data>
-  <data name="HotkeyType_StripMetadata" xml:space="preserve">
-    <value>Metadata’yı temizle</value>
-  </data>
-  <data name="ImageBeautifierBackgroundType_Transparent" xml:space="preserve">
-    <value>Saydam</value>
+  <data name="ToastClickAction_DeleteFile" xml:space="preserve">
+    <value>Yerel dosyayı sil</value>
   </data>
 </root>

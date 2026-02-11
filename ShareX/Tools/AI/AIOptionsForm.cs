@@ -25,9 +25,11 @@
 
 using ShareX.HelpersLib;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text.Json;
 using System.Windows.Forms;
 
 namespace ShareX
@@ -113,18 +115,11 @@ namespace ShareX
             gbOpenAI.Visible = false;
             gbGemini.Visible = false;
             gbOpenRouter.Visible = false;
-            lblOpenAICustomURL.Visible = false;
-            txtOpenAICustomURL.Visible = false;
 
             switch ((AIProvider)cbProvider.SelectedIndex)
             {
                 case AIProvider.OpenAI:
                     gbOpenAI.Visible = true;
-                    break;
-                case AIProvider.Custom:
-                    gbOpenAI.Visible = true;
-                    lblOpenAICustomURL.Visible = true;
-                    txtOpenAICustomURL.Visible = true;
                     break;
                 case AIProvider.Gemini:
                     gbGemini.Visible = true;
@@ -135,11 +130,112 @@ namespace ShareX
             }
         }
 
+        private void btnAPIKeyHelp_Click(object sender, EventArgs e)
+        {
+            string url = "";
+
+            switch ((AIProvider)cbProvider.SelectedIndex)
+            {
+                case AIProvider.OpenAI:
+                    url = "https://platform.openai.com/api-keys";
+                    break;
+                case AIProvider.Gemini:
+                    url = "https://aistudio.google.com/app/apikey";
+                    break;
+                case AIProvider.OpenRouter:
+                    url = "https://openrouter.ai/keys";
+                    break;
+            }
+
+            URLHelpers.OpenURL(url);
+        }
+
+        private async void btnOpenAILoadModels_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                btnTestConnection.Enabled = false;
+                btnOpenAILoadModels.Enabled = false;
+                lblTestStatus.ForeColor = Color.Gold;
+                lblTestStatus.Text = "Loading Models...";
+
+                HttpClient client = HttpClientFactory.Create();
+                HttpRequestMessage req = null;
+                AIProvider provider = (AIProvider)cbProvider.SelectedIndex;
+
+                string openAIKey = txtOpenAIAPIKey.Text?.Trim();
+                if (string.IsNullOrEmpty(openAIKey))
+                {
+                    openAIKey = "";
+                }
+
+                string openAIBaseURL = txtOpenAICustomURL.Text;
+                if (string.IsNullOrWhiteSpace(openAIBaseURL))
+                {
+                    openAIBaseURL = "https://api.openai.com";
+                }
+                string openAIURL = URLHelpers.CombineURL(openAIBaseURL, "v1/models");
+                req = new HttpRequestMessage(HttpMethod.Get, openAIURL);
+                req.Headers.Authorization = new AuthenticationHeaderValue("Bearer", openAIKey);
+
+                using (req)
+                using (HttpResponseMessage resp = await client.SendAsync(req))
+                {
+                    bool ok = (int)resp.StatusCode >= 200 && (int)resp.StatusCode < 300;
+                    string text = await resp.Content.ReadAsStringAsync();
+
+                    if (ok)
+                    {
+                        var json = JsonSerializer.Deserialize<JsonElement>(text);
+                        var modelIds = new List<string>();
+                        int modelCount = 0;
+                        cbOpenAIModel.Items.Clear();
+                        foreach (var item in json.GetProperty("data").EnumerateArray())
+                        {
+                            cbOpenAIModel.Items.Add(item.GetProperty("id").GetString());
+                            modelCount++;
+                        }
+                        if (modelCount == 0)
+                        {
+                            lblTestStatus.ForeColor = Color.IndianRed;
+                            lblTestStatus.Text = "No models found.";
+                            return;
+                        }
+                        lblTestStatus.ForeColor = Color.LimeGreen;
+                        lblTestStatus.Text = modelCount + " models loaded.";
+                    }
+                    else
+                    {
+                        lblTestStatus.ForeColor = Color.IndianRed;
+                        string summary = resp.ReasonPhrase;
+                        if (string.IsNullOrWhiteSpace(summary)) summary = resp.StatusCode.ToString();
+                        if (!string.IsNullOrWhiteSpace(text))
+                        {
+                            if (text.Length > 200) text = text.Substring(0, 200) + "...";
+                            summary += ": " + text;
+                        }
+                        lblTestStatus.Text = summary;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                lblTestStatus.ForeColor = Color.IndianRed;
+                lblTestStatus.Text = ex.Message;
+            }
+            finally
+            {
+                btnTestConnection.Enabled = true;
+                btnOpenAILoadModels.Enabled = true;
+            }
+        }
+
         private async void btnTestConnection_Click(object sender, EventArgs e)
         {
             try
             {
                 btnTestConnection.Enabled = false;
+                btnOpenAILoadModels.Enabled = false;
                 lblTestStatus.ForeColor = Color.Gold;
                 lblTestStatus.Text = "Testing...";
 
@@ -150,7 +246,6 @@ namespace ShareX
                 switch (provider)
                 {
                     case AIProvider.OpenAI:
-                    case AIProvider.Custom:
                         string openAIKey = txtOpenAIAPIKey.Text?.Trim();
                         if (string.IsNullOrEmpty(openAIKey))
                         {
@@ -162,11 +257,9 @@ namespace ShareX
                         string openAIBaseURL = txtOpenAICustomURL.Text;
                         if (string.IsNullOrWhiteSpace(openAIBaseURL))
                         {
-                            openAIBaseURL = "https://api.openai.com/v1";
+                            openAIBaseURL = "https://api.openai.com";
                         }
-                        openAIBaseURL = openAIBaseURL.Trim().TrimEnd('/');
-
-                        string openAIURL = openAIBaseURL + "/models";
+                        string openAIURL = URLHelpers.CombineURL(openAIBaseURL, "v1/models");
                         req = new HttpRequestMessage(HttpMethod.Get, openAIURL);
                         req.Headers.Authorization = new AuthenticationHeaderValue("Bearer", openAIKey);
                         break;
@@ -234,26 +327,13 @@ namespace ShareX
             finally
             {
                 btnTestConnection.Enabled = true;
+                btnOpenAILoadModels.Enabled = true;
             }
         }
 
-        private void btnAPIKeyHelp_Click(object sender, EventArgs e)
+        private void lblTestStatus_MouseHover(object sender, EventArgs e)
         {
-            string url = "";
-            switch ((AIProvider)cbProvider.SelectedIndex)
-            {
-                case AIProvider.OpenAI:
-                case AIProvider.Custom:
-                    url = "https://platform.openai.com/api-keys";
-                    break;
-                case AIProvider.Gemini:
-                    url = "https://aistudio.google.com/app/apikey";
-                    break;
-                case AIProvider.OpenRouter:
-                    url = "https://openrouter.ai/keys";
-                    break;
-            }
-            URLHelpers.OpenURL(url);
+            tipStatus.SetToolTip(this, lblTestStatus.Text);
         }
 
         private void btnOK_Click(object sender, EventArgs e)

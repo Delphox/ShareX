@@ -203,7 +203,7 @@ namespace ShareX
 
             if (Settings != null && Settings.UseMachineSpecificUploadersConfig)
             {
-                string sanitizedMachineName = FileHelpers.SanitizeFileName(Environment.MachineName);
+                string sanitizedMachineName = FileHelpers.SanitizeFileName(Environment.MachineName.ToLowerInvariant());
 
                 if (!string.IsNullOrEmpty(sanitizedMachineName))
                 {

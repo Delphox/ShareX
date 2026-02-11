@@ -192,7 +192,25 @@ namespace ShareX
             string json = JsonSerializer.Serialize(request);
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            HttpResponseMessage response = await httpClient.PostAsync("https://api.openai.com/v1/responses", content);
+            string url;
+
+            if (!string.IsNullOrEmpty(CustomURL))
+            {
+                url = CustomURL;
+            }
+            else
+            {
+                url = "https://api.openai.com";
+            }
+
+            string path = "/v1/responses";
+
+            if (!url.EndsWith(path))
+            {
+                url = URLHelpers.CombineURL(url, path);
+            }
+
+            HttpResponseMessage response = await httpClient.PostAsync(url, content);
             response.EnsureSuccessStatusCode();
             string responseString = await response.Content.ReadAsStringAsync();
 

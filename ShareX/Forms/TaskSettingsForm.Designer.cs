@@ -179,6 +179,7 @@
             lblRegionCaptureFixedSizeHeight = new System.Windows.Forms.Label();
             nudRegionCaptureFixedSizeHeight = new System.Windows.Forms.NumericUpDown();
             cbRegionCaptureIsFixedSize = new System.Windows.Forms.CheckBox();
+            cbRegionCaptureShowCenterCrosshair = new System.Windows.Forms.CheckBox();
             cbRegionCaptureShowCrosshair = new System.Windows.Forms.CheckBox();
             lblRegionCaptureMagnifierPixelSize = new System.Windows.Forms.Label();
             lblRegionCaptureMagnifierPixelCount = new System.Windows.Forms.Label();
@@ -1393,6 +1394,7 @@
             tpRegionCapture.Controls.Add(cbRegionCaptureShowFPS);
             tpRegionCapture.Controls.Add(flpRegionCaptureFixedSize);
             tpRegionCapture.Controls.Add(cbRegionCaptureIsFixedSize);
+            tpRegionCapture.Controls.Add(cbRegionCaptureShowCenterCrosshair);
             tpRegionCapture.Controls.Add(cbRegionCaptureShowCrosshair);
             tpRegionCapture.Controls.Add(lblRegionCaptureMagnifierPixelSize);
             tpRegionCapture.Controls.Add(lblRegionCaptureMagnifierPixelCount);
@@ -1510,6 +1512,13 @@
             cbRegionCaptureIsFixedSize.Name = "cbRegionCaptureIsFixedSize";
             cbRegionCaptureIsFixedSize.UseVisualStyleBackColor = true;
             cbRegionCaptureIsFixedSize.CheckedChanged += cbRegionCaptureIsFixedSize_CheckedChanged;
+            // 
+            // cbRegionCaptureShowCenterCrosshair
+            // 
+            resources.ApplyResources(cbRegionCaptureShowCenterCrosshair, "cbRegionCaptureShowCenterCrosshair");
+            cbRegionCaptureShowCenterCrosshair.Name = "cbRegionCaptureShowCenterCrosshair";
+            cbRegionCaptureShowCenterCrosshair.UseVisualStyleBackColor = true;
+            cbRegionCaptureShowCenterCrosshair.CheckedChanged += cbRegionCaptureShowCenterCrosshair_CheckedChanged;
             // 
             // cbRegionCaptureShowCrosshair
             // 
@@ -2732,6 +2741,7 @@
         private System.Windows.Forms.NumericUpDown nudRegionCaptureMagnifierPixelCount;
         private System.Windows.Forms.NumericUpDown nudRegionCaptureMagnifierPixelSize;
         private System.Windows.Forms.Label lblRegionCaptureMagnifierPixelSize;
+        private System.Windows.Forms.CheckBox cbRegionCaptureShowCenterCrosshair;
         private System.Windows.Forms.CheckBox cbRegionCaptureShowCrosshair;
         private System.Windows.Forms.FlowLayoutPanel flpRegionCaptureFixedSize;
         private System.Windows.Forms.Label lblRegionCaptureFixedSizeWidth;

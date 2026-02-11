@@ -19,7 +19,7 @@ namespace ShareX.UploadersLib.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -378,15 +378,6 @@ namespace ShareX.UploadersLib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Issue not found.
-        /// </summary>
-        internal static string JiraUpload_ValidateIssueId_Issue_not_found {
-            get {
-                return ResourceManager.GetString("JiraUpload_ValidateIssueId_Issue_not_found", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Browse for a key file....
         /// </summary>
         internal static string KeyFileNameEditor_EditValue_Browse_for_a_key_file___ {
@@ -450,16 +441,6 @@ namespace ShareX.UploadersLib.Properties {
         internal static System.Drawing.Icon MediaFire {
             get {
                 object obj = ResourceManager.GetObject("MediaFire", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon Mega {
-            get {
-                object obj = ResourceManager.GetObject("Mega", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -643,6 +624,16 @@ namespace ShareX.UploadersLib.Properties {
             get {
                 object obj = ResourceManager.GetObject("Pomf", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PrivateBin {
+            get {
+                object obj = ResourceManager.GetObject("PrivateBin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -905,42 +896,6 @@ namespace ShareX.UploadersLib.Properties {
         internal static string UploadersConfigForm_Login_successful {
             get {
                 return ResourceManager.GetString("UploadersConfigForm_Login_successful", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Click refresh button.
-        /// </summary>
-        internal static string UploadersConfigForm_MegaConfigureTab_Click_refresh_button {
-            get {
-                return ResourceManager.GetString("UploadersConfigForm_MegaConfigureTab_Click_refresh_button", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Configured.
-        /// </summary>
-        internal static string UploadersConfigForm_MegaConfigureTab_Configured {
-            get {
-                return ResourceManager.GetString("UploadersConfigForm_MegaConfigureTab_Configured", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid authentication.
-        /// </summary>
-        internal static string UploadersConfigForm_MegaConfigureTab_Invalid_authentication {
-            get {
-                return ResourceManager.GetString("UploadersConfigForm_MegaConfigureTab_Invalid_authentication", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Not configured.
-        /// </summary>
-        internal static string UploadersConfigForm_MegaConfigureTab_Not_configured {
-            get {
-                return ResourceManager.GetString("UploadersConfigForm_MegaConfigureTab_Not_configured", resourceCulture);
             }
         }
         

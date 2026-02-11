@@ -117,7 +117,6 @@ FFmpeg: https://www.ffmpeg.org
 Recorder devices: https://github.com/rdp/screen-capture-recorder-to-video-windows-free
 FluentFTP: https://github.com/robinrodricks/FluentFTP
 ZXing.Net: https://github.com/micjahn/ZXing.Net
-MegaApiClient: https://github.com/gpailler/MegaApiClient
 Blob Emoji: http://blobs.gg
 ExifTool: https://exiftool.org
 ", FontStyle.Regular);

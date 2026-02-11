@@ -34,8 +34,6 @@ namespace ShareX
             switch (options.Provider)
             {
                 case AIProvider.OpenAI:
-                    return new OpenAIProvider(options.OpenAIAPIKey, options.OpenAIModel);
-                case AIProvider.Custom:
                     return new OpenAIProvider(options.OpenAIAPIKey, options.OpenAIModel, options.OpenAICustomURL);
                 case AIProvider.Gemini:
                     return new GeminiProvider(options.GeminiAPIKey, options.GeminiModel);

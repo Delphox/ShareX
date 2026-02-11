@@ -28,11 +28,13 @@ namespace ShareX
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AIOptionsForm));
             lblProvider = new System.Windows.Forms.Label();
             cbProvider = new System.Windows.Forms.ComboBox();
             btnAPIKeyHelp = new System.Windows.Forms.Button();
             gbOpenAI = new System.Windows.Forms.GroupBox();
+            btnOpenAILoadModels = new System.Windows.Forms.Button();
             lblOpenAIAPIKey = new System.Windows.Forms.Label();
             txtOpenAIAPIKey = new System.Windows.Forms.TextBox();
             lblOpenAIModel = new System.Windows.Forms.Label();
@@ -60,6 +62,7 @@ namespace ShareX
             cbAutoCopyResult = new System.Windows.Forms.CheckBox();
             btnOK = new System.Windows.Forms.Button();
             btnCancel = new System.Windows.Forms.Button();
+            tipStatus = new System.Windows.Forms.ToolTip(components);
             gbOpenAI.SuspendLayout();
             gbGemini.SuspendLayout();
             gbOpenRouter.SuspendLayout();
@@ -88,6 +91,7 @@ namespace ShareX
             // 
             // gbOpenAI
             // 
+            gbOpenAI.Controls.Add(btnOpenAILoadModels);
             gbOpenAI.Controls.Add(lblOpenAIAPIKey);
             gbOpenAI.Controls.Add(txtOpenAIAPIKey);
             gbOpenAI.Controls.Add(lblOpenAIModel);
@@ -101,6 +105,15 @@ namespace ShareX
             resources.ApplyResources(gbOpenAI, "gbOpenAI");
             gbOpenAI.Name = "gbOpenAI";
             gbOpenAI.TabStop = false;
+            // 
+            // btnOpenAILoadModels
+            // 
+            resources.ApplyResources(btnOpenAILoadModels, "btnOpenAILoadModels");
+            btnOpenAILoadModels.Image = Properties.Resources.arrow_circle_double_135;
+            btnOpenAILoadModels.Name = "btnOpenAILoadModels";
+            tipStatus.SetToolTip(btnOpenAILoadModels, resources.GetString("btnOpenAILoadModels.ToolTip"));
+            btnOpenAILoadModels.UseVisualStyleBackColor = true;
+            btnOpenAILoadModels.Click += btnOpenAILoadModels_Click;
             // 
             // lblOpenAIAPIKey
             // 
@@ -236,6 +249,7 @@ namespace ShareX
             // 
             resources.ApplyResources(lblTestStatus, "lblTestStatus");
             lblTestStatus.Name = "lblTestStatus";
+            lblTestStatus.MouseHover += lblTestStatus_MouseHover;
             // 
             // cbAutoStartRegion
             // 
@@ -333,5 +347,7 @@ namespace ShareX
         private System.Windows.Forms.CheckBox cbAutoCopyResult;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnOpenAILoadModels;
+        private System.Windows.Forms.ToolTip tipStatus;
     }
 }
