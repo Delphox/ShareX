@@ -395,8 +395,8 @@ namespace ShareX.ScreenCaptureLib
                     case FFmpegVideoCodec.libsvtav1:
                     case FFmpegVideoCodec.libaom_av1:
                     case FFmpegVideoCodec.librav1e:
-                        // Reuse VPx tab for bitrate control for software AV1
-                        tcFFmpegVideoCodecs.SelectTabWithoutFocus(tpVpx);
+                        // Reuse X264 tab for CRF/bitrate control for software AV1
+                        tcFFmpegVideoCodecs.SelectTabWithoutFocus(tpX264);
                         break;
                 }
             }

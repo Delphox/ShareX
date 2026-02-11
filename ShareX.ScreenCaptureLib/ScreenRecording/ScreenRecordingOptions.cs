@@ -256,17 +256,38 @@ namespace ShareX.ScreenCaptureLib
                             break;
                         case FFmpegVideoCodec.libsvtav1:
                             args.Append("-c:v libsvtav1 ");
-                            args.Append($"-b:v {FFmpeg.VPx_Bitrate}k ");
+                            if (FFmpeg.x264_Use_Bitrate)
+                            {
+                                args.Append($"-b:v {FFmpeg.x264_Bitrate}k ");
+                            }
+                            else
+                            {
+                                args.Append($"-crf {FFmpeg.x264_CRF} ");
+                            }
                             args.Append("-pix_fmt yuv420p ");
                             break;
                         case FFmpegVideoCodec.libaom_av1:
                             args.Append("-c:v libaom-av1 ");
-                            args.Append($"-b:v {FFmpeg.VPx_Bitrate}k ");
+                            if (FFmpeg.x264_Use_Bitrate)
+                            {
+                                args.Append($"-b:v {FFmpeg.x264_Bitrate}k ");
+                            }
+                            else
+                            {
+                                args.Append($"-crf {FFmpeg.x264_CRF} ");
+                            }
                             args.Append("-pix_fmt yuv420p ");
                             break;
                         case FFmpegVideoCodec.librav1e:
                             args.Append("-c:v librav1e ");
-                            args.Append($"-b:v {FFmpeg.VPx_Bitrate}k ");
+                            if (FFmpeg.x264_Use_Bitrate)
+                            {
+                                args.Append($"-b:v {FFmpeg.x264_Bitrate}k ");
+                            }
+                            else
+                            {
+                                args.Append($"-crf {FFmpeg.x264_CRF} ");
+                            }
                             args.Append("-pix_fmt yuv420p ");
                             break;
                         case FFmpegVideoCodec.libvpx: // https://trac.ffmpeg.org/wiki/Encode/VP8
