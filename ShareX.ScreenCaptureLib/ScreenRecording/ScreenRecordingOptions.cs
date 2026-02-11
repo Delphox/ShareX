@@ -255,7 +255,6 @@ namespace ShareX.ScreenCaptureLib
                             args.Append("-movflags +faststart "); // This will move some information to the beginning of your file and allow the video to begin playing before it is completely downloaded by the viewer
                             break;
                         case FFmpegVideoCodec.libsvtav1:
-                            args.Append("-c:v libsvtav1 ");
                             if (FFmpeg.x264_Use_Bitrate)
                             {
                                 args.Append($"-b:v {FFmpeg.x264_Bitrate}k ");
@@ -267,7 +266,6 @@ namespace ShareX.ScreenCaptureLib
                             args.Append("-pix_fmt yuv420p ");
                             break;
                         case FFmpegVideoCodec.libaom_av1:
-                            args.Append("-c:v libaom-av1 ");
                             if (FFmpeg.x264_Use_Bitrate)
                             {
                                 args.Append($"-b:v {FFmpeg.x264_Bitrate}k ");
@@ -279,7 +277,6 @@ namespace ShareX.ScreenCaptureLib
                             args.Append("-pix_fmt yuv420p ");
                             break;
                         case FFmpegVideoCodec.librav1e:
-                            args.Append("-c:v librav1e ");
                             if (FFmpeg.x264_Use_Bitrate)
                             {
                                 args.Append($"-b:v {FFmpeg.x264_Bitrate}k ");
