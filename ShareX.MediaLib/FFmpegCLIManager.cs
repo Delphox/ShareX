@@ -230,7 +230,7 @@ namespace ShareX.MediaLib
             string output = Output.ToString();
             string[] lines = output.Lines();
             bool isAudio = false;
-            Regex regex = new Regex(@"\[dshow @ \w+\] +""(.+)""", RegexOptions.Compiled | RegexOptions.CultureInvariant);
+            Regex regex = new Regex(@"\[(?:dshow|in#0) @ \w+\] +""(.+)""", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
             foreach (string line in lines)
             {
