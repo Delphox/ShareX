@@ -55,6 +55,11 @@ namespace ShareX.HelpersLib
                 {
                     try
                     {
+                        if (!IsValidURL(url))
+                        {
+                            throw new Exception("Invalid URL.");
+                        }
+
                         using (Process process = new Process())
                         {
                             ProcessStartInfo psi = new ProcessStartInfo();

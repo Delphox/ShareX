@@ -1402,7 +1402,6 @@
             // 
             niTray.ContextMenuStrip = cmsTray;
             resources.ApplyResources(niTray, "niTray");
-            niTray.BalloonTipClicked += niTray_BalloonTipClicked;
             niTray.MouseUp += niTray_MouseUp;
             // 
             // cmsTray

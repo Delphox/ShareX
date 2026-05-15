@@ -110,6 +110,22 @@ namespace ShareX.ScreenCaptureLib
                 return true;
             }
 
+            // Skip non-activatable tool windows (tiling manager overlays, system
+            // auxiliaries, etc.).  These are never the "real" application the user
+            // intends to capture, and including them causes screenshot metadata
+            // (filename, window title) to reflect the overlay instead of the app
+            // underneath.
+            if (isWindow)
+            {
+                const long WS_EX_TOOLWINDOW = 0x00000080L;
+                const long WS_EX_NOACTIVATE = 0x08000000L;
+                long exStyle = (long)NativeMethods.GetWindowLong(handle, NativeConstants.GWL_EXSTYLE);
+                if ((exStyle & WS_EX_TOOLWINDOW) != 0 && (exStyle & WS_EX_NOACTIVATE) != 0)
+                {
+                    return true;
+                }
+            }
+
             SimpleWindowInfo windowInfo = new SimpleWindowInfo(handle);
 
             if (isWindow)

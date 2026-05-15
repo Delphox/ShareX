@@ -129,4 +129,10 @@
   <data name="BaseRegionForm_InitializeComponent_Region_capture" xml:space="preserve">
     <value>Régió felvétele</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Simítás:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Görbe interpoláció</value>
+  </data>
 </root>

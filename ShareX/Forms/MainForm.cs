@@ -2031,22 +2031,6 @@ namespace ShareX
             }
         }
 
-        private void niTray_BalloonTipClicked(object sender, EventArgs e)
-        {
-            if (niTray.Tag is BalloonTipAction action)
-            {
-                switch (action.ClickAction)
-                {
-                    case BalloonTipClickAction.OpenURL:
-                        URLHelpers.OpenURL(action.Text);
-                        break;
-                    case BalloonTipClickAction.OpenDebugLog:
-                        TaskHelpers.OpenDebugLog();
-                        break;
-                }
-            }
-        }
-
         private void cmsTray_Opened(object sender, EventArgs e)
         {
             if (Program.Settings.TrayAutoExpandCaptureMenu)

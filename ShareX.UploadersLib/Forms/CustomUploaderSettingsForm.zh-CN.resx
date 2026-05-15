@@ -235,7 +235,7 @@
     <value>请求 URL:</value>
   </data>
   <data name="btnTestURLSyntax.Text" xml:space="preserve">
-    <value>测试</value>
+    <value>测试...</value>
   </data>
   <data name="lblUploaders.Text" xml:space="preserve">
     <value>上传器：</value>

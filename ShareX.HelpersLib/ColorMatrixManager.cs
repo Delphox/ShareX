@@ -58,7 +58,6 @@ namespace ShareX.HelpersLib
             {
                 ia.ClearColorMatrix();
                 ia.SetColorMatrix(matrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
-                g.SetHighQuality();
                 g.DrawImage(src, destRect, 0, 0, src.Width, src.Height, GraphicsUnit.Pixel, ia);
             }
         }
@@ -76,7 +75,6 @@ namespace ShareX.HelpersLib
             {
                 ia.ClearColorMatrix();
                 ia.SetGamma(value, ColorAdjustType.Bitmap);
-                g.SetHighQuality();
                 g.DrawImage(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, bmp.Width, bmp.Height, GraphicsUnit.Pixel, ia);
             }
 

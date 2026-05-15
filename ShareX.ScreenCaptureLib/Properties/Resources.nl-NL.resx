@@ -201,4 +201,10 @@
   <data name="ShapeManager_CreateContextMenu_Pixel_size_" xml:space="preserve">
     <value>Pixel grootte:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Vloeiendheid:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Curve-interpolatie</value>
+  </data>
 </root>

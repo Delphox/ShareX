@@ -468,6 +468,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>Hướng đầu mũi tên:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Làm mượt:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Nội suy đường cong</value>
+  </data>
   <data name="ShapeManager_BorderStyle" xml:space="preserve">
     <value>Kiểu viền:</value>
   </data>

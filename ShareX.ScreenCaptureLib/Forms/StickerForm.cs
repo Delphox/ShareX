@@ -177,7 +177,7 @@ namespace ShareX.ScreenCaptureLib
         {
             using (StickerPackForm stickerPackForm = new StickerPackForm(StickerPacks))
             {
-                stickerPackForm.ShowDialog(this);
+                stickerPackForm.ShowDialogTopMost(this);
 
                 UpdateStickerPacks();
             }

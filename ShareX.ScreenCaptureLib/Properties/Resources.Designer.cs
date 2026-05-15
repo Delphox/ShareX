@@ -19,7 +19,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -2276,6 +2276,24 @@ namespace ShareX.ScreenCaptureLib.Properties {
         internal static string ShapeManager_CursorType {
             get {
                 return ResourceManager.GetString("ShapeManager_CursorType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Curve interpolation.
+        /// </summary>
+        internal static string ShapeManager_FreehandCurveInterpolation {
+            get {
+                return ResourceManager.GetString("ShapeManager_FreehandCurveInterpolation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smoothing:.
+        /// </summary>
+        internal static string ShapeManager_FreehandSmoothing {
+            get {
+                return ResourceManager.GetString("ShapeManager_FreehandSmoothing", resourceCulture);
             }
         }
         

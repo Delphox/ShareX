@@ -165,6 +165,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>Direcția capului de săgeată:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Netezire:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Interpolare curbă</value>
+  </data>
   <data name="ShapeManager_CreateToolbar_AutoCloseEditorOnTask" xml:space="preserve">
     <value>Închideți automat editorul pe sarcină</value>
   </data>

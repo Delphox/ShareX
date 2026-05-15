@@ -351,6 +351,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>Ok başı yönü:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Yumuşatma:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Eğri enterpolasyonu</value>
+  </data>
   <data name="ShapeManager_CreateToolbar_AutoCloseEditorOnTask" xml:space="preserve">
     <value>Görevden sonra editörü otomatik kapat</value>
   </data>

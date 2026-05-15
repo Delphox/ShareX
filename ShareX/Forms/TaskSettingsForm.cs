@@ -484,6 +484,8 @@ namespace ShareX
 
             #region Tools
 
+            #region General
+
             CodeMenu.Create<CodeMenuEntryPixelInfo>(txtToolsScreenColorPickerFormat);
             txtToolsScreenColorPickerFormat.Text = TaskSettings.ToolsSettings.ScreenColorPickerFormat;
 
@@ -492,6 +494,22 @@ namespace ShareX
 
             CodeMenu.Create<CodeMenuEntryPixelInfo>(txtToolsScreenColorPickerInfoText);
             txtToolsScreenColorPickerInfoText.Text = TaskSettings.ToolsSettings.ScreenColorPickerInfoText;
+
+            #endregion
+
+            #region Image editor
+
+            cbImageEditorUseLegacyImageEditor.Checked = TaskSettings.ToolsSettings.UseLegacyImageEditor;
+            cbImageEditorUseSystemTheme.Checked = TaskSettings.ToolsSettings.ImageEditorOptions.UseSystemTheme;
+            cbImageEditorUseSystemAccentColor.Checked = TaskSettings.ToolsSettings.ImageEditorOptions.UseSystemAccentColor;
+            cbImageEditorRememberWindowState.Checked = TaskSettings.ToolsSettings.ImageEditorOptions.RememberWindowState;
+            cbImageEditorExitConfirmation.Checked = TaskSettings.ToolsSettings.ImageEditorOptions.ShowExitConfirmation;
+            cbImageEditorZoomToFitOnOpen.Checked = TaskSettings.ToolsSettings.ImageEditorOptions.ZoomToFitOnOpen;
+            cbImageEditorAutoCloseEditorOnTask.Checked = TaskSettings.ToolsSettings.ImageEditorOptions.AutoCloseEditorOnTask;
+            cbImageEditorAutoCopyImageToClipboard.Checked = TaskSettings.ToolsSettings.ImageEditorOptions.AutoCopyImageToClipboard;
+            cbImageEditorQuickCrop.Checked = TaskSettings.ToolsSettings.ImageEditorOptions.QuickCrop;
+
+            #endregion
 
             #endregion Tools
 
@@ -538,7 +556,7 @@ namespace ShareX
                 pCapture.Enabled = tpRegionCapture.Enabled = tpScreenRecorder.Enabled = tpOCR.Enabled = !TaskSettings.UseDefaultCaptureSettings;
                 pActions.Enabled = !TaskSettings.UseDefaultActions;
                 tpFileNaming.Enabled = tpUploadClipboard.Enabled = tpUploaderFilters.Enabled = !TaskSettings.UseDefaultUploadSettings;
-                pTools.Enabled = !TaskSettings.UseDefaultToolsSettings;
+                pTools.Enabled = tpToolsImageEditor.Enabled = !TaskSettings.UseDefaultToolsSettings;
                 pgTaskSettings.Enabled = !TaskSettings.UseDefaultAdvancedSettings;
             }
         }
@@ -1845,6 +1863,8 @@ namespace ShareX
 
         #region Tools
 
+        #region General
+
         private void cbUseDefaultToolsSettings_CheckedChanged(object sender, EventArgs e)
         {
             TaskSettings.UseDefaultToolsSettings = !cbOverrideToolsSettings.Checked;
@@ -1865,6 +1885,57 @@ namespace ShareX
         {
             TaskSettings.ToolsSettings.ScreenColorPickerInfoText = txtToolsScreenColorPickerInfoText.Text;
         }
+
+        #endregion
+
+        #region Image editor
+
+        private void cbImageEditorUseLegacyImageEditor_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ToolsSettings.UseLegacyImageEditor = cbImageEditorUseLegacyImageEditor.Checked;
+        }
+
+        private void cbImageEditorUseSystemTheme_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ToolsSettings.ImageEditorOptions.UseSystemTheme = cbImageEditorUseSystemTheme.Checked;
+        }
+
+        private void cbImageEditorUseSystemAccentColor_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ToolsSettings.ImageEditorOptions.UseSystemAccentColor = cbImageEditorUseSystemAccentColor.Checked;
+        }
+
+        private void cbImageEditorRememberWindowState_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ToolsSettings.ImageEditorOptions.RememberWindowState = cbImageEditorRememberWindowState.Checked;
+        }
+
+        private void cbImageEditorExitConfirmation_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ToolsSettings.ImageEditorOptions.ShowExitConfirmation = cbImageEditorExitConfirmation.Checked;
+        }
+
+        private void cbImageEditorZoomToFitOnOpen_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ToolsSettings.ImageEditorOptions.ZoomToFitOnOpen = cbImageEditorZoomToFitOnOpen.Checked;
+        }
+
+        private void cbImageEditorAutoCloseEditorOnTask_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ToolsSettings.ImageEditorOptions.AutoCloseEditorOnTask = cbImageEditorAutoCloseEditorOnTask.Checked;
+        }
+
+        private void cbImageEditorAutoCopyImageToClipboard_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ToolsSettings.ImageEditorOptions.AutoCopyImageToClipboard = cbImageEditorAutoCopyImageToClipboard.Checked;
+        }
+
+        private void cbImageEditorQuickCrop_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ToolsSettings.ImageEditorOptions.QuickCrop = cbImageEditorQuickCrop.Checked;
+        }
+
+        #endregion
 
         #endregion Tools
 

@@ -482,6 +482,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>箭頭頭部方向：</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>平滑度:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>曲線插值</value>
+  </data>
   <data name="CutOutEffectSize" xml:space="preserve">
     <value>剪紙效果大小：</value>
   </data>

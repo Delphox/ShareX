@@ -177,4 +177,10 @@
   <data name="gbAdvancedSearch.Text" xml:space="preserve">
     <value>高级搜索</value>
   </data>
+  <data name="tsbFavorites.Text" xml:space="preserve">
+    <value>收藏</value>
+  </data>
+  <data name="tsbImportFolder.Text" xml:space="preserve">
+    <value>导入文件夹...</value>
+  </data>
 </root>

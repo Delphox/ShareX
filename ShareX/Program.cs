@@ -25,6 +25,7 @@
 
 using ShareX.HelpersLib;
 using ShareX.HistoryLib;
+using ShareX.ImageEditor.Hosting;
 using ShareX.Properties;
 using ShareX.UploadersLib;
 using System;
@@ -113,7 +114,7 @@ namespace ShareX
             }
         }
 
-        public static bool Dev { get; } = true;
+        public static bool Dev { get; } = false;
         public static bool MultiInstance { get; private set; }
         public static bool Portable { get; private set; }
         public static bool SilentRun { get; private set; }
@@ -355,6 +356,13 @@ namespace ShareX
             UpdateManager = new ShareXUpdateManager();
             LanguageHelper.ChangeLanguage(Settings.Language);
             CleanupManager.CleanupAsync();
+
+            if (!DefaultTaskSettings.ToolsSettings.UseLegacyImageEditor)
+            {
+                DebugHelper.WriteLine("Avalonia init started.");
+                AvaloniaIntegration.Initialize();
+                DebugHelper.WriteLine("Avalonia init finished.");
+            }
 
             DebugHelper.WriteLine("MainForm init started.");
             MainForm = new MainForm();

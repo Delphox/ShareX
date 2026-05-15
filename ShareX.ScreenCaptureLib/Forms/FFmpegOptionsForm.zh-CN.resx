@@ -130,7 +130,7 @@
     <value>使用命令行测试</value>
   </data>
   <data name="cbCustomCommands.Text" xml:space="preserve">
-    <value>使用自定义命令</value>
+    <value>使用自定义命令：</value>
   </data>
   <data name="lblAACQuality.Text" xml:space="preserve">
     <value>比特率：</value>
@@ -188,7 +188,7 @@
     <value>安装“屏幕捕捉器”和“虚拟音频捕捉器”视频/音频源。</value>
   </data>
   <data name="btnInstallHelperDevices.Text" xml:space="preserve">
-    <value>安装捕捉器</value>
+    <value>安装捕捉器...</value>
   </data>
   <data name="cbx264Preset.ToolTip" xml:space="preserve">
     <value>较快的预设 = 编码速度较快，但是文件比较大。
@@ -288,5 +288,56 @@
   </data>
   <data name="lblx264BitrateK.Text" xml:space="preserve">
     <value>kbps</value>
+  </data>
+  <data name="lblAACBitrate.Text" xml:space="preserve">
+    <value>比特率：</value>
+  </data>
+  <data name="lblOpusBitrate.Text" xml:space="preserve">
+    <value>比特率：</value>
+  </data>
+  <data name="lblAMFBitrate.Text" xml:space="preserve">
+    <value>比特率：</value>
+  </data>
+  <data name="lblVideoEncoder.Text" xml:space="preserve">
+    <value>视频编码器：</value>
+  </data>
+  <data name="lblAudioEncoder.Text" xml:space="preserve">
+    <value>音频编码器：</value>
+  </data>
+  <data name="lblNVENCTune.Text" xml:space="preserve">
+    <value>调整：</value>
+  </data>
+  <data name="btnResetOptions.Text" xml:space="preserve">
+    <value>重置设定...</value>
+  </data>
+  <data name="cbUseCustomFFmpegPath.Text" xml:space="preserve">
+    <value>使用自定义 FFmpeg 路径：</value>
+  </data>
+  <data name="tpQSV.Text" xml:space="preserve">
+    <value>QuickSync</value>
+  </data>
+  <data name="btnHelperDevicesHelp.Text" xml:space="preserve">
+    <value>？</value>
+  </data>
+  <data name="btnFFmpegBrowse.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblAMFBitrateK.Text" xml:space="preserve">
+    <value>kbps</value>
+  </data>
+  <data name="tpAMF.Text" xml:space="preserve">
+    <value>AMF</value>
+  </data>
+  <data name="lblAACBitrateK.Text" xml:space="preserve">
+    <value>kbps</value>
+  </data>
+  <data name="tpAAC.Text" xml:space="preserve">
+    <value>AAC</value>
+  </data>
+  <data name="lblOpusBitrateK.Text" xml:space="preserve">
+    <value>kbps</value>
+  </data>
+  <data name="lblx264CRF.Text" xml:space="preserve">
+    <value>CRF:</value>
   </data>
 </root>

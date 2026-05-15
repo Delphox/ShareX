@@ -49,6 +49,10 @@ namespace ShareX.ScreenCaptureLib
         public Color ShadowColor { get; set; } = Color.FromArgb(125, 0, 0, 0);
         public Point ShadowOffset { get; set; } = new Point(0, 1);
 
+        // Freehand drawing
+        public int FreehandSmoothing { get; set; } = 0;
+        public bool FreehandCurveInterpolation { get; set; } = true;
+
         // Line, arrow drawing
         public int LineCenterPointCount { get; set; } = 1;
 
@@ -90,10 +94,7 @@ namespace ShareX.ScreenCaptureLib
         public int MagnifyStrength { get; set; } = 200;
 
         // Sticker drawing
-        public List<StickerPackInfo> StickerPacks = new List<StickerPackInfo>()
-        {
-            new StickerPackInfo(@"Stickers\BlobEmoji", "Blob Emoji")
-        };
+        public List<StickerPackInfo> StickerPacks = new List<StickerPackInfo>();
         public int SelectedStickerPack = 0;
         public int StickerSize { get; set; } = 64;
         public string LastStickerPath { get; set; }

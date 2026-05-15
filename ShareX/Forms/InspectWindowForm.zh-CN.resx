@@ -129,4 +129,13 @@
   <data name="btnInspectWindow.Text" xml:space="preserve">
     <value>探查窗口...</value>
   </data>
+  <data name="cbTopMost.Text" xml:space="preserve">
+    <value>最上层</value>
+  </data>
+  <data name="lblOpacity.Text" xml:space="preserve">
+    <value>不透明度：</value>
+  </data>
+  <data name="mbWindowList.Text" xml:space="preserve">
+    <value>窗口列表</value>
+  </data>
 </root>

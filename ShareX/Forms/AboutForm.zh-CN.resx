@@ -123,7 +123,4 @@
   <data name="lblBuild.Text" xml:space="preserve">
     <value>编译版本</value>
   </data>
-  <data name="lblProductName.Text" xml:space="preserve">
-    <value>ShareX</value>
-  </data>
 </root>

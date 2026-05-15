@@ -237,4 +237,7 @@
   <data name="HistoryItemManager_InitializeComponent_More_info" xml:space="preserve">
     <value>更多信息...</value>
   </data>
+  <data name="PinToScreen" xml:space="preserve">
+    <value>固定到屏幕</value>
+  </data>
 </root>

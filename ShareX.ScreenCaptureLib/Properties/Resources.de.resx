@@ -381,6 +381,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>Richtung der Pfeilspitze:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Glättung:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Kurveninterpolation</value>
+  </data>
   <data name="ShapeManager_CreateContextMenu_Capture_fullscreen" xml:space="preserve">
     <value>Vollbild aufnehmen</value>
   </data>

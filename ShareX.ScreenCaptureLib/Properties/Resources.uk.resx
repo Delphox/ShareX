@@ -485,6 +485,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>Напрямок стрілки:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Згладжування:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Інтерполяція кривої</value>
+  </data>
   <data name="ShapeManager_CreateToolbar_BringForward" xml:space="preserve">
     <value>Перемістити вперед</value>
   </data>

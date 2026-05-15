@@ -249,6 +249,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>כיוון ראש החץ:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>החלקה:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>אינטרפולציית עקומה</value>
+  </data>
   <data name="ShapeManager_BorderStyle" xml:space="preserve">
     <value>סגנון גבול:</value>
   </data>

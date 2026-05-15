@@ -40,6 +40,9 @@ namespace ShareX.ScreenCaptureLib
 
         public override bool IsSelectable => Manager.CurrentTool == ShapeType.ToolSelect;
 
+        public int Smoothing { get; set; }
+        public bool CurveInterpolation { get; set; }
+
         public PointF LastPosition
         {
             get
@@ -63,6 +66,20 @@ namespace ShareX.ScreenCaptureLib
         protected List<PointF> positions = new List<PointF>();
         private bool isPolygonMode;
 
+        public override void OnConfigLoad()
+        {
+            base.OnConfigLoad();
+            Smoothing = AnnotationOptions.FreehandSmoothing;
+            CurveInterpolation = AnnotationOptions.FreehandCurveInterpolation;
+        }
+
+        public override void OnConfigSave()
+        {
+            base.OnConfigSave();
+            AnnotationOptions.FreehandSmoothing = Smoothing;
+            AnnotationOptions.FreehandCurveInterpolation = CurveInterpolation;
+        }
+
         public override void ShowNodes()
         {
         }
@@ -81,6 +98,11 @@ namespace ShareX.ScreenCaptureLib
 
                     if (positions.Count == 0 || (!Manager.IsProportionalResizing && LastPosition != pos))
                     {
+                        if (Smoothing > 0 && positions.Count > 0 && !Manager.IsProportionalResizing)
+                        {
+                            pos = positions.SmoothPoint(pos, Smoothing);
+                        }
+
                         positions.Add(pos);
                     }
 
@@ -147,7 +169,14 @@ namespace ShareX.ScreenCaptureLib
                 {
                     using (Pen pen = CreatePen(borderColor, borderSize, borderStyle))
                     {
-                        g.DrawLines(pen, points.ToArray());
+                        if (CurveInterpolation && points.Length > 2)
+                        {
+                            g.DrawCurve(pen, points, 0.5f);
+                        }
+                        else
+                        {
+                            g.DrawLines(pen, points);
+                        }
                     }
                 }
 

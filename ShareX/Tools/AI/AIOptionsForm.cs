@@ -119,6 +119,7 @@ namespace ShareX
             switch ((AIProvider)cbProvider.SelectedIndex)
             {
                 case AIProvider.OpenAI:
+                case AIProvider.OpenAILegacy:
                     gbOpenAI.Visible = true;
                     break;
                 case AIProvider.Gemini:
@@ -137,6 +138,7 @@ namespace ShareX
             switch ((AIProvider)cbProvider.SelectedIndex)
             {
                 case AIProvider.OpenAI:
+                case AIProvider.OpenAILegacy:
                     url = "https://platform.openai.com/api-keys";
                     break;
                 case AIProvider.Gemini:
@@ -246,6 +248,7 @@ namespace ShareX
                 switch (provider)
                 {
                     case AIProvider.OpenAI:
+                    case AIProvider.OpenAILegacy:
                         string openAIKey = txtOpenAIAPIKey.Text?.Trim();
                         if (string.IsNullOrEmpty(openAIKey))
                         {

@@ -766,6 +766,10 @@ namespace ShareX
                 {
                     ClipboardHelpers.CopyText(Info.FilePath);
                 }
+                else if (Info.TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.CopyFolderPathToClipboard))
+                {
+                    ClipboardHelpers.CopyText(Path.GetDirectoryName(Info.FilePath));
+                }
 
                 if (Info.TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.ShowInExplorer))
                 {

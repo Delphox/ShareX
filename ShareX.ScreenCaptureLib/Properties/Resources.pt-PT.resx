@@ -387,4 +387,10 @@
   <data name="CloseEsc" xml:space="preserve">
     <value>Fechar (Esc)</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Suavização:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Interpolação de curva</value>
+  </data>
 </root>

@@ -34,6 +34,9 @@ namespace ShareX.ScreenCaptureLib
     {
         public override ShapeType ShapeType { get; } = ShapeType.RegionFreehand;
 
+        public int Smoothing { get; set; }
+        public bool CurveInterpolation { get; set; }
+
         public PointF LastPosition
         {
             get
@@ -57,6 +60,18 @@ namespace ShareX.ScreenCaptureLib
         private List<PointF> points = new List<PointF>();
         private bool isPolygonMode;
 
+        public override void OnConfigLoad()
+        {
+            Smoothing = AnnotationOptions.FreehandSmoothing;
+            CurveInterpolation = AnnotationOptions.FreehandCurveInterpolation;
+        }
+
+        public override void OnConfigSave()
+        {
+            AnnotationOptions.FreehandSmoothing = Smoothing;
+            AnnotationOptions.FreehandCurveInterpolation = CurveInterpolation;
+        }
+
         protected override void UseLightResizeNodes()
         {
             ChangeNodeShape(NodeShape.Circle);
@@ -76,6 +91,11 @@ namespace ShareX.ScreenCaptureLib
 
                     if (points.Count == 0 || (!Manager.IsProportionalResizing && LastPosition != pos))
                     {
+                        if (Smoothing > 0 && points.Count > 0 && !Manager.IsProportionalResizing)
+                        {
+                            pos = points.SmoothPoint(pos, Smoothing);
+                        }
+
                         points.Add(pos);
                     }
 
@@ -104,7 +124,14 @@ namespace ShareX.ScreenCaptureLib
         {
             if (points.Count > 2)
             {
-                gp.AddPolygon(points.ToArray());
+                if (CurveInterpolation)
+                {
+                    gp.AddClosedCurve(points.ToArray(), 0.5f);
+                }
+                else
+                {
+                    gp.AddPolygon(points.ToArray());
+                }
             }
             else if (points.Count == 2)
             {

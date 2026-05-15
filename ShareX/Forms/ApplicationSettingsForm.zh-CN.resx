@@ -315,18 +315,6 @@
   <data name="btnResetSettings.Text" xml:space="preserve">
     <value>重置设置...</value>
   </data>
-  <data name="lblSaveImageSubFolderPatternPreview.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="lblPreviewPersonalFolderPath.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="gbWindows.Text" xml:space="preserve">
-    <value>Windows</value>
-  </data>
-  <data name="gbSteam.Text" xml:space="preserve">
-    <value>Steam</value>
-  </data>
   <data name="gbFirefox.Text" xml:space="preserve">
     <value>Firefox 扩展程序</value>
   </data>
@@ -426,13 +414,16 @@
   <data name="tpMainWindow.Text" xml:space="preserve">
     <value>主窗口</value>
   </data>
-  <data name="lblThumbnailViewThumbnailSizeX.Text" xml:space="preserve">
-    <value>x</value>
-  </data>
   <data name="lblClipboardFormatsTip.Text" xml:space="preserve">
     <value>这些格式会出现在主窗口的右键菜单中的“复制”菜单里面。</value>
   </data>
   <data name="lblDefaultPrinterOverride.Text" xml:space="preserve">
     <value>覆盖默认打印机：</value>
+  </data>
+  <data name="lblUpdateChannel.Text" xml:space="preserve">
+    <value>更新通道：</value>
+  </data>
+  <data name="cbAutoCheckUpdate.Text" xml:space="preserve">
+    <value>自动检查更新</value>
   </data>
 </root>

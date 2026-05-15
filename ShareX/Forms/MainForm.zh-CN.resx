@@ -549,9 +549,6 @@
   <data name="tsmiDownloadSelectedURL.Text" xml:space="preserve">
     <value>下载</value>
   </data>
-  <data name="niTray.Text" xml:space="preserve">
-    <value>ShareX</value>
-  </data>
   <data name="tsmiDeleteSelectedItem.Text" xml:space="preserve">
     <value>从列表中删除任务</value>
   </data>
@@ -758,5 +755,68 @@
   </data>
   <data name="tsmiCombineImagesVertically.Text" xml:space="preserve">
     <value>垂直叠放</value>
+  </data>
+  <data name="tsmiImageBeautifier.Text" xml:space="preserve">
+    <value>图片美化工具...</value>
+  </data>
+  <data name="tsmiTrayImageBeautifier.Text" xml:space="preserve">
+    <value>图片美化工具...</value>
+  </data>
+  <data name="tsmiHashChecker.Text" xml:space="preserve">
+    <value>哈希（Hash） 检查...</value>
+  </data>
+  <data name="tsmiTrayHashChecker.Text" xml:space="preserve">
+    <value>哈希（Hash） 检查...</value>
+  </data>
+  <data name="tsmiBeautifyImage.Text" xml:space="preserve">
+    <value>美化图片...</value>
+  </data>
+  <data name="tsmiPinToScreen.Text" xml:space="preserve">
+    <value>固定到屏幕...</value>
+  </data>
+  <data name="tsmiTrayPinToScreen.Text" xml:space="preserve">
+    <value>固定到屏幕...</value>
+  </data>
+  <data name="tsmiPinSelectedFile.Text" xml:space="preserve">
+    <value>固定到屏幕</value>
+  </data>
+  <data name="tsbX.Text" xml:space="preserve">
+    <value>关注 @ShareX...</value>
+  </data>
+  <data name="cDescription.HeaderText" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="cHotkey.HeaderText" xml:space="preserve">
+    <value>快捷键</value>
+  </data>
+  <data name="niTray.Text" xml:space="preserve">
+    <value>ShareX</value>
+  </data>
+  <data name="tsbDestinationSettings.Text" xml:space="preserve">
+    <value>目标设置...</value>
+  </data>
+  <data name="tsbCustomUploaderSettings.Text" xml:space="preserve">
+    <value>自定义上传设置...</value>
+  </data>
+  <data name="tsmiMetadata.Text" xml:space="preserve">
+    <value>元数据...</value>
+  </data>
+  <data name="tsmiAI.Text" xml:space="preserve">
+    <value>分析图片...</value>
+  </data>
+  <data name="tsmiAnalyzeImage.Text" xml:space="preserve">
+    <value>分析图片...</value>
+  </data>
+  <data name="tsmiGoogleLens.Text" xml:space="preserve">
+    <value>谷歌智慧镜头（Google Lens）...</value>
+  </data>
+  <data name="tsmiPinSelectedFile.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+P</value>
+  </data>
+  <data name="tsmiTrayAI.Text" xml:space="preserve">
+    <value>分析图片...</value>
+  </data>
+  <data name="tsmiTrayMetadata.Text" xml:space="preserve">
+    <value>元数据...</value>
   </data>
 </root>

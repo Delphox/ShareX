@@ -456,6 +456,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>Kierunek grotu strzałki:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Wygładzanie:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Interpolacja krzywej</value>
+  </data>
   <data name="RectangleTransparent_RectangleTransparent_Rectangle_capture_transparent" xml:space="preserve">
     <value>Przechwytywanie przezroczystego prostokąta</value>
   </data>

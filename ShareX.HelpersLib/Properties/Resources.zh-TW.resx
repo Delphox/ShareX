@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1050,7 +1050,7 @@
     <value>正上</value>
   </data>
   <data name="ContentAlignment_TopRight" xml:space="preserve">
-    <value>左上</value>
+    <value>右上</value>
   </data>
   <data name="ContentAlignment_MiddleLeft" xml:space="preserve">
     <value>左中</value>

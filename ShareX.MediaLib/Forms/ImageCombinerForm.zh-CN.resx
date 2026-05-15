@@ -159,4 +159,13 @@
   <data name="rbOrientationVertical.Text" xml:space="preserve">
     <value>垂直</value>
   </data>
+  <data name="lblWrapAfterImages.Text" xml:space="preserve">
+    <value>图片</value>
+  </data>
+  <data name="lblWrapAfter.Text" xml:space="preserve">
+    <value>换行后：</value>
+  </data>
+  <data name="lblImageCount.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
 </root>

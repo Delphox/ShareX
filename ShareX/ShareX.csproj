@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net9.0-windows10.0.22621.0</TargetFramework>
     <OutputType>WinExe</OutputType>
@@ -15,15 +15,25 @@
     <CETCompat>false</CETCompat>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-    <PackageReference Include="ZXing.Net" Version="0.16.11" />
-    <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" Version="0.16.14" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="SkiaSharp" />
+    <PackageReference Include="ZXing.Net" />
+    <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShareX.HistoryLib\ShareX.HistoryLib.csproj" />
+    <ProjectReference Include="..\ShareX.ImageEditor.App\ShareX.ImageEditor.App.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX.ImageEditor\ShareX.ImageEditor.csproj" />
     <ProjectReference Include="..\ShareX.ImageEffectsLib\ShareX.ImageEffectsLib.csproj" />
     <ProjectReference Include="..\ShareX.IndexerLib\ShareX.IndexerLib.csproj" />
     <ProjectReference Include="..\ShareX.MediaLib\ShareX.MediaLib.csproj" />
+    <ProjectReference Include="..\ShareX.NativeMessagingHost\ShareX.NativeMessagingHost.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>
+    </ProjectReference>
     <ProjectReference Include="..\ShareX.ScreenCaptureLib\ShareX.ScreenCaptureLib.csproj" />
     <ProjectReference Include="..\ShareX.HelpersLib\ShareX.HelpersLib.csproj" />
     <ProjectReference Include="..\ShareX.UploadersLib\ShareX.UploadersLib.csproj" />

@@ -121,7 +121,7 @@
     <value>ShareX - 调试日志</value>
   </data>
   <data name="btnCopyAll.Text" xml:space="preserve">
-    <value>全部复制</value>
+    <value>复制全部</value>
   </data>
   <data name="btnLoadedAssemblies.Text" xml:space="preserve">
     <value>加载的程序集</value>

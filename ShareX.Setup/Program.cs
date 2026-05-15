@@ -96,7 +96,7 @@ namespace ShareX.Setup
 
         private const string InnoSetupCompilerPath = @"C:\Program Files (x86)\Inno Setup 6\ISCC.exe";
         private const string FFmpegVersion = "8.0";
-        private static string FFmpegDownloadURL = $"https://github.com/ShareX/FFmpeg/releases/download/v{FFmpegVersion}/ffmpeg-{FFmpegVersion}-win-{Platform}.zip";
+        private static string FFmpegDownloadURL => $"https://github.com/ShareX/FFmpeg/releases/download/v{FFmpegVersion}/ffmpeg-{FFmpegVersion}-win-{Platform}.zip";
         private const string RecorderDevicesVersion = "0.12.10";
         private static string RecorderDevicesDownloadURL = $"https://github.com/ShareX/RecorderDevices/releases/download/v{RecorderDevicesVersion}/recorder-devices-{RecorderDevicesVersion}-setup.exe";
         private const string ExifToolVersion = "13.29";
@@ -409,8 +409,6 @@ namespace ShareX.Setup
                 FileHelpers.CopyAll(Path.Combine(OutputDir, "exiftool_files"), Path.Combine(destination, "exiftool_files"));
             }
 
-            FileHelpers.CopyAll(Path.Combine(ParentDir, @"ShareX.ScreenCaptureLib\Stickers"), Path.Combine(destination, "Stickers"));
-
             if (job == SetupJobs.CreatePortable)
             {
                 FileHelpers.CreateEmptyFile(Path.Combine(destination, "Portable"));
@@ -424,12 +422,21 @@ namespace ShareX.Setup
                 if (File.Exists(manifestPath))
                 {
                     string manifestContent = File.ReadAllText(manifestPath);
-                    manifestContent = manifestContent.Replace("{PLATFORM}", Platform);
+                    manifestContent = manifestContent.
+                        Replace("{PLATFORM}", Platform).
+                        Replace("{VERSION}", GetMicrosoftStoreManifestVersion());
                     File.WriteAllText(manifestPath, manifestContent);
                 }
             }
 
             Console.WriteLine("Folder created: " + destination);
+        }
+
+        private static string GetMicrosoftStoreManifestVersion()
+        {
+            Version version = Version.Parse(AppVersion);
+            int revision = version.Revision > -1 ? version.Revision : 0;
+            return $"{version.Major}.{version.Minor}.{version.Build}.{revision}";
         }
 
         private static void CreateZipFile(string source, string archivePath)

@@ -23,22 +23,38 @@ jobs:
           - MicrosoftStore
           - MicrosoftStoreDebug
         platform:
-          - Any CPU
+          - x64
+          - ARM64
+        exclude:
+          # Steam configuration doesn't support ARM64
+          - configuration: Steam
+            platform: ARM64
 
     env:
       SOLUTION_FILE_PATH: ShareX.sln
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: 9.0.x
 
+      - name: Set PLATFORM & RUNTIME_ID
+        run: |
+          $platform = if ("${{ matrix.platform }}" -eq "ARM64") { "arm64" } else { "x64" }
+          echo "PLATFORM=$platform" >> $env:GITHUB_ENV
+          echo "RUNTIME_ID=win-$platform" >> $env:GITHUB_ENV
+
       - name: Restore NuGet packages
-        run: dotnet restore --runtime win-x64 "${{ env.SOLUTION_FILE_PATH }}"
+        run: |
+          dotnet restore --runtime "${{ env.RUNTIME_ID }}" "${{ env.SOLUTION_FILE_PATH }}"
+          if ("${{ matrix.platform }}" -eq "ARM64") {
+            # ShareX.Setup always builds as x64, so restore win-x64 packages too
+            dotnet restore --runtime "win-x64" "ShareX.Setup\ShareX.Setup.csproj"
+          }
 
       - name: Build
-        run: dotnet build --no-restore --configuration "${{ matrix.configuration }}" --self-contained true /m:1 "${{ env.SOLUTION_FILE_PATH }}"
+        run: dotnet build --no-restore --configuration "${{ matrix.configuration }}" -p:Platform="${{ matrix.platform }}" --self-contained true /m:1 "${{ env.SOLUTION_FILE_PATH }}"

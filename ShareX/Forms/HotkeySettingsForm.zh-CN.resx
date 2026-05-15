@@ -135,4 +135,7 @@
   <data name="btnHotkeysDisabled.Text" xml:space="preserve">
     <value>快捷键已禁用。点此可重新启用。</value>
   </data>
+  <data name="btnReset.Text" xml:space="preserve">
+    <value>重置...</value>
+  </data>
 </root>

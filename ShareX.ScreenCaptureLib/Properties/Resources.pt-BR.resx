@@ -393,6 +393,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>Direção da seta:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Suavização:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Interpolação de curva</value>
+  </data>
   <data name="NewLineEnterOKCtrlEnter" xml:space="preserve">
     <value>Nova linha: Enter, OK: Ctrl + Enter</value>
   </data>

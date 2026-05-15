@@ -132,4 +132,7 @@
   <data name="btnCancel.Text" xml:space="preserve">
     <value>取消</value>
   </data>
+  <data name="btnLoadImageFromURL.Text" xml:space="preserve">
+    <value>加载 URL 中的图像</value>
+  </data>
 </root>

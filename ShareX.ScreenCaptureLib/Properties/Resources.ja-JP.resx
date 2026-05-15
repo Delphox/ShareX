@@ -399,6 +399,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>矢の先端の方向:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>スムージング:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>曲線補間</value>
+  </data>
   <data name="LockMenu" xml:space="preserve">
     <value>ツールバーメニューを固定する</value>
   </data>

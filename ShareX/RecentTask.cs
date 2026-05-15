@@ -73,6 +73,28 @@ namespace ShareX
             Time = DateTime.Now;
         }
 
+        public void Open()
+        {
+            if (!string.IsNullOrEmpty(ShortenedURL))
+            {
+                URLHelpers.OpenURL(ShortenedURL);
+            }
+            else if (!string.IsNullOrEmpty(URL))
+            {
+                URLHelpers.OpenURL(URL);
+            }
+            else if (!string.IsNullOrEmpty(FilePath))
+            {
+                FileHelpers.OpenFile(FilePath);
+            }
+        }
+
+        public void Copy()
+        {
+            string text = ToString();
+            ClipboardHelpers.CopyText(text);
+        }
+
         public override string ToString()
         {
             string text = "";

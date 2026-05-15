@@ -384,6 +384,12 @@
   <data name="ShapeManager_CreateContextMenu_SwitchToSelectionToolAfterDrawing" xml:space="preserve">
     <value>Cambiar a herramienta de selección después de dibujar una forma</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Suavizado:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Interpolación de curva</value>
+  </data>
   <data name="ThisWindowWillCloseBeforeOpeningKeybindsPageWantContinue" xml:space="preserve">
     <value>Esta ventana se cerrará antes de abrir la página web de atajos de teclado. ¿Desea continuar?</value>
   </data>

@@ -75,6 +75,7 @@ namespace ShareX.UploadersLib
 
             if (Position >= Length)
             {
+                Position = Length;
                 startTimer.Stop();
 
                 return true;

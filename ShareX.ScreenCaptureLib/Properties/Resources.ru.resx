@@ -390,6 +390,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>Направление стрелки:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Сглаживание:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Интерполяция кривой</value>
+  </data>
   <data name="NewLineEnterOKCtrlEnter" xml:space="preserve">
     <value>Новая строка: Enter, OK: Ctrl + Enter</value>
   </data>

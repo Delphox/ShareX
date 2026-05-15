@@ -169,7 +169,7 @@ namespace ShareX
             {
                 gBuffer.DrawImage(Config.Image, 1, 1, Config.Image.Width, Config.Image.Height);
 
-                if (isMouseInside && !string.IsNullOrEmpty(Config.URL))
+                if (isMouseInside && !string.IsNullOrEmpty(Config.Text))
                 {
                     Rectangle textRect = new Rectangle(0, 0, rect.Width, 40);
 
@@ -178,7 +178,7 @@ namespace ShareX
                         gBuffer.FillRectangle(brush, textRect);
                     }
 
-                    TextRenderer.DrawText(gBuffer, Config.URL, Config.TextFont, textRect.Offset(-urlPadding), Color.White, TextFormatFlags.Left | TextFormatFlags.EndEllipsis);
+                    TextRenderer.DrawText(gBuffer, Config.Text, Config.TextFont, textRect.Offset(-urlPadding), Color.White, TextFormatFlags.Left | TextFormatFlags.EndEllipsis);
                 }
             }
             else if (!string.IsNullOrEmpty(Config.Text))
@@ -375,6 +375,10 @@ namespace ShareX
                     {
                         ClipboardHelpers.CopyText(Config.URL);
                     }
+                    else if (!string.IsNullOrEmpty(Config.FilePath))
+                    {
+                        ClipboardHelpers.CopyText(Config.FilePath);
+                    }
                     break;
                 case ToastClickAction.OpenFile:
                     if (!string.IsNullOrEmpty(Config.FilePath))
@@ -392,6 +396,10 @@ namespace ShareX
                     if (!string.IsNullOrEmpty(Config.URL))
                     {
                         URLHelpers.OpenURL(Config.URL);
+                    }
+                    else if (!string.IsNullOrEmpty(Config.FilePath))
+                    {
+                        FileHelpers.OpenFile(Config.FilePath);
                     }
                     break;
                 case ToastClickAction.Upload:

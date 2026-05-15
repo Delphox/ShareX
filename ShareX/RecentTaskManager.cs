@@ -161,11 +161,11 @@ namespace ShareX
                     {
                         if (e.Button == MouseButtons.Left)
                         {
-                            ClipboardHelpers.CopyText(link);
+                            task.Copy();
                         }
                         else if (e.Button == MouseButtons.Right)
                         {
-                            URLHelpers.OpenURL(link);
+                            task.Open();
                         }
                     };
 

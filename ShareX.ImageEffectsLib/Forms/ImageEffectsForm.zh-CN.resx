@@ -136,7 +136,7 @@
     <value>从剪切板</value>
   </data>
   <data name="btnUploadImage.Text" xml:space="preserve">
-    <value>上传图像</value>
+    <value>上传图片</value>
   </data>
   <data name="lblPresetName.Text" xml:space="preserve">
     <value>名称：</value>

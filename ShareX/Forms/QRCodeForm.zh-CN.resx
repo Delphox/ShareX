@@ -120,4 +120,31 @@
   <data name="$this.Text" xml:space="preserve">
     <value>ShareX - 二维码</value>
   </data>
+  <data name="btnCopyImage.Text" xml:space="preserve">
+    <value>复制图片</value>
+  </data>
+  <data name="lblQRCode.Text" xml:space="preserve">
+    <value>二维码：</value>
+  </data>
+  <data name="btnUploadImage.Text" xml:space="preserve">
+    <value>上传图片</value>
+  </data>
+  <data name="btnSaveImage.Text" xml:space="preserve">
+    <value>保存图像...</value>
+  </data>
+  <data name="lblQRCodeSize.Text" xml:space="preserve">
+    <value>二维码大小：</value>
+  </data>
+  <data name="lblText.Text" xml:space="preserve">
+    <value>文本：</value>
+  </data>
+  <data name="btnScanScreen.Text" xml:space="preserve">
+    <value>扫描屏幕</value>
+  </data>
+  <data name="btnScanRegion.Text" xml:space="preserve">
+    <value>扫描区域...</value>
+  </data>
+  <data name="btnScanImageFile.Text" xml:space="preserve">
+    <value>扫描图片文件...</value>
+  </data>
 </root>

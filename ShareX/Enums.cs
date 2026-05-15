@@ -144,13 +144,14 @@ namespace ShareX
         PerformActions = 1 << 11,
         CopyFileToClipboard = 1 << 12,
         CopyFilePathToClipboard = 1 << 13,
-        ShowInExplorer = 1 << 14,
-        AnalyzeImage = 1 << 15,
-        ScanQRCode = 1 << 16,
-        DoOCR = 1 << 17,
-        ShowBeforeUploadWindow = 1 << 18,
-        UploadImageToHost = 1 << 19,
-        DeleteFile = 1 << 20
+        CopyFolderPathToClipboard = 1 << 14,
+        ShowInExplorer = 1 << 15,
+        AnalyzeImage = 1 << 16,
+        ScanQRCode = 1 << 17,
+        DoOCR = 1 << 18,
+        ShowBeforeUploadWindow = 1 << 19,
+        UploadImageToHost = 1 << 20,
+        DeleteFile = 1 << 21
     }
 
     [Flags]
@@ -421,13 +422,6 @@ namespace ShareX
         EnabledByPolicy = StartupTaskState.EnabledByPolicy
     }
 #endif
-
-    public enum BalloonTipClickAction
-    {
-        None,
-        OpenURL,
-        OpenDebugLog
-    }
 
     public enum TaskViewMode // Localized
     {

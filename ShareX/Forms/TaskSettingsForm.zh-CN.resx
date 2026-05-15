@@ -235,7 +235,7 @@
     <value>如果剪贴板包含一个网址，使用网址分享服务分享它</value>
   </data>
   <data name="tpUploadClipboard.Text" xml:space="preserve">
-    <value>剪贴板上传</value>
+    <value>上传剪贴板</value>
   </data>
   <data name="lblNameFormatPattern.Text" xml:space="preserve">
     <value>截图或剪贴板的文件名设置：</value>
@@ -665,5 +665,53 @@
   </data>
   <data name="cbImageAutoJPEGQuality.Text" xml:space="preserve">
     <value>自动调整 JPEG 品质以使图像大小更接近指定大小</value>
+  </data>
+  <data name="lblCaptureCustomWindow.Text" xml:space="preserve">
+    <value>预设的窗口标题：</value>
+  </data>
+  <data name="lblRegionCaptureBackgroundDimStrength.Text" xml:space="preserve">
+    <value>背景调暗强度：</value>
+  </data>
+  <data name="cbCloseWindowAfterOpenServiceLink.Text" xml:space="preserve">
+    <value>打开服务链接后关闭 OCR 窗口</value>
+  </data>
+  <data name="cbPlaySoundAfterAction.Text" xml:space="preserve">
+    <value>动作完成后声音提示</value>
+  </data>
+  <data name="cbUseCustomActionCompletedSound.Text" xml:space="preserve">
+    <value>使用自定义的动作完成音效：</value>
+  </data>
+  <data name="cbUseRandomImageEffect.Text" xml:space="preserve">
+    <value>使用随机的图片效果</value>
+  </data>
+  <data name="tpToolsImageEditor.Text" xml:space="preserve">
+    <value>图片编辑器</value>
+  </data>
+  <data name="cbImageEditorExitConfirmation.Text" xml:space="preserve">
+    <value>显示退出确认</value>
+  </data>
+  <data name="cbImageEditorUseLegacyImageEditor.Text" xml:space="preserve">
+    <value>使用旧版图像编辑器</value>
+  </data>
+  <data name="cbImageEditorZoomToFitOnOpen.Text" xml:space="preserve">
+    <value>缩放以适应打开的屏幕</value>
+  </data>
+  <data name="cbImageEditorAutoCloseEditorOnTask.Text" xml:space="preserve">
+    <value>任务完成后自动关闭编辑器</value>
+  </data>
+  <data name="cbImageEditorAutoCopyImageToClipboard.Text" xml:space="preserve">
+    <value>自动将图片复制到剪贴板</value>
+  </data>
+  <data name="cbCaptureAutoHideDesktopIcons.Text" xml:space="preserve">
+    <value>自动隐藏桌面图标</value>
+  </data>
+  <data name="lblRegionCaptureBackgroundDimStrengthHint.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="cbRegionCaptureShowCenterCrosshair.Text" xml:space="preserve">
+    <value>显示中心十字线</value>
+  </data>
+  <data name="btnCustomActionCompletedSoundPath.Text" xml:space="preserve">
+    <value>...</value>
   </data>
 </root>

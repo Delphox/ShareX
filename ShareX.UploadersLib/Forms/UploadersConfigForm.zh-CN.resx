@@ -475,7 +475,7 @@
     <value>注意：双击文件夹名称可打开文件夹。</value>
   </data>
   <data name="cbGoogleDriveIsPublic.Text" xml:space="preserve">
-    <value>是否公共上传?</value>
+    <value>公开上传</value>
   </data>
   <data name="btnGoogleDriveRefreshFolders.Text" xml:space="preserve">
     <value>刷新文件夹列表</value>
@@ -1036,7 +1036,7 @@
     <value>粘贴 API URL：</value>
   </data>
   <data name="cbGooglePhotosIsPublic.Text" xml:space="preserve">
-    <value>公共上传</value>
+    <value>公开上传</value>
   </data>
   <data name="lblGoogleCloudStorageStripExtension.Text" xml:space="preserve">
     <value>移除文件扩展名于：</value>
@@ -1292,5 +1292,41 @@
   </data>
   <data name="cbOneDriveUseDirectLink.Text" xml:space="preserve">
     <value>使用直链</value>
+  </data>
+  <data name="btnGoogleDriveFolderIDHelp.Text" xml:space="preserve">
+    <value>？</value>
+  </data>
+  <data name="lblPrivateBinCustomUrl.Text" xml:space="preserve">
+    <value>自定义URL：</value>
+  </data>
+  <data name="tpPrivateBin.Text" xml:space="preserve">
+    <value>PrivateBin</value>
+  </data>
+  <data name="cbPrivateBinBurnAfterReading.Text" xml:space="preserve">
+    <value>阅后即焚</value>
+  </data>
+  <data name="lblPrivateBinPastePassword.Text" xml:space="preserve">
+    <value>粘贴密码：</value>
+  </data>
+  <data name="lblPrivateBinFormat.Text" xml:space="preserve">
+    <value>格式：</value>
+  </data>
+  <data name="lblPrivateBinExpiration.Text" xml:space="preserve">
+    <value>有效期：</value>
+  </data>
+  <data name="gbPrivateBinCredentials.ToolTip" xml:space="preserve">
+    <value>某些服务器可能需要额外的授权</value>
+  </data>
+  <data name="gbPrivateBinCredentials.Text" xml:space="preserve">
+    <value>凭据</value>
+  </data>
+  <data name="lblPrivateBinUsername.Text" xml:space="preserve">
+    <value>用户名：</value>
+  </data>
+  <data name="lblPrivateBinPassword.Text" xml:space="preserve">
+    <value>密码：</value>
+  </data>
+  <data name="lblAzureStorageCacheControl.Text" xml:space="preserve">
+    <value>Cache-Control 头:</value>
   </data>
 </root>

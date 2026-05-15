@@ -252,6 +252,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>اتجاه رأس السهم:</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>التنعيم:</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>استيفاء المنحنى</value>
+  </data>
   <data name="ShapeManager_CreateToolbar_AutoCloseEditorOnTask" xml:space="preserve">
     <value>إغلاق المحرّر بشكل تلقائي عند بدء مهمة</value>
   </data>

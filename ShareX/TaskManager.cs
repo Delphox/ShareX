@@ -380,7 +380,7 @@ namespace ShareX
                                         Image = task.Image,
                                         Title = "ShareX - " + Resources.TaskManager_task_UploadCompleted_ShareX___Task_completed,
                                         Text = result,
-                                        URL = result
+                                        URL = info.Result.ToString()
                                     };
 
                                     NotificationForm.Show(toastConfig);

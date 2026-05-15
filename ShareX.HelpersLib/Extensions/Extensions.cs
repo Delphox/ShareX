@@ -400,6 +400,34 @@ namespace ShareX.HelpersLib
             return result;
         }
 
+        public static PointF SmoothPoint(this List<PointF> points, PointF currentPos, int smoothing)
+        {
+            smoothing = Math.Max(0, Math.Min(smoothing, 10));
+            int windowSize = Math.Min(smoothing * 4, points.Count);
+
+            if (windowSize < 1)
+            {
+                return currentPos;
+            }
+
+            float sumX = currentPos.X;
+            float sumY = currentPos.Y;
+            float weight = 1f;
+            float totalWeight = weight;
+            float decay = 0.6f + (smoothing * 0.0175f);
+
+            for (int i = 0; i < windowSize; i++)
+            {
+                PointF p = points[points.Count - 1 - i];
+                weight *= decay;
+                sumX += p.X * weight;
+                sumY += p.Y * weight;
+                totalWeight += weight;
+            }
+
+            return new PointF(sumX / totalWeight, sumY / totalWeight);
+        }
+
         public static Point Center(this Rectangle rect)
         {
             return new Point(rect.X + (rect.Width / 2), rect.Y + (rect.Height / 2));

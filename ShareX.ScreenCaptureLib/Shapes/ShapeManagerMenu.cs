@@ -50,9 +50,10 @@ namespace ShareX.ScreenCaptureLib
         private ToolStripDropDownButton tsddbShapeOptions;
         private ToolStripMenuItem tsmiShadow, tsmiShadowColor, tsmiUndo, tsmiRedo, tsmiDuplicate, tsmiDelete, tsmiDeleteAll,
             tsmiMoveTop, tsmiMoveUp, tsmiMoveDown, tsmiMoveBottom, tsmiRegionCapture, tsmiQuickCrop, tsmiShowMagnifier, tsmiCutOutBackgroundColor,
-            tsmiSpotlightEllipse;
+            tsmiSpotlightEllipse, tsmiFreehandCurveInterpolation;
         private ToolStripLabeledNumericUpDown tslnudBorderSize, tslnudCornerRadius, tslnudCenterPoints, tslnudBlurRadius, tslnudPixelateSize, tslnudStepFontSize,
-            tslnudMagnifierPixelCount, tslnudStartingStepValue, tslnudMagnifyStrength, tslnudCutOutEffectSize, tslnudSpotlightDim, tslnudSpotlightBlur;
+            tslnudMagnifierPixelCount, tslnudStartingStepValue, tslnudMagnifyStrength, tslnudCutOutEffectSize, tslnudSpotlightDim, tslnudSpotlightBlur,
+            tslnudFreehandSmoothing;
         private ToolStripLabel tslDragLeft, tslDragRight;
         private ToolStripLabeledComboBox tscbBorderStyle, tscbArrowHeadDirection, tscbImageInterpolationMode, tscbCursorTypes, tscbStepType, tscbCutOutEffectType;
 
@@ -595,6 +596,25 @@ namespace ShareX.ScreenCaptureLib
                 UpdateCurrentShape();
             };
             tsddbShapeOptions.DropDownItems.Add(tscbArrowHeadDirection);
+
+            tslnudFreehandSmoothing = new ToolStripLabeledNumericUpDown(Resources.ShapeManager_FreehandSmoothing);
+            tslnudFreehandSmoothing.Content.Minimum = 0;
+            tslnudFreehandSmoothing.Content.Maximum = 10;
+            tslnudFreehandSmoothing.Content.ValueChanged = (sender, e) =>
+            {
+                AnnotationOptions.FreehandSmoothing = (int)tslnudFreehandSmoothing.Content.Value;
+                UpdateCurrentShape();
+            };
+            tsddbShapeOptions.DropDownItems.Add(tslnudFreehandSmoothing);
+
+            tsmiFreehandCurveInterpolation = new ToolStripMenuItem(Resources.ShapeManager_FreehandCurveInterpolation);
+            tsmiFreehandCurveInterpolation.CheckOnClick = true;
+            tsmiFreehandCurveInterpolation.Click += (sender, e) =>
+            {
+                AnnotationOptions.FreehandCurveInterpolation = tsmiFreehandCurveInterpolation.Checked;
+                UpdateCurrentShape();
+            };
+            tsddbShapeOptions.DropDownItems.Add(tsmiFreehandCurveInterpolation);
 
             tslnudStepFontSize = new ToolStripLabeledNumericUpDown(Resources.ShapeManager_CreateToolbar_FontSize);
             tslnudStepFontSize.Content.Minimum = 10;
@@ -1546,6 +1566,9 @@ namespace ShareX.ScreenCaptureLib
 
             tscbArrowHeadDirection.Content.SelectedIndex = (int)AnnotationOptions.ArrowHeadDirection;
 
+            tslnudFreehandSmoothing.Content.Value = AnnotationOptions.FreehandSmoothing;
+            tsmiFreehandCurveInterpolation.Checked = AnnotationOptions.FreehandCurveInterpolation;
+
             tslnudSpotlightDim.Content.Value = AnnotationOptions.SpotlightDim;
             tslnudSpotlightBlur.Content.Value = AnnotationOptions.SpotlightBlur;
             tsmiSpotlightEllipse.Checked = AnnotationOptions.SpotlightEllipse;
@@ -1563,6 +1586,7 @@ namespace ShareX.ScreenCaptureLib
                     tsddbShapeOptions.Visible = false;
                     break;
                 case ShapeType.RegionRectangle:
+                case ShapeType.RegionFreehand:
                 case ShapeType.DrawingRectangle:
                 case ShapeType.DrawingEllipse:
                 case ShapeType.DrawingFreehand:
@@ -1661,6 +1685,8 @@ namespace ShareX.ScreenCaptureLib
 
             tslnudCenterPoints.Visible = shapeType == ShapeType.DrawingLine || shapeType == ShapeType.DrawingArrow;
             tscbArrowHeadDirection.Visible = shapeType == ShapeType.DrawingArrow || shapeType == ShapeType.DrawingFreehandArrow;
+            tslnudFreehandSmoothing.Visible = tsmiFreehandCurveInterpolation.Visible =
+                shapeType == ShapeType.DrawingFreehand || shapeType == ShapeType.DrawingFreehandArrow || shapeType == ShapeType.RegionFreehand;
             tscbImageInterpolationMode.Visible = shapeType == ShapeType.DrawingImage || shapeType == ShapeType.DrawingImageScreen || shapeType == ShapeType.DrawingMagnify;
             tslnudStartingStepValue.Visible = shapeType == ShapeType.DrawingStep;
             tslnudStepFontSize.Visible = tscbStepType.Visible = shapeType == ShapeType.DrawingStep;

@@ -132,4 +132,16 @@
   <data name="lblScaleFactor.Text" xml:space="preserve">
     <value>比例因子：</value>
   </data>
+  <data name="btnCopyAll.Text" xml:space="preserve">
+    <value>复制全部</value>
+  </data>
+  <data name="btnOpenServiceLink.Text" xml:space="preserve">
+    <value>打开服务链接...</value>
+  </data>
+  <data name="cbSingleLine.Text" xml:space="preserve">
+    <value>单行</value>
+  </data>
+  <data name="lblService.Text" xml:space="preserve">
+    <value>服务：</value>
+  </data>
 </root>

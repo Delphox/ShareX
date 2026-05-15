@@ -124,7 +124,7 @@
     <value>关闭</value>
   </data>
   <data name="btnCopyImage.Text" xml:space="preserve">
-    <value>复制图像</value>
+    <value>复制图片</value>
   </data>
   <data name="btnCopyLink.Text" xml:space="preserve">
     <value>复制链接</value>

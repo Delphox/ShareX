@@ -405,6 +405,12 @@
   <data name="ShapeManager_ArrowHeadDirection" xml:space="preserve">
     <value>Direction de la tête de flêche :</value>
   </data>
+  <data name="ShapeManager_FreehandSmoothing" xml:space="preserve">
+    <value>Lissage :</value>
+  </data>
+  <data name="ShapeManager_FreehandCurveInterpolation" xml:space="preserve">
+    <value>Interpolation de courbe</value>
+  </data>
   <data name="ImageUploading" xml:space="preserve">
     <value>Mise en ligne de l'image</value>
   </data>

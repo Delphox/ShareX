@@ -31,7 +31,8 @@ namespace ShareX
     {
         OpenAI,
         Gemini,
-        OpenRouter
+        OpenRouter,
+        OpenAILegacy
     }
 
     public class AIOptions
