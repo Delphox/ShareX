@@ -486,7 +486,7 @@
             // 
             resources.ApplyResources(nudx264Bitrate, "nudx264Bitrate");
             nudx264Bitrate.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            nudx264Bitrate.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
+            nudx264Bitrate.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudx264Bitrate.Name = "nudx264Bitrate";
             nudx264Bitrate.Value = new decimal(new int[] { 3000, 0, 0, 0 });
             nudx264Bitrate.ValueChanged += nudx264Bitrate_ValueChanged;
@@ -510,7 +510,7 @@
             nudVP8Bitrate.Increment = new decimal(new int[] { 100, 0, 0, 0 });
             resources.ApplyResources(nudVP8Bitrate, "nudVP8Bitrate");
             nudVP8Bitrate.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            nudVP8Bitrate.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
+            nudVP8Bitrate.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudVP8Bitrate.Name = "nudVP8Bitrate";
             nudVP8Bitrate.Value = new decimal(new int[] { 3000, 0, 0, 0 });
             nudVP8Bitrate.ValueChanged += nudVP8Bitrate_ValueChanged;
@@ -581,7 +581,7 @@
             // 
             resources.ApplyResources(nudNVENCBitrate, "nudNVENCBitrate");
             nudNVENCBitrate.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            nudNVENCBitrate.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
+            nudNVENCBitrate.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudNVENCBitrate.Name = "nudNVENCBitrate";
             nudNVENCBitrate.Value = new decimal(new int[] { 3000, 0, 0, 0 });
             nudNVENCBitrate.ValueChanged += nudNVENCBitrate_ValueChanged;
@@ -634,7 +634,7 @@
             // 
             resources.ApplyResources(nudAMFBitrate, "nudAMFBitrate");
             nudAMFBitrate.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            nudAMFBitrate.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
+            nudAMFBitrate.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudAMFBitrate.Name = "nudAMFBitrate";
             nudAMFBitrate.Value = new decimal(new int[] { 3000, 0, 0, 0 });
             nudAMFBitrate.ValueChanged += nudAMFBitrate_ValueChanged;
@@ -703,7 +703,7 @@
             // 
             resources.ApplyResources(nudQSVBitrate, "nudQSVBitrate");
             nudQSVBitrate.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            nudQSVBitrate.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
+            nudQSVBitrate.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudQSVBitrate.Name = "nudQSVBitrate";
             nudQSVBitrate.Value = new decimal(new int[] { 3000, 0, 0, 0 });
             nudQSVBitrate.ValueChanged += nudQSVBitrate_ValueChanged;

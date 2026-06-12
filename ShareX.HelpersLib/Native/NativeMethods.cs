@@ -578,6 +578,88 @@ namespace ShareX.HelpersLib
 
         #endregion avif.dll
 
+        #region jxl.dll
+
+        private const string JxlDll = "jxl.dll";
+
+        // --- Encoder functions ---
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern IntPtr JxlEncoderCreate(IntPtr memory_manager);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void JxlEncoderDestroy(IntPtr encoder);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern IntPtr JxlEncoderFrameSettingsCreate(IntPtr encoder, IntPtr frame_settings);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void JxlEncoderInitBasicInfo(IntPtr info);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlEncoderStatus JxlEncoderSetBasicInfo(IntPtr encoder, IntPtr info);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void JxlEncoderSetFrameLossless(IntPtr frame_settings, int lossless);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlEncoderStatus JxlEncoderSetFrameDistance(IntPtr frame_settings, float distance);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlEncoderStatus JxlEncoderFrameSettingsSetOption(IntPtr frame_settings, JxlEncoderFrameSettingId option, int value);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlEncoderStatus JxlEncoderAddImageFrame(IntPtr frame_settings, ref JxlPixelFormat pixel_format, IntPtr buffer, IntPtr size);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void JxlEncoderCloseInput(IntPtr encoder);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlEncoderStatus JxlEncoderProcessOutput(IntPtr encoder, ref IntPtr next_out, ref IntPtr avail_out);
+
+        // --- Decoder functions ---
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern IntPtr JxlDecoderCreate(IntPtr memory_manager);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void JxlDecoderDestroy(IntPtr decoder);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void JxlDecoderSubscribeEvents(IntPtr decoder, int events);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void JxlDecoderSetInput(IntPtr decoder, IntPtr data, IntPtr size);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void JxlDecoderCloseInput(IntPtr decoder);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlDecoderStatus JxlDecoderProcessInput(IntPtr decoder);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlDecoderStatus JxlDecoderGetBasicInfo(IntPtr decoder, ref JxlBasicInfo info);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlDecoderStatus JxlDecoderGetBasicInfo(IntPtr decoder, IntPtr info);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlDecoderStatus JxlDecoderImageOutBufferSize(IntPtr decoder, ref JxlPixelFormat format, out IntPtr size);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlDecoderStatus JxlDecoderSetImageOutBuffer(IntPtr decoder, ref JxlPixelFormat format, IntPtr buffer, IntPtr size);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern int JxlSignatureCheck(IntPtr data, IntPtr size);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern float JxlEncoderDistanceFromQuality(float quality);
+
+        [DllImport(JxlDll, CallingConvention = CallingConvention.Cdecl)]
+        public static extern JxlEncoderError JxlEncoderGetError(IntPtr encoder);
+
+        #endregion jxl.dll
+
         #region Other dll
 
         [DllImport("msvcrt.dll")]

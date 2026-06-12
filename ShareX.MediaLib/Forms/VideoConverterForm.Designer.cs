@@ -187,7 +187,7 @@
             0,
             0});
             this.nudVideoQualityBitrate.Minimum = new decimal(new int[] {
-            100,
+            1,
             0,
             0,
             0});

@@ -44,6 +44,8 @@ namespace ShareX.HelpersLib
         public static readonly ImageFormat WebP = new ImageFormat(WebP_GUID);
         private static readonly Guid AVIF_GUID = new Guid(104845947u, 37650, 64832, 164, 215, 25, 172, 247, 193, 106, 213);
         public static readonly ImageFormat AVIF = new ImageFormat(AVIF_GUID);
+        private static readonly Guid JXL_GUID = new Guid(2739553696u, 57146, 18905, 155, 214, 154, 235, 167, 175, 145, 209);
+        public static readonly ImageFormat JXL = new ImageFormat(JXL_GUID);
 
         private const InterpolationMode DefaultInterpolationMode = InterpolationMode.HighQualityBicubic;
 
@@ -2141,8 +2143,8 @@ namespace ShareX.HelpersLib
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                ofd.Filter = "Image files (*.png, *.jpg, *.jpeg, *.jpe, *.jfif, *.gif, *.bmp, *.tif, *.tiff, *.webp, *.avif)|*.png;*.jpg;*.jpeg;*.jpe;*.jfif;*.gif;*.bmp;*.tif;*.tiff;*.webp;*.avif|" +
-                    "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif|GIF (*.gif)|*.gif|BMP (*.bmp)|*.bmp|TIFF (*.tif, *.tiff)|*.tif;*.tiff|WEBP (*.webp)|*.webp|AVIF (*.avif)|*.avif";
+                ofd.Filter = "Image files (*.png, *.jpg, *.jpeg, *.jpe, *.jfif, *.gif, *.bmp, *.tif, *.tiff, *.webp, *.avif, *.jxl)|*.png;*.jpg;*.jpeg;*.jpe;*.jfif;*.gif;*.bmp;*.tif;*.tiff;*.webp;*.avif;*.jxl|" +
+                    "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif|GIF (*.gif)|*.gif|BMP (*.bmp)|*.bmp|TIFF (*.tif, *.tiff)|*.tif;*.tiff|WEBP (*.webp)|*.webp|AVIF (*.avif)|*.avif|JXL (*.jxl)|*.jxl";
 
                 ofd.Multiselect = multiselect;
 
@@ -2196,6 +2198,10 @@ namespace ShareX.HelpersLib
                 {
                     imageFormat = AVIF;
                 }
+                else if (ext.Equals("jxl", StringComparison.OrdinalIgnoreCase))
+                {
+                    imageFormat = JXL;
+                }
             }
 
             return imageFormat;
@@ -2215,6 +2221,10 @@ namespace ShareX.HelpersLib
                 else if (imageFormat.Equals(AVIF))
                 {
                     SaveAvif(img, filePath);
+                }
+                else if (imageFormat.Equals(JXL))
+                {
+                    SaveJxl(img, filePath);
                 }
                 else
                 {
@@ -2319,6 +2329,186 @@ namespace ShareX.HelpersLib
                 }
             }
         }
+        public static void SaveJxl(Image img, string filePath, int quality = 90, int effort = 7)
+        {
+            using (FileStream fs = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.Read))
+            {
+                SaveJxlToStream(img, fs, quality, effort);
+            }
+        }
+
+        public static void SaveJxlToStream(Image img, Stream stream, int quality = 90, int effort = 7)
+        {
+            if (img == null)
+                throw new ArgumentNullException(nameof(img));
+            if (stream == null)
+                throw new ArgumentNullException(nameof(stream));
+            if (!stream.CanWrite)
+                throw new ArgumentException("Stream must be writable", nameof(stream));
+            if (quality < 0 || quality > 100)
+                throw new ArgumentOutOfRangeException(nameof(quality), "Quality must be between 0 and 100");
+
+            using (var bmp32 = CreateArgbBitmap(img))
+            {
+                BitmapData bmpData = null;
+                IntPtr encoder = IntPtr.Zero;
+                IntPtr frameSettings = IntPtr.Zero;
+                IntPtr bufferPtr = IntPtr.Zero;
+
+                try
+                {
+                    bmpData = bmp32.LockBits(new Rectangle(0, 0, bmp32.Width, bmp32.Height),
+                        ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+
+                    encoder = NativeMethods.JxlEncoderCreate(IntPtr.Zero);
+                    if (encoder == IntPtr.Zero)
+                        throw new ApplicationException("JXL encoder creation failed");
+
+                    frameSettings = NativeMethods.JxlEncoderFrameSettingsCreate(encoder, IntPtr.Zero);
+                    if (frameSettings == IntPtr.Zero)
+                        throw new ApplicationException("JXL frame settings creation failed");
+
+                    NativeMethods.JxlEncoderFrameSettingsSetOption(frameSettings, JxlEncoderFrameSettingId.JXL_ENC_FRAME_SETTING_EFFORT, effort);
+
+                    bool lossless = quality >= 100;
+
+                    IntPtr basicInfoPtr = Marshal.AllocHGlobal(256);
+                    try
+                    {
+                        NativeMethods.JxlEncoderInitBasicInfo(basicInfoPtr);
+                        Marshal.WriteInt32(basicInfoPtr, 4, (int)bmp32.Width);     // xsize
+                        Marshal.WriteInt32(basicInfoPtr, 8, (int)bmp32.Height);    // ysize
+                        Marshal.WriteInt32(basicInfoPtr, 12, 8);                   // bits_per_sample
+                        Marshal.WriteInt32(basicInfoPtr, 16, 0);                   // exponent_bits_per_sample
+                        Marshal.WriteInt32(basicInfoPtr, 36, lossless ? 1 : 0);    // uses_original_profile
+                        Marshal.WriteInt32(basicInfoPtr, 44, 0);                   // have_animation
+                        Marshal.WriteInt32(basicInfoPtr, 48, 1);                   // orientation
+                        Marshal.WriteInt32(basicInfoPtr, 52, 3);                   // num_color_channels
+                        Marshal.WriteInt32(basicInfoPtr, 56, 1);                   // num_extra_channels
+                        Marshal.WriteInt32(basicInfoPtr, 60, 8);                   // alpha_bits
+                        Marshal.WriteInt32(basicInfoPtr, 64, 0);                   // alpha_exponent_bits
+                        Marshal.WriteInt32(basicInfoPtr, 68, 0);                   // alpha_premultiplied
+
+                        if (NativeMethods.JxlEncoderSetBasicInfo(encoder, basicInfoPtr) != JxlEncoderStatus.JXL_ENC_SUCCESS)
+                        {
+                            string errMsg = ": " + NativeMethods.JxlEncoderGetError(encoder).ToString();
+                            throw new ApplicationException("JXL SetBasicInfo failed" + errMsg);
+                        }
+                    }
+                    finally
+                    {
+                        Marshal.FreeHGlobal(basicInfoPtr);
+                    }
+
+                    if (lossless)
+                    {
+                        NativeMethods.JxlEncoderSetFrameLossless(frameSettings, 1);
+                    }
+                    else
+                    {
+                        float distance = (float)NativeMethods.JxlEncoderDistanceFromQuality(quality);
+                        if (NativeMethods.JxlEncoderSetFrameDistance(frameSettings, distance) != JxlEncoderStatus.JXL_ENC_SUCCESS)
+                            throw new ApplicationException("JXL SetFrameDistance failed");
+                    }
+
+                    JxlPixelFormat pixelFormat = new JxlPixelFormat
+                    {
+                        num_channels = 4,
+                        data_type = JxlDataType.JXL_TYPE_UINT8,
+                        endianness = JxlEndianness.JXL_NATIVE_ENDIAN,
+                        align = (IntPtr)0
+                    };
+
+                    int stride = bmpData.Stride;
+                    int height = bmp32.Height;
+                    IntPtr pixelBuffer = Marshal.AllocHGlobal(stride * height);
+                    try
+                    {
+                        unsafe
+                        {
+                            byte* src = (byte*)bmpData.Scan0;
+                            byte* dst = (byte*)pixelBuffer;
+                            for (int y = 0; y < height; y++)
+                            {
+                                byte* srcRow = src + y * stride;
+                                byte* dstRow = dst + y * stride;
+                                for (int x = 0; x < stride; x += 4)
+                                {
+                                    dstRow[x] = srcRow[x + 2];     // R
+                                    dstRow[x + 1] = srcRow[x + 1]; // G
+                                    dstRow[x + 2] = srcRow[x];     // B
+                                    dstRow[x + 3] = srcRow[x + 3]; // A
+                                }
+                            }
+                        }
+
+                        IntPtr pixelDataSize = (IntPtr)(stride * height);
+
+                        DebugHelper.WriteLine($"JXL: {bmp32.Width}x{bmp32.Height}, stride={stride}, pixelDataSize={pixelDataSize}, fmt={bmp32.PixelFormat}");
+
+                        if (NativeMethods.JxlEncoderAddImageFrame(frameSettings, ref pixelFormat, pixelBuffer, pixelDataSize) != JxlEncoderStatus.JXL_ENC_SUCCESS)
+                        {
+                            string errorMsg = ": " + NativeMethods.JxlEncoderGetError(encoder).ToString();
+                            throw new ApplicationException("JXL AddImageFrame failed" + errorMsg);
+                        }
+                    }
+                    finally
+                    {
+                        Marshal.FreeHGlobal(pixelBuffer);
+                    }
+
+                    NativeMethods.JxlEncoderCloseInput(encoder);
+
+                    int bufferSize = 65536;
+                    bufferPtr = Marshal.AllocHGlobal(bufferSize);
+                    IntPtr nextOut = bufferPtr;
+                    IntPtr availOut = (IntPtr)bufferSize;
+
+                    while (true)
+                    {
+                        JxlEncoderStatus status = NativeMethods.JxlEncoderProcessOutput(encoder, ref nextOut, ref availOut);
+
+                        if (status == JxlEncoderStatus.JXL_ENC_SUCCESS)
+                        {
+                            int written = bufferSize - availOut.ToInt32();
+                            if (written > 0)
+                            {
+                                byte[] data = new byte[written];
+                                Marshal.Copy(bufferPtr, data, 0, written);
+                                stream.Write(data, 0, written);
+                            }
+                            break;
+                        }
+                        else if (status == JxlEncoderStatus.JXL_ENC_NEED_MORE_OUTPUT)
+                        {
+                            int written = bufferSize - availOut.ToInt32();
+                            if (written > 0)
+                            {
+                                byte[] data = new byte[written];
+                                Marshal.Copy(bufferPtr, data, 0, written);
+                                stream.Write(data, 0, written);
+                            }
+                            nextOut = bufferPtr;
+                            availOut = (IntPtr)bufferSize;
+                        }
+                        else
+                        {
+                            throw new ApplicationException("JXL encoding failed");
+                        }
+                    }
+                }
+                finally
+                {
+                    if (bmpData != null)
+                        bmp32.UnlockBits(bmpData);
+                    if (bufferPtr != IntPtr.Zero)
+                        Marshal.FreeHGlobal(bufferPtr);
+                    if (encoder != IntPtr.Zero)
+                        NativeMethods.JxlEncoderDestroy(encoder);
+                }
+            }
+        }
+
         public static bool SaveAvif(Image img, string filePath, int quality = 80, int speed = 6, AvifTuneIQ tuneIQ = AvifTuneIQ.Default)
         {
             if (img == null)
@@ -2614,7 +2804,7 @@ namespace ShareX.HelpersLib
         {
             using (SaveFileDialog sfd = new SaveFileDialog())
             {
-                sfd.Filter = "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif|GIF (*.gif)|*.gif|BMP (*.bmp)|*.bmp|TIFF (*.tif, *.tiff)|*.tif;*.tiff|WEBP (*.webp)|*.webp";
+                sfd.Filter = "PNG (*.png)|*.png|JPEG (*.jpg, *.jpeg, *.jpe, *.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif|GIF (*.gif)|*.gif|BMP (*.bmp)|*.bmp|TIFF (*.tif, *.tiff)|*.tif;*.tiff|WEBP (*.webp)|*.webp|AVIF (*.avif)|*.avif|JXL (*.jxl)|*.jxl";
                 sfd.DefaultExt = "png";
 
                 string initialDirectory = null;
@@ -2668,6 +2858,9 @@ namespace ShareX.HelpersLib
                             case "avif":
                                 sfd.FilterIndex = 7;
                                 break;
+                            case "jxl":
+                                sfd.FilterIndex = 8;
+                                break;
                         }
                     }
                 }
@@ -2718,6 +2911,9 @@ namespace ShareX.HelpersLib
                         break;
                     case ".avif":
                         bitmap = LoadAvifImage(filePath);
+                        break;
+                    case ".jxl":
+                        bitmap = LoadJxlImage(filePath);
                         break;
                     default:
                         bitmap = LoadStandardImage(filePath);
@@ -2948,6 +3144,176 @@ namespace ShareX.HelpersLib
                 {
                     NativeMethods.avifDecoderDestroy(decoder);
                 }
+            }
+        }
+
+        private static Bitmap LoadJxlImage(string filePath)
+        {
+            byte[] data = File.ReadAllBytes(filePath);
+            IntPtr dataPtr = IntPtr.Zero;
+            IntPtr decoder = IntPtr.Zero;
+            IntPtr pixelBuffer = IntPtr.Zero;
+            IntPtr basicInfoPtr = IntPtr.Zero;
+            Bitmap bitmap = null;
+
+            try
+            {
+                dataPtr = Marshal.AllocHGlobal(data.Length);
+                Marshal.Copy(data, 0, dataPtr, data.Length);
+
+                if (NativeMethods.JxlSignatureCheck(dataPtr, (IntPtr)data.Length) == 0)
+                {
+                    DebugHelper.WriteLine($"Not a JXL file: {filePath}");
+                    return null;
+                }
+
+                decoder = NativeMethods.JxlDecoderCreate(IntPtr.Zero);
+                if (decoder == IntPtr.Zero)
+                {
+                    DebugHelper.WriteLine("Failed to create JXL decoder");
+                    return null;
+                }
+
+                NativeMethods.JxlDecoderSubscribeEvents(decoder, JxlDecoderEvents.JXL_DEC_BASIC_INFO | JxlDecoderEvents.JXL_DEC_FULL_IMAGE);
+
+                NativeMethods.JxlDecoderSetInput(decoder, dataPtr, (IntPtr)data.Length);
+                NativeMethods.JxlDecoderCloseInput(decoder);
+
+                basicInfoPtr = Marshal.AllocHGlobal(256);
+                bool decoding = true;
+
+                while (decoding)
+                {
+                    JxlDecoderStatus status = NativeMethods.JxlDecoderProcessInput(decoder);
+
+                    switch (status)
+                    {
+                        case JxlDecoderStatus.JXL_DEC_BASIC_INFO:
+                            if (NativeMethods.JxlDecoderGetBasicInfo(decoder, basicInfoPtr) != JxlDecoderStatus.JXL_DEC_SUCCESS)
+                            {
+                                DebugHelper.WriteLine("Failed to get JXL basic info");
+                                return null;
+                            }
+                            break;
+
+                        case JxlDecoderStatus.JXL_DEC_NEED_IMAGE_OUT_BUFFER:
+                            {
+                                JxlPixelFormat format = new JxlPixelFormat
+                                {
+                                    num_channels = 4,
+                                    data_type = JxlDataType.JXL_TYPE_UINT8,
+                                    endianness = JxlEndianness.JXL_NATIVE_ENDIAN,
+                                    align = (IntPtr)0
+                                };
+
+                                if (NativeMethods.JxlDecoderImageOutBufferSize(decoder, ref format, out IntPtr bufferSize) != JxlDecoderStatus.JXL_DEC_SUCCESS)
+                                {
+                                    DebugHelper.WriteLine("Failed to get JXL output buffer size");
+                                    return null;
+                                }
+
+                                pixelBuffer = Marshal.AllocHGlobal(bufferSize.ToInt32());
+
+                                if (NativeMethods.JxlDecoderSetImageOutBuffer(decoder, ref format, pixelBuffer, bufferSize) != JxlDecoderStatus.JXL_DEC_SUCCESS)
+                                {
+                                    DebugHelper.WriteLine("Failed to set JXL output buffer");
+                                    return null;
+                                }
+                            }
+                            break;
+
+                            case JxlDecoderStatus.JXL_DEC_FULL_IMAGE:
+                            {
+                                int imgWidth = Marshal.ReadInt32(basicInfoPtr, 4);
+                                int imgHeight = Marshal.ReadInt32(basicInfoPtr, 8);
+                                bitmap = new Bitmap(imgWidth, imgHeight, PixelFormat.Format32bppArgb);
+                                BitmapData bmpData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height),
+                                    ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
+
+                                try
+                                {
+                                    int srcStride = imgWidth * 4;
+                                    int dstStride = bmpData.Stride;
+
+                                    if (srcStride == dstStride)
+                                    {
+                                        int totalSize = srcStride * bitmap.Height;
+                                        byte[] bytes = new byte[totalSize];
+                                        Marshal.Copy(pixelBuffer, bytes, 0, totalSize);
+                                        // Swap R↔B: JXL outputs RGBA, bitmap expects BGRA
+                                        for (int i = 0; i < totalSize; i += 4)
+                                        {
+                                            byte temp = bytes[i];
+                                            bytes[i] = bytes[i + 2];
+                                            bytes[i + 2] = temp;
+                                        }
+                                        Marshal.Copy(bytes, 0, bmpData.Scan0, totalSize);
+                                    }
+                                    else
+                                    {
+                                        unsafe
+                                        {
+                                            byte* srcPtr = (byte*)pixelBuffer;
+                                            byte* dstPtr = (byte*)bmpData.Scan0;
+                                            for (int y = 0; y < bitmap.Height; y++)
+                                            {
+                                                byte* srcRow = srcPtr + y * srcStride;
+                                                byte* dstRow = dstPtr + y * dstStride;
+                                                for (int x = 0; x < srcStride; x += 4)
+                                                {
+                                                    dstRow[x] = srcRow[x + 2];     // R → B
+                                                    dstRow[x + 1] = srcRow[x + 1]; // G → G
+                                                    dstRow[x + 2] = srcRow[x];     // B → R
+                                                    dstRow[x + 3] = srcRow[x + 3]; // A → A
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                finally
+                                {
+                                    bitmap.UnlockBits(bmpData);
+                                }
+
+                                if (pixelBuffer != IntPtr.Zero)
+                                {
+                                    Marshal.FreeHGlobal(pixelBuffer);
+                                    pixelBuffer = IntPtr.Zero;
+                                }
+                            }
+                            break;
+
+                        case JxlDecoderStatus.JXL_DEC_SUCCESS:
+                            decoding = false;
+                            break;
+
+                        case JxlDecoderStatus.JXL_DEC_ERROR:
+                            DebugHelper.WriteLine($"JXL decode error for: {filePath}");
+                            return null;
+
+                        default:
+                            break;
+                    }
+                }
+
+                return bitmap;
+            }
+            catch (Exception ex)
+            {
+                DebugHelper.WriteException(ex, $"Error loading JXL: {filePath}");
+                bitmap?.Dispose();
+                return null;
+            }
+            finally
+            {
+                if (pixelBuffer != IntPtr.Zero)
+                    Marshal.FreeHGlobal(pixelBuffer);
+                if (basicInfoPtr != IntPtr.Zero)
+                    Marshal.FreeHGlobal(basicInfoPtr);
+                if (decoder != IntPtr.Zero)
+                    NativeMethods.JxlDecoderDestroy(decoder);
+                if (dataPtr != IntPtr.Zero)
+                    Marshal.FreeHGlobal(dataPtr);
             }
         }
 

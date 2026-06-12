@@ -107,6 +107,8 @@
             cbImageAutoJPEGQuality = new System.Windows.Forms.CheckBox();
             cbImageAVIFTuneIQ = new System.Windows.Forms.ComboBox();
             lblImageAVIFTuneIQ = new System.Windows.Forms.Label();
+            nudImageJXLEffort = new System.Windows.Forms.NumericUpDown();
+            lblImageJXLEffort = new System.Windows.Forms.Label();
             cbImagePNGBitDepth = new System.Windows.Forms.ComboBox();
             lblImagePNGBitDepth = new System.Windows.Forms.Label();
             cbImageAutoUseJPEG = new System.Windows.Forms.CheckBox();
@@ -946,6 +948,8 @@
             pImage.Controls.Add(cbImageAutoJPEGQuality);
             pImage.Controls.Add(cbImageAVIFTuneIQ);
             pImage.Controls.Add(lblImageAVIFTuneIQ);
+            pImage.Controls.Add(nudImageJXLEffort);
+            pImage.Controls.Add(lblImageJXLEffort);
             pImage.Controls.Add(cbImagePNGBitDepth);
             pImage.Controls.Add(lblImagePNGBitDepth);
             pImage.Controls.Add(cbImageAutoUseJPEG);
@@ -982,6 +986,19 @@
             // 
             resources.ApplyResources(lblImageAVIFTuneIQ, "lblImageAVIFTuneIQ");
             lblImageAVIFTuneIQ.Name = "lblImageAVIFTuneIQ";
+            // 
+            // nudImageJXLEffort
+            // 
+            nudImageJXLEffort.Minimum = 1;
+            nudImageJXLEffort.Maximum = 10;
+            resources.ApplyResources(nudImageJXLEffort, "nudImageJXLEffort");
+            nudImageJXLEffort.Name = "nudImageJXLEffort";
+            nudImageJXLEffort.ValueChanged += nudImageJXLEffort_ValueChanged;
+            // 
+            // lblImageJXLEffort
+            // 
+            resources.ApplyResources(lblImageJXLEffort, "lblImageJXLEffort");
+            lblImageJXLEffort.Name = "lblImageJXLEffort";
             // 
             // cbImagePNGBitDepth
             // 
@@ -2974,5 +2991,7 @@
         private System.Windows.Forms.CheckBox cbImageEditorQuickCrop;
                 private System.Windows.Forms.ComboBox cbImageAVIFTuneIQ;
         private System.Windows.Forms.Label lblImageAVIFTuneIQ;
+        private System.Windows.Forms.NumericUpDown nudImageJXLEffort;
+        private System.Windows.Forms.Label lblImageJXLEffort;
     }
 }

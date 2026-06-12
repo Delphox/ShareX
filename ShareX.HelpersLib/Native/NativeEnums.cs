@@ -3645,4 +3645,154 @@ namespace ShareX.HelpersLib
         // Decode the thumbnail item. Currently unimplemented.
         // AVIF_DECODER_SOURCE_THUMBNAIL_ITEM
     }
+
+    #region JXL enums
+
+    public enum JxlEncoderStatus
+    {
+        JXL_ENC_SUCCESS = 0,
+        JXL_ENC_ERROR = 1,
+        JXL_ENC_NEED_MORE_OUTPUT = 2
+    }
+
+    public enum JxlDecoderStatus
+    {
+        JXL_DEC_SUCCESS = 0,
+        JXL_DEC_ERROR = 1,
+        JXL_DEC_NEED_MORE_INPUT = 2,
+        JXL_DEC_NEED_IMAGE_OUT_BUFFER = 3,
+        JXL_DEC_IMAGE_OUT_BUFFER_SIZE = 4,
+        JXL_DEC_JPEG_NEED_MORE_INPUT = 5,
+        JXL_DEC_BASIC_INFO = 6,
+        JXL_DEC_COLOR_ENCODING = 7,
+        JXL_DEC_PREVIEW_IMAGE = 8,
+        JXL_DEC_FRAME = 9,
+        JXL_DEC_FRAME_PROGRESSION = 10,
+        JXL_DEC_FULL_IMAGE = 11
+    }
+
+    public enum JxlDataType
+    {
+        JXL_TYPE_FLOAT = 0,
+        JXL_TYPE_UINT8 = 2,
+        JXL_TYPE_UINT16 = 3,
+        JXL_TYPE_FLOAT16 = 5
+    }
+
+    public enum JxlEndianness
+    {
+        JXL_NATIVE_ENDIAN = 0,
+        JXL_LITTLE_ENDIAN = 1,
+        JXL_BIG_ENDIAN = 2
+    }
+
+    public enum JxlEncoderFrameSettingId
+    {
+        JXL_ENC_FRAME_SETTING_EFFORT = 0,
+        JXL_ENC_FRAME_SETTING_DECODING_SPEED = 1,
+        JXL_ENC_FRAME_SETTING_RESAMPLING = 2,
+        JXL_ENC_FRAME_SETTING_EXTRA_CHANNEL_RESAMPLING = 3,
+        JXL_ENC_FRAME_SETTING_ALREADY_DOWNSAMPLED = 4,
+        JXL_ENC_FRAME_SETTING_PHOTON_NOISE = 5,
+        JXL_ENC_FRAME_SETTING_NOISE = 6,
+        JXL_ENC_FRAME_SETTING_DOTS = 7,
+        JXL_ENC_FRAME_SETTING_PATCHES = 8,
+        JXL_ENC_FRAME_SETTING_EPF = 9,
+        JXL_ENC_FRAME_SETTING_GABORISH = 10,
+        JXL_ENC_FRAME_SETTING_MODULAR = 11,
+        JXL_ENC_FRAME_SETTING_KEEP_INVISIBLE = 12,
+        JXL_ENC_FRAME_SETTING_GROUP_ORDER = 13,
+        JXL_ENC_FRAME_SETTING_GROUP_ORDER_CENTER_X = 14,
+        JXL_ENC_FRAME_SETTING_GROUP_ORDER_CENTER_Y = 15,
+        JXL_ENC_FRAME_SETTING_RESPONSIVE = 16,
+        JXL_ENC_FRAME_SETTING_PROGRESSIVE_AC = 17,
+        JXL_ENC_FRAME_SETTING_QPROGRESSIVE_AC = 18,
+        JXL_ENC_FRAME_SETTING_PROGRESSIVE_DC = 19,
+        JXL_ENC_FRAME_SETTING_CHANNEL_COLORS_GLOBAL_PERCENT = 20,
+        JXL_ENC_FRAME_SETTING_CHANNEL_COLORS_GROUP_PERCENT = 21,
+        JXL_ENC_FRAME_SETTING_PALETTE_COLORS = 22,
+        JXL_ENC_FRAME_SETTING_LOSSY_PALETTE = 23,
+        JXL_ENC_FRAME_SETTING_COLOR_TRANSFORM = 24,
+        JXL_ENC_FRAME_SETTING_MODULAR_COLOR_SPACE = 25,
+        JXL_ENC_FRAME_SETTING_MODULAR_GROUP_SIZE = 26,
+        JXL_ENC_FRAME_SETTING_MODULAR_PREDICTOR = 27,
+        JXL_ENC_FRAME_SETTING_MODULAR_MA_TREE_LEARNING_PERCENT = 28,
+        JXL_ENC_FRAME_SETTING_MODULAR_NB_PREV_CHANNELS = 29,
+        JXL_ENC_FRAME_SETTING_JPEG_RECON_CFL = 30,
+        JXL_ENC_FRAME_SETTING_INDEX_BOX = 31,
+        JXL_ENC_FRAME_SETTING_BROTLI_EFFORT = 32,
+        JXL_ENC_FRAME_SETTING_JPEG_COMPRESS_BOXES = 33,
+        JXL_ENC_FRAME_SETTING_BUFFERING = 34,
+        JXL_ENC_FRAME_SETTING_JPEG_KEEP_EXIF = 35,
+        JXL_ENC_FRAME_SETTING_JPEG_KEEP_XMP = 36,
+        JXL_ENC_FRAME_SETTING_JPEG_KEEP_JUMBF = 37,
+        JXL_ENC_FRAME_SETTING_USE_FULL_IMAGE_HEURISTICS = 38,
+        JXL_ENC_FRAME_SETTING_DISABLE_PERCEPTUAL_HEURISTICS = 39
+    }
+
+    public enum JxlColorSpace
+    {
+        JXL_COLOR_SPACE_RGB = 0,
+        JXL_COLOR_SPACE_GRAY = 1,
+        JXL_COLOR_SPACE_XYB = 2,
+        JXL_COLOR_SPACE_UNKNOWN = 3
+    }
+
+    public enum JxlWhitePoint
+    {
+        JXL_WHITE_POINT_D65 = 1,
+        JXL_WHITE_POINT_CUSTOM = 2,
+        JXL_WHITE_POINT_E = 10,
+        JXL_WHITE_POINT_DCI = 11
+    }
+
+    public enum JxlPrimaries
+    {
+        JXL_PRIMARIES_SRGB = 1,
+        JXL_PRIMARIES_CUSTOM = 2,
+        JXL_PRIMARIES_2100 = 3,
+        JXL_PRIMARIES_P3 = 4
+    }
+
+    public enum JxlTransferFunction
+    {
+        JXL_TRANSFER_FUNCTION_709 = 1,
+        JXL_TRANSFER_FUNCTION_UNKNOWN = 2,
+        JXL_TRANSFER_FUNCTION_LINEAR = 8,
+        JXL_TRANSFER_FUNCTION_SRGB = 13,
+        JXL_TRANSFER_FUNCTION_PQ = 16,
+        JXL_TRANSFER_FUNCTION_DCI = 17,
+        JXL_TRANSFER_FUNCTION_HLG = 18
+    }
+
+    public enum JxlRenderingIntent
+    {
+        JXL_RENDERING_INTENT_PERCEPTUAL = 0,
+        JXL_RENDERING_INTENT_RELATIVE = 1,
+        JXL_RENDERING_INTENT_SATURATION = 2,
+        JXL_RENDERING_INTENT_ABSOLUTE = 3
+    }
+
+    public enum JxlEncoderError
+    {
+        JXL_ENC_ERR_OK = 0,
+        JXL_ENC_ERR_GENERIC = 1,
+        JXL_ENC_ERR_OOM = 2,
+        JXL_ENC_ERR_JBRD = 3,
+        JXL_ENC_ERR_BAD_INPUT = 4,
+        JXL_ENC_ERR_NOT_SUPPORTED = 0x80,
+        JXL_ENC_ERR_API_USAGE = 0x81
+    }
+
+    public static class JxlDecoderEvents
+    {
+        public const int JXL_DEC_BASIC_INFO = 0x0040;
+        public const int JXL_DEC_COLOR_ENCODING = 0x0080;
+        public const int JXL_DEC_PREVIEW_IMAGE = 0x0100;
+        public const int JXL_DEC_FRAME = 0x0200;
+        public const int JXL_DEC_FULL_IMAGE = 0x0400;
+        public const int JXL_DEC_FRAME_PROGRESSION = 0x0800;
+    }
+
+    #endregion JXL enums
 }
