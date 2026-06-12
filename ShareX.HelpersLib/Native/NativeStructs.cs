@@ -1361,4 +1361,48 @@ namespace ShareX.HelpersLib
         public AvifFraction horizontal;
         public AvifFraction vertical;
     }
+
+    #region JXL structs
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct JxlPixelFormat
+    {
+        public uint num_channels;
+        public JxlDataType data_type;
+        public JxlEndianness endianness;
+        public IntPtr align;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct JxlBasicInfo
+    {
+        public uint have_container;           // 0
+        public uint xsize;                    // 4
+        public uint ysize;                    // 8
+        public uint bits_per_sample;          // 12
+        public uint exponent_bits_per_sample; // 16
+        public float intensity_target;        // 20
+        public float min_nits;                // 24
+        public uint relative_to_max_display;  // 28
+        public float linear_below;            // 32
+        public uint uses_original_profile;    // 36
+        public uint have_preview;             // 40
+        public uint have_animation;           // 44
+        public uint orientation;              // 48
+        public uint num_color_channels;       // 52
+        public uint num_extra_channels;       // 56
+        public uint alpha_bits;               // 60
+        public uint alpha_exponent_bits;      // 64
+        public uint alpha_premultiplied;      // 68
+        public uint preview_xsize;            // 72
+        public uint preview_ysize;            // 76
+        public uint animation_tps_numerator;   // 80
+        public uint animation_tps_denominator; // 84
+        public uint animation_num_loops;       // 88
+        public uint animation_have_timecodes;  // 92
+        public uint intrinsic_xsize;          // 96
+        public uint intrinsic_ysize;          // 100
+    }
+
+    #endregion JXL structs
 }

@@ -999,7 +999,7 @@ namespace ShareX
 		private void UpdateImageQualityLabelBasedOnFormat()
 		{
 			EImageFormat currentFormat = (EImageFormat)cbImageFormat.SelectedIndex;
-			if (currentFormat == EImageFormat.AVIF)
+			if (currentFormat == EImageFormat.AVIF || currentFormat == EImageFormat.JXL)
 			{
 				lblImageJPEGQuality.Text = Resources.ResourceManager.GetString("Label_ImageQuality_IQ");
 			}

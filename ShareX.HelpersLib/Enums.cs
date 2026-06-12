@@ -67,7 +67,9 @@ namespace ShareX.HelpersLib
         [Description("webp")]
         WEBP,
         [Description("avif")]
-        AVIF
+        AVIF,
+        [Description("jxl")]
+        JXL
     }
 
     public enum AvifTuneIQ // Localized

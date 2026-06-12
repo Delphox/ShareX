@@ -479,6 +479,9 @@ namespace ShareX
                     case EImageFormat.AVIF:
                         ImageHelpers.SaveAvifToStream(img, ms, quality: jpegQuality, tuneIQ: avifTuneIQ);
                         break;
+                    case EImageFormat.JXL:
+                        ImageHelpers.SaveJxlToStream(img, ms, quality: jpegQuality);
+                        break;
                 }
             }
             catch (Exception e)
