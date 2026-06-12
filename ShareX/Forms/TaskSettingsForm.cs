@@ -239,6 +239,7 @@ namespace ShareX
 			UpdateImageQualityLabelBasedOnFormat();
             cbImageAVIFTuneIQ.Items.AddRange(Helpers.GetLocalizedEnumDescriptions<AvifTuneIQ>());
             cbImageAVIFTuneIQ.SelectedIndex = (int)TaskSettings.ImageSettings.ImageAVIFTuneIQ;
+            nudImageJXLEffort.SetValue(TaskSettings.ImageSettings.ImageJXLEffort);
             UpdateAvifTuneVisibility();
             cbImageAutoUseJPEG.Checked = TaskSettings.ImageSettings.ImageAutoUseJPEG;
             nudImageAutoUseJPEGSize.Enabled = TaskSettings.ImageSettings.ImageAutoUseJPEG;
@@ -1011,14 +1012,23 @@ namespace ShareX
 
         private void UpdateAvifTuneVisibility()
         {
-            bool isAvif = (EImageFormat)cbImageFormat.SelectedIndex == EImageFormat.AVIF;
+            EImageFormat currentFormat = (EImageFormat)cbImageFormat.SelectedIndex;
+            bool isAvif = currentFormat == EImageFormat.AVIF;
+            bool isJxl = currentFormat == EImageFormat.JXL;
             lblImageAVIFTuneIQ.Visible = isAvif;
             cbImageAVIFTuneIQ.Visible = isAvif;
+            lblImageJXLEffort.Visible = isJxl;
+            nudImageJXLEffort.Visible = isJxl;
         }
 
         private void cbImageAVIFTuneIQ_SelectedIndexChanged(object sender, EventArgs e)
         {
             TaskSettings.ImageSettings.ImageAVIFTuneIQ = (AvifTuneIQ)cbImageAVIFTuneIQ.SelectedIndex;
+        }
+
+        private void nudImageJXLEffort_ValueChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ImageSettings.ImageJXLEffort = (int)nudImageJXLEffort.Value;
         }
 
         private void cbImagePNGBitDepth_SelectedIndexChanged(object sender, EventArgs e)

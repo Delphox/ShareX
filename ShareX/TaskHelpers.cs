@@ -435,11 +435,11 @@ namespace ShareX
         {
             return SaveImageAsStream(img, imageFormat, taskSettings.ImageSettings.ImagePNGBitDepth,
                 taskSettings.ImageSettings.ImageJPEGQuality, taskSettings.ImageSettings.ImageGIFQuality,
-                taskSettings.ImageSettings.ImageAVIFTuneIQ);
+                taskSettings.ImageSettings.ImageAVIFTuneIQ, taskSettings.ImageSettings.ImageJXLEffort);
         }
 
         public static MemoryStream SaveImageAsStream(Image img, EImageFormat imageFormat, PNGBitDepth pngBitDepth = PNGBitDepth.Automatic,
-            int jpegQuality = 90, GIFQuality gifQuality = GIFQuality.Default, AvifTuneIQ avifTuneIQ = AvifTuneIQ.Default)
+            int jpegQuality = 90, GIFQuality gifQuality = GIFQuality.Default, AvifTuneIQ avifTuneIQ = AvifTuneIQ.Default, int jxlEffort = 7)
         {
             MemoryStream ms = new MemoryStream();
 
@@ -480,7 +480,7 @@ namespace ShareX
                         ImageHelpers.SaveAvifToStream(img, ms, quality: jpegQuality, tuneIQ: avifTuneIQ);
                         break;
                     case EImageFormat.JXL:
-                        ImageHelpers.SaveJxlToStream(img, ms, quality: jpegQuality);
+                        ImageHelpers.SaveJxlToStream(img, ms, quality: jpegQuality, effort: jxlEffort);
                         break;
                 }
             }

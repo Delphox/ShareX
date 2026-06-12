@@ -2329,15 +2329,15 @@ namespace ShareX.HelpersLib
                 }
             }
         }
-        public static void SaveJxl(Image img, string filePath, int quality = 90)
+        public static void SaveJxl(Image img, string filePath, int quality = 90, int effort = 7)
         {
             using (FileStream fs = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.Read))
             {
-                SaveJxlToStream(img, fs, quality);
+                SaveJxlToStream(img, fs, quality, effort);
             }
         }
 
-        public static void SaveJxlToStream(Image img, Stream stream, int quality = 90)
+        public static void SaveJxlToStream(Image img, Stream stream, int quality = 90, int effort = 7)
         {
             if (img == null)
                 throw new ArgumentNullException(nameof(img));
@@ -2368,7 +2368,7 @@ namespace ShareX.HelpersLib
                     if (frameSettings == IntPtr.Zero)
                         throw new ApplicationException("JXL frame settings creation failed");
 
-                    NativeMethods.JxlEncoderFrameSettingsSetOption(frameSettings, JxlEncoderFrameSettingId.JXL_ENC_FRAME_SETTING_EFFORT, 7);
+                    NativeMethods.JxlEncoderFrameSettingsSetOption(frameSettings, JxlEncoderFrameSettingId.JXL_ENC_FRAME_SETTING_EFFORT, effort);
 
                     bool lossless = quality >= 100;
 

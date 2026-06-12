@@ -341,6 +341,7 @@ namespace ShareX
         public int ImageJPEGQuality = 90;
         public GIFQuality ImageGIFQuality = GIFQuality.Default;
         public AvifTuneIQ ImageAVIFTuneIQ = AvifTuneIQ.Default;
+        public int ImageJXLEffort = 7;
         public bool ImageAutoUseJPEG = true;
         public int ImageAutoUseJPEGSize = 2048;
         public bool ImageAutoJPEGQuality = false;
