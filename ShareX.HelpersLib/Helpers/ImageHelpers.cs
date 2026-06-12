@@ -2370,6 +2370,8 @@ namespace ShareX.HelpersLib
 
                     NativeMethods.JxlEncoderFrameSettingsSetOption(frameSettings, JxlEncoderFrameSettingId.JXL_ENC_FRAME_SETTING_EFFORT, 7);
 
+                    bool lossless = quality >= 100;
+
                     IntPtr basicInfoPtr = Marshal.AllocHGlobal(256);
                     try
                     {
@@ -2378,7 +2380,7 @@ namespace ShareX.HelpersLib
                         Marshal.WriteInt32(basicInfoPtr, 8, (int)bmp32.Height);    // ysize
                         Marshal.WriteInt32(basicInfoPtr, 12, 8);                   // bits_per_sample
                         Marshal.WriteInt32(basicInfoPtr, 16, 0);                   // exponent_bits_per_sample
-                        Marshal.WriteInt32(basicInfoPtr, 36, 1);                   // uses_original_profile
+                        Marshal.WriteInt32(basicInfoPtr, 36, lossless ? 1 : 0);    // uses_original_profile
                         Marshal.WriteInt32(basicInfoPtr, 44, 0);                   // have_animation
                         Marshal.WriteInt32(basicInfoPtr, 48, 1);                   // orientation
                         Marshal.WriteInt32(basicInfoPtr, 52, 3);                   // num_color_channels
@@ -2398,9 +2400,16 @@ namespace ShareX.HelpersLib
                         Marshal.FreeHGlobal(basicInfoPtr);
                     }
 
-                    float distance = (float)NativeMethods.JxlEncoderDistanceFromQuality(quality);
-                    if (NativeMethods.JxlEncoderSetFrameDistance(frameSettings, distance) != JxlEncoderStatus.JXL_ENC_SUCCESS)
-                        throw new ApplicationException("JXL SetFrameDistance failed");
+                    if (lossless)
+                    {
+                        NativeMethods.JxlEncoderSetFrameLossless(frameSettings, 1);
+                    }
+                    else
+                    {
+                        float distance = (float)NativeMethods.JxlEncoderDistanceFromQuality(quality);
+                        if (NativeMethods.JxlEncoderSetFrameDistance(frameSettings, distance) != JxlEncoderStatus.JXL_ENC_SUCCESS)
+                            throw new ApplicationException("JXL SetFrameDistance failed");
+                    }
 
                     JxlPixelFormat pixelFormat = new JxlPixelFormat
                     {
@@ -2410,14 +2419,42 @@ namespace ShareX.HelpersLib
                         align = (IntPtr)0
                     };
 
-                    IntPtr pixelDataSize = (IntPtr)(bmpData.Stride * bmp32.Height);
-
-                    DebugHelper.WriteLine($"JXL: {bmp32.Width}x{bmp32.Height}, stride={bmpData.Stride}, pixelDataSize={pixelDataSize}, fmt={bmp32.PixelFormat}");
-
-                    if (NativeMethods.JxlEncoderAddImageFrame(frameSettings, ref pixelFormat, bmpData.Scan0, pixelDataSize) != JxlEncoderStatus.JXL_ENC_SUCCESS)
+                    int stride = bmpData.Stride;
+                    int height = bmp32.Height;
+                    IntPtr pixelBuffer = Marshal.AllocHGlobal(stride * height);
+                    try
                     {
-                        string errorMsg = ": " + NativeMethods.JxlEncoderGetError(encoder).ToString();
-                        throw new ApplicationException("JXL AddImageFrame failed" + errorMsg);
+                        unsafe
+                        {
+                            byte* src = (byte*)bmpData.Scan0;
+                            byte* dst = (byte*)pixelBuffer;
+                            for (int y = 0; y < height; y++)
+                            {
+                                byte* srcRow = src + y * stride;
+                                byte* dstRow = dst + y * stride;
+                                for (int x = 0; x < stride; x += 4)
+                                {
+                                    dstRow[x] = srcRow[x + 2];     // R
+                                    dstRow[x + 1] = srcRow[x + 1]; // G
+                                    dstRow[x + 2] = srcRow[x];     // B
+                                    dstRow[x + 3] = srcRow[x + 3]; // A
+                                }
+                            }
+                        }
+
+                        IntPtr pixelDataSize = (IntPtr)(stride * height);
+
+                        DebugHelper.WriteLine($"JXL: {bmp32.Width}x{bmp32.Height}, stride={stride}, pixelDataSize={pixelDataSize}, fmt={bmp32.PixelFormat}");
+
+                        if (NativeMethods.JxlEncoderAddImageFrame(frameSettings, ref pixelFormat, pixelBuffer, pixelDataSize) != JxlEncoderStatus.JXL_ENC_SUCCESS)
+                        {
+                            string errorMsg = ": " + NativeMethods.JxlEncoderGetError(encoder).ToString();
+                            throw new ApplicationException("JXL AddImageFrame failed" + errorMsg);
+                        }
+                    }
+                    finally
+                    {
+                        Marshal.FreeHGlobal(pixelBuffer);
                     }
 
                     NativeMethods.JxlEncoderCloseInput(encoder);
@@ -3203,15 +3240,33 @@ namespace ShareX.HelpersLib
                                         int totalSize = srcStride * bitmap.Height;
                                         byte[] bytes = new byte[totalSize];
                                         Marshal.Copy(pixelBuffer, bytes, 0, totalSize);
+                                        // Swap R↔B: JXL outputs RGBA, bitmap expects BGRA
+                                        for (int i = 0; i < totalSize; i += 4)
+                                        {
+                                            byte temp = bytes[i];
+                                            bytes[i] = bytes[i + 2];
+                                            bytes[i + 2] = temp;
+                                        }
                                         Marshal.Copy(bytes, 0, bmpData.Scan0, totalSize);
                                     }
                                     else
                                     {
-                                        for (int y = 0; y < bitmap.Height; y++)
+                                        unsafe
                                         {
-                                            IntPtr srcRow = IntPtr.Add(pixelBuffer, y * srcStride);
-                                            IntPtr dstRow = IntPtr.Add(bmpData.Scan0, y * dstStride);
-                                            NativeMethods.CopyMemory(dstRow, srcRow, (uint)srcStride);
+                                            byte* srcPtr = (byte*)pixelBuffer;
+                                            byte* dstPtr = (byte*)bmpData.Scan0;
+                                            for (int y = 0; y < bitmap.Height; y++)
+                                            {
+                                                byte* srcRow = srcPtr + y * srcStride;
+                                                byte* dstRow = dstPtr + y * dstStride;
+                                                for (int x = 0; x < srcStride; x += 4)
+                                                {
+                                                    dstRow[x] = srcRow[x + 2];     // R → B
+                                                    dstRow[x + 1] = srcRow[x + 1]; // G → G
+                                                    dstRow[x + 2] = srcRow[x];     // B → R
+                                                    dstRow[x + 3] = srcRow[x + 3]; // A → A
+                                                }
+                                            }
                                         }
                                     }
                                 }
